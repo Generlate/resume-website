@@ -2,9 +2,9 @@ import './style.css'
 
 import * as THREE from './three.js';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls';
 
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from './three/examples/jsm/loaders/GLTFLoader';
 
 
 const scene = new THREE.Scene();
