@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/icons/Generlate-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Austen Cabret, software, engineering, back end, Generlate, architecture, design" />
+    <meta name="description" content="resume website" />
+    <meta name="author" content="Austen Cabret" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Austen Cabret</title>
+  </head>
+  <body>
+    <div class="loader"></div>
+
+
+    <canvas id="bg">
+      
+    </canvas>
+    <header>
+      <a href="http://generlate.com/" id= "header1"><img src="./assets/icons/Generlate Logo.png" alt="Generlate Icon"></a>
+      <div id= "header2">
+        <a href="./assets/resume.png">Resume</a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./assets/icons/instagram.png " alt="Social Media Icon"></a>
+        <a href="https://www.facebook.com/austen.cabret" target="_blank"><img src="./assets/icons/facebook.png " alt="Social Media Icon"></a>
+        <a href="https://twitter.com/austencabret" target="_blank"><img src="./assets/icons/twitter.png " alt="Social Media Icon"></a>
+        <a href="https://www.linkedin.com/in/austen-cabret/" target="_blank"><img src="./assets/icons/linkedin.png " alt="Social Media Icon"></a>
+        <a href="https://www.youtube.com/channel/UCnhilg6-o3JPzZuqPafSYxA" target="_blank"><img src="./assets/icons/youtube.png " alt="Social Media Icon"></a>
+        <a href="https://github.com/Generlate" target="_blank"><img src="./assets/icons/github.png " alt="Social Media Icon"></a>
+        <a href="mailto:austencabret@gmail.com" target="_blank"><img src="./assets/icons/email.png " alt="Email Button"></a>
+      </div>
+    </header>
+    <div id="flex">
+      <div id="title">
+        <div>AUSTEN CABRET</div>
+        <div>BACKEND ENGINEER</div>
+      </div>
+      <div id = "box1">
+        <div id = "box2">
+          <div>
+            Hi! I'm Austen and I've made architecture since 2014. When I started out, It was pencil on paper. It later became 
+            3d models, then visual scripting and these days, I'm working on machine learning. Eventually, I want to build 
+            machine-generated and managed cities! To realize that dream, here are some technologies that I've been using:
+          </div>
+          <div id="flex2">
+            <div>
+              <div><span>▢</span>&nbsp;&nbsp;Python</div>
+              <div><span>▢</span>&nbsp;&nbsp;Three.js</div>
+            </div>
+            <div>
+              <div><span>▢</span>&nbsp;&nbsp;Pytorch</div>
+              <div><span>▢</span>&nbsp;&nbsp;PostgreSQL</div>
+            </div>
+            <div>
+              <div><span>▢</span>&nbsp;&nbsp;HTML5</div>
+              <div><span>▢</span>&nbsp;&nbsp;Azure</div>
+            </div>
+            <div>
+              <div><span>▢</span>&nbsp;&nbsp;CSS3</div>
+              <div><span>▢</span>&nbsp;&nbsp;Unreal Engine</div>
+            </div>
+            <div>
+              <div><span>▢</span>&nbsp;&nbsp;Javascript</div>
+              <div><span>▢</span>&nbsp;&nbsp;Rhino</div>
+            </div>
+            <div>
+              <div><span>▢</span>&nbsp;&nbsp;Node.js</div>
+              <div><span>▢</span>&nbsp;&nbsp;Adobe Creative Cloud</div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div id = "box3">
+          <div class="projects">
+            Projects 
+          </div>
+          
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="text">Feed Forward Neural Network: Generates random cube models.</div>
+            <div class="numbertext">1 / 5</div>
+            <a href="./subpages/Model Generator/Model Generator.html"><img src="./assets/model generator 6.gif"></a>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="text">Building Code Consultant: A fine-tuned OpenAI model, that can answer questions about a municipality's ordinances.</div>
+            <div class="numbertext">2 / 5</div>
+            <a href="./subpages/Building Code Consultant/Building Code Consultant.html"><video src="./assets/building code consultant2.mp4" controls autoplay muted loop></a>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="text">Visual Scripting: parametric geometry, built in Grasshopper.</div>
+            <div class="numbertext">3 / 5</div>
+            <a href="./subpages/Visual Scripting/Visual Scripting.html"><img src="./assets/Visual Scripting.png"></a>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="text">Architecture: Design, modeling, rendering, etc.</div>
+            <div class="numbertext">4 / 5</div>
+            <a href="./subpages/Architecture/Architecture.html"><video src="./assets/sterling ridge.mp4" controls autoplay muted loop></a>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="text">Space Invaders Game: game development.</div>
+            <div class="numbertext">5 / 5</div>
+            <a href="./subpages/Space Invaders Game/Space Invaders Game.html"><video src="./assets/space invaders game2.mp4" controls autoplay muted loop></a>
+          </div>
+  
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+
+        </div>
+        <!-- The dots/circles -->
+        <div id="threeDots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+
+      <script src="./slideShow.js">
+      </script>
+    </div>
+
+
+
+    <script type="module" src="./canvas.js">
+    </script>
+
+  </body>
+</html>
