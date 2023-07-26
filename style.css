@@ -161,8 +161,7 @@ header {
   display: flex;
   padding-top: 3.75vh;
   padding-bottom: 2.25vh;
-  padding-left: 7vw;
-  padding-right: 7vw;
+  justify-content: center;
 }
 
 #flex2 div {
