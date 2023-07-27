@@ -186,12 +186,9 @@ header {
   text-align: left;
   background-color: rgba(22, 21, 9, 0.92);
   outline: 2px solid rgb(143, 136, 85);
-  /* place-items: center; */
   padding: 0.75%;
   display: flex;
   flex-direction: column;
-
-
   margin: 1.2%;
   margin-bottom: 0%;
   position: relative;
@@ -246,8 +243,6 @@ header {
   color: rgb(143, 136, 85);
   font-size: 1.5vmin;
   padding: 16px;
-  /* display: flex; */
-  /* position: relative; */
   bottom: 8vmin;
   width: 98%;
   text-align: center;
@@ -260,9 +255,9 @@ header {
 .numbertext {
   color: rgb(143, 136, 85);
   font-size: 1vmin;
-  padding: 10vmin 1vmin;
-  position: absolute;
-  top: 0;
+  padding: 0vmin 1vmin;
+  position: relative;
+  top: 2.25vh;
 }
 
 /* The dots/bullets/indicators */
