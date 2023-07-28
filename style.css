@@ -39,12 +39,21 @@ body {
   cursor: url("./assets/icons/cursor.png"), auto;
 }
 
-canvas {
+#bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1;
+}
+
+#blackfill {
+  position: absolute;
+  height: 100vh;
+  background-color: black;
+  z-index: 1;
+  width: 65.75vw;
+  right: 0;
+  top: 0;
 }
 
 

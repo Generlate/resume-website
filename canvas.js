@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 0.1, 1000000 );
+const camera = new THREE.PerspectiveCamera( 20, (window.innerWidth / 2.9) / window.innerHeight, 0.1, 1000000 );
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
@@ -12,10 +12,8 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.domElement.style.position = 'absolute';
-renderer.domElement.style.top = '0px';
-renderer.domElement.style.left = '0px';
+renderer.setSize( window.innerWidth/2.9, window.innerHeight );
+
 
 
 renderer.outputColorSpace = THREE.SRGBColorSpace
@@ -23,10 +21,10 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
 
 const onWindowResize = () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = (window.innerWidth/2.9) / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize((window.innerWidth/2.9), window.innerHeight);
 }
 
 window.addEventListener('resize', onWindowResize, false);
@@ -66,8 +64,9 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 
 camera.position.set(-12, 0.5, 0);
-controls.target.set(20, 16, -150);
-// controls.enablePan = false;
+controls.target.set(-12.5, 16, -150);
+
+
 
 
 
