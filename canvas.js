@@ -1,10 +1,6 @@
-import './style.css'
-
-import * as THREE from './three.js';
-
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const scene = new THREE.Scene();
