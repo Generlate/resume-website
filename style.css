@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:thin|regular|bold');
+@import url('https://fonts.googleapis.com/css?family=Roboto:thin,medium,black');
 
 .loader {
   position: fixed;
@@ -255,9 +255,9 @@ header {
 .numbertext {
   color: rgb(143, 136, 85);
   font-size: 1vmin;
-  padding: 0vh 1vmin;
-  position: relative;
-  top: 2.25vh;
+  padding: 10vh 1vmin;
+  position: absolute;
+  top: 0;
 }
 
 /* The dots/bullets/indicators */
