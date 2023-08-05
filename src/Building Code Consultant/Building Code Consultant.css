@@ -2,7 +2,7 @@
 
 body {
     background-color: rgb(22, 21, 9);
-    cursor: url("../../cursor.png"), auto;
+    cursor: url("../../public/cursor.png"), auto;
     font-family: "roboto";
     color: rgb(143, 136, 85);
     font-size: 1.5vmin;
