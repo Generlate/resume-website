@@ -68,7 +68,7 @@ controls.target.set(-12.5, 16, -150);
 
 // make sky
 
-const skyTexture = new THREE.TextureLoader().load('../sky.png');
+const skyTexture = new THREE.TextureLoader().load('../public/sky.png');
 
 const sky = new THREE.Mesh(
   new THREE.SphereGeometry(900, 32, 32),
@@ -105,7 +105,7 @@ floorMesh.position.set(-2, -1.9, -5);
 
 const loader = new GLTFLoader();
 
-loader.load('../Building.glb', function ( glb ) {
+loader.load('../public/Building.glb', function ( glb ) {
   console.log(glb)
   const root = glb.scene;
   const glassMesh = glb.scene.getObjectByName('KB3D_EVC_BldgLG_B_Main')
@@ -134,7 +134,7 @@ loader.load('../Building.glb', function ( glb ) {
 
 const ringGeometry = new THREE.CylinderGeometry(0.5, 0.5, 0.02, 128);
 const glassLoader = new THREE.TextureLoader();
-const ringMaterial = new THREE.MeshStandardMaterial({ map: glassLoader.load('../platform.jpg') });
+const ringMaterial = new THREE.MeshStandardMaterial({ map: glassLoader.load('../public/platform.jpg') });
 const ringLight = new THREE.SpotLight( 0xB9B794, 4);
 ringLight.position.set(-12.025, -5, -6.5);
 ringLight.target.position.set(-12.025, 15, -6.5);
@@ -152,7 +152,7 @@ scene.add(ringMesh, ringLight);
 // load character
 const characterLoader = new GLTFLoader();
 
-characterLoader.load('../Avatar.glb', function ( glb ) {
+characterLoader.load('../public/Avatar.glb', function ( glb ) {
   console.log(glb)
   const root = glb.scene;
   root.scale.set(0.95, 0.95, 0.95)
