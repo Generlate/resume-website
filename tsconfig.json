@@ -6,8 +6,6 @@
       "preserveConstEnums": true,
       "sourceMap": true
     },
-    "files": [
-      "index.ts",
-      "slideShow.ts"
-    ]
+    "include": ["src/*.ts"],
+    "exclude": ["node_modules"]
   }
