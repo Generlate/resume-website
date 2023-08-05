@@ -9,7 +9,6 @@ body {
     font-weight: 100;
 } 
 
-
   #flex {
     display: flex;
     flex-direction: column;
@@ -28,9 +27,6 @@ body {
     max-width: 100%;
     width: 60%;
   }
-
-
-  
 
   #flex div:nth-of-type(1) {
     padding: 0vh;

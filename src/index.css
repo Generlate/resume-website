@@ -86,14 +86,14 @@ body {
   font-weight: 500;
 }
 
-#box1 {
+#box-1 {
   display: flex;
   flex-direction: column;
   width: 64%;
   float: right;
 }
 
-#box2 {
+#box-2 {
   font-size: 1.5vmin;
   color: rgb(143, 136, 85);
   font-family: "roboto";
@@ -107,7 +107,7 @@ body {
   border-radius: 1.5vh;
 }
 
-#box2 a {
+#box-2 a {
   text-decoration: none;
   color:rgb(255, 247, 178);
   display: block;
@@ -115,26 +115,26 @@ body {
   padding-top: 3vh;
 }
 
-#flex2 {
+#flex-2 {
   display: flex;
   padding-top: 3.75vh;
   padding-bottom: 2.25vh;
   justify-content: center;
 }
 
-#flex2 div {
+#flex-2 div {
   padding-left:0.6vw;
   padding-right:0.6vw;
   display: flex;
   flex-direction: column;
 }
 
-#flex2 div div {
+#flex-2 div div {
   display: flex;
   flex-direction: row;
 }
 
-#box3 {
+#box-3 {
   font-size: 1.5vmin;
   font-family: "roboto";
   text-align: left;
@@ -237,14 +237,14 @@ body {
 }
 
 
-#box3 a img {
+#box-3 a img {
   width:100%;
   display: flex;
   align-items: center;
   border-radius: 20px;
 }
 
-#box3 a video {
+#box-3 a video {
   width:100%;
   display: flex;
   align-items: center;
