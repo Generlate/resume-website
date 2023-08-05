@@ -8,7 +8,7 @@ header {
     z-index: 2;
   }
   
-  #header1 img {
+  #header-left img {
     float: left;
     display: flex;
     width: 5.5vh;
@@ -17,13 +17,22 @@ header {
     align-items: center;
   }
   
-  #header2 {
+  #header-right {
     text-align: right;
     font-size: 2vh;
     padding: 0.8vh;
   }
   
-  #header2 a:-webkit-any-link {
+  #header-right img {
+    float: right;
+    display: flex;
+    width: 2.2vh;
+    padding-top: 5px;
+    margin-right: 0.65vw;
+    align-items: center;
+  }
+  
+  #header-right a:-webkit-any-link {
     font-weight: 300;
     color: rgb(143, 136, 85);
     text-decoration: none;
@@ -33,11 +42,3 @@ header {
   }
   
   
-  #header2 img {
-    float: right;
-    display: flex;
-    width: 2.2vh;
-    padding-top: 5px;
-    margin-right: 0.65vw;
-    align-items: center;
-  }

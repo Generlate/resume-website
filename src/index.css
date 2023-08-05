@@ -46,7 +46,7 @@ body {
   z-index: 1;
 }
 
-#blackfill {
+#black-fill {
   position: absolute;
   height: 100vh;
   background-color: black;
@@ -55,7 +55,6 @@ body {
   right: 0;
   top: 0;
 }
-
 
 #flex {
   position: relative;
@@ -79,7 +78,6 @@ body {
   color: rgb(250, 229, 0);
   font-weight: 900;
   height: 6.5vh;
-  
 }
 
 #title div:nth-of-type(2) {
@@ -107,11 +105,7 @@ body {
   margin: 0% 1.2%;
   box-shadow: 0 0 20px rgb(255, 247, 178);
   border-radius: 1.5vh;
-
 }
-
-
-
 
 #box2 a {
   text-decoration: none;
@@ -140,10 +134,6 @@ body {
   flex-direction: row;
 }
 
-
-
-
-
 #box3 {
   font-size: 1.5vmin;
   font-family: "roboto";
@@ -165,8 +155,6 @@ body {
   font-weight: 500;
   padding:1vh;
 }
-
-
 
 /* Hide the images by default */
 .mySlides {
@@ -212,9 +200,7 @@ body {
   text-align: center;
   font-weight: 100;
   flex: 1;
-  
 }
-
  
 /* The dots/bullets/indicators */
 .dot {
@@ -270,18 +256,7 @@ video::-webkit-media-controls-panel {
   opacity: 1 !important;
 }
 
-
 span {
   font-size: 70%;
   padding-top: 0.25vh;
 }
-
-
-
-
-
-
-
-
-
-
