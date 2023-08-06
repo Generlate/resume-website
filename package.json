@@ -1,14 +1,13 @@
 {
   "name": "resume-website",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "resume website",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "vite": "^4.2.0"
+  "author": "austen cabret",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.155.0"
   }
-}
