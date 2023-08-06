@@ -32,7 +32,7 @@ const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3)
 studioLight.position.set(-12.1, 3, -2.5)
 studioLight.target.position.set(-12.1, 0, -6.5);
 studioLight.angle = Math.PI / 8.3;
-studioLight.exponent = 50;
+studioLight.penumbra = 50;
 studioLight.distance = 10;
 studioLight.decay = 0.75;
 studioLight.castShadow = true;
@@ -41,7 +41,7 @@ const studioLight2 = new THREE.SpotLight(0xFFFDBE, 0.2)
 studioLight2.position.set(-12.1, 2.5, 2.5)
 studioLight2.target.position.set(-12.1, 0.9, -6.5);
 studioLight2.angle = Math.PI / 8.3;
-studioLight2.exponent = 5;
+studioLight2.penumbra = 5;
 studioLight2.distance = 20;
 studioLight2.decay = 0.75;
 studioLight2.castShadow = true;
@@ -105,29 +105,30 @@ floorMesh.position.set(-2, -1.9, -5);
 
 const loader = new GLTFLoader();
 
-loader.load('../public/Building.glb', function ( glb ) {
-  console.log(glb)
+loader.load('../public/building.glb', function (glb) {
+  console.log(glb);
   const root = glb.scene;
-  const glassMesh = glb.scene.getObjectByName('KB3D_EVC_BldgLG_B_Main')
+  const glassMesh = root.getObjectByName('KB3D_EVC_BldgLG_B_Main'); // Use 'root' to access the object
   const glassMaterial = new THREE.MeshStandardMaterial({
     color: 0x818181,
     opacity: 0.75,
     transparent: true,
     metalness: 1,
     roughness: 0
-  })
+  });
   glassMesh.material = glassMaterial;
-  root.scale.set(1, 1, 1)
-  root.rotateY(1.57)
+  root.scale.set(1, 1, 1);
+  root.rotateY(1.57);
 
   scene.add(root);
 
-  const loader = document.querySelector(".loader");
-  loader.classList.add("loader--hidden");
-  loader.addEventListener("transitionend", () => {
-    document.body.removeChild(document.querySelector(".loader"));
+  const loaderElement = document.querySelector(".loader");
+  loaderElement.classList.add("loader--hidden");
+  loaderElement.addEventListener("transitionend", () => {
+    document.body.removeChild(loaderElement);
   });
 });
+
 
 
 // make ring floor light 
@@ -152,7 +153,7 @@ scene.add(ringMesh, ringLight);
 // load character
 const characterLoader = new GLTFLoader();
 
-characterLoader.load('../public/Avatar.glb', function ( glb ) {
+characterLoader.load('../public/avatar.glb', function ( glb ) {
   console.log(glb)
   const root = glb.scene;
   root.scale.set(0.95, 0.95, 0.95)
