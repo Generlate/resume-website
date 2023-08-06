@@ -1,11 +1,13 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "sourceMap": true
-    },
-    "include": ["src/*.ts"],
-    "exclude": ["node_modules"]
-  }
+  "compilerOptions": {
+    "target": "ESNext",             
+    "module": "ESNext",             
+    "noImplicitAny": true,          
+    "strictNullChecks": true,       
+    "esModuleInterop": true,        
+    "forceConsistentCasingInFileNames": true,            
+    "sourceMap": true             
+  },
+  "include": ["src/**/*.ts"],      
+  "exclude": ["node_modules"]       
+}
