@@ -71,7 +71,7 @@ body {
 }
 
 #title div:first-of-type {
-  font-size: 3.5vw;
+  font-size: 6.5vh;
   color: rgb(250, 229, 0);
   font-weight: 900;
   height: 6.5vh;
@@ -79,7 +79,7 @@ body {
 
 #title div:nth-of-type(2) {
   color: rgb(255, 247, 178);
-  font-size: 2vw;
+  font-size: 3.5vh;
   font-weight: 500;
 }
 
@@ -250,7 +250,7 @@ span {
   padding-top: 0.25vh;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1070px) {
   #black-fill {
     position: fixed;
     height: 100%;
@@ -281,5 +281,14 @@ span {
     text-align: center;
     padding-bottom: 90vh;
     margin: 20px auto; /* Add margin for spacing */
+  }
+  
+  #title div:first-of-type {
+    font-size: 5.25vh;
+    height: 5.5vh;
+  }
+  
+  #title div:nth-of-type(2) {
+    font-size: 3vh;
   }
 }

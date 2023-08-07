@@ -5,38 +5,42 @@ import { Object3D, Mesh } from 'three';
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 20, (window.innerWidth / 2.9) / window.innerHeight, 0.1, 1000000 );
-
 const rendererCanvas = document.querySelector('#bg') as HTMLCanvasElement;
 const renderer = new THREE.WebGLRenderer({
   canvas: rendererCanvas,
-  antialias:true
+  antialias: true
 });
 
-renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( window.innerWidth/2.9, window.innerHeight );
- 
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth / 2.9, window.innerHeight);
 
-renderer.outputColorSpace = THREE.SRGBColorSpace
+renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
+
+const calculateAspectRatio = () => {
+  return (window.innerWidth <= 1070) ? window.innerWidth / window.innerHeight : window.innerWidth / (2.9 * window.innerHeight);
+};
+
+const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000000);
 
 const onWindowResize = () => {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
-  camera.aspect = (windowWidth / 2.9) / windowHeight;
+  camera.aspect = calculateAspectRatio();
   camera.updateProjectionMatrix();
 
-  const canvasWidth = windowWidth / 2.9;
+  const canvasWidth = (windowWidth <= 1070) ? windowWidth : windowWidth / 2.9;
   const canvasHeight = windowHeight;
-  const canvasOffsetX = (windowWidth > 820) ? 0 : (windowWidth - canvasWidth) / 2;
+  const canvasOffsetX = (windowWidth > 1070) ? 0 : (windowWidth - canvasWidth) / 2;
 
   renderer.setSize(canvasWidth, canvasHeight);
   rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
 };
 
 window.addEventListener('resize', onWindowResize, false);
+
 
 const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3)
 studioLight.position.set(-12.1, 3, -2.5)
