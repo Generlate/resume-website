@@ -228,7 +228,7 @@ body {
 #threeDots {
   text-align:center;
   position: relative;
-  top: -3vh;
+  top: -4.25vh;
 }
 
 @keyframes fade {
@@ -238,17 +238,19 @@ body {
 
 
 #box-3 a img {
-  width:100%;
+  width:98%;
   display: flex;
   align-items: center;
   border-radius: 20px;
+  padding: 0.6vw;
 }
 
 #box-3 a video {
-  width:100%;
+  width:98%;
   display: flex;
   align-items: center;
   border-radius: 20px;
+  padding: 0.6vw;
 }
 
 video::-webkit-media-controls-panel {
