@@ -243,6 +243,7 @@ body {
   align-items: center;
   border-radius: 20px;
   padding: 0.6vw;
+  padding-top: 0vw;
 }
 
 #box-3 a video {
@@ -251,6 +252,7 @@ body {
   align-items: center;
   border-radius: 20px;
   padding: 0.6vw;
+  padding-top: 0vw;
 }
 
 video::-webkit-media-controls-panel {
