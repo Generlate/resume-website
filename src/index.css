@@ -50,8 +50,8 @@ body {
   position: absolute;
   height: 100vh;
   background-color: black;
-  z-index: 1;
-  width: 65.75vw;
+  z-index: 0;
+  width: 100vw;
   right: 0;
   top: 0;
 }
@@ -248,4 +248,38 @@ video::-webkit-media-controls-panel {
 span {
   font-size: 70%;
   padding-top: 0.25vh;
+}
+
+@media (max-width: 820px) {
+  #black-fill {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  #bg {
+    width: 100%;
+  }
+
+  #flex {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  #box-1 {
+    width: 100%; /* Make box-1 take up the full width */
+    order: 2; /* Change the order to move it below */
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  #title {
+    text-align: center;
+    padding-bottom: 90vh;
+    margin: 20px auto; /* Add margin for spacing */
+  }
 }

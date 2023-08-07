@@ -22,11 +22,19 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
 
 const onWindowResize = () => {
-  camera.aspect = (window.innerWidth/2.9) / window.innerHeight;
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+
+  camera.aspect = (windowWidth / 2.9) / windowHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize((window.innerWidth/2.9), window.innerHeight);
-}
+  const canvasWidth = windowWidth / 2.9;
+  const canvasHeight = windowHeight;
+  const canvasOffsetX = (windowWidth > 820) ? 0 : (windowWidth - canvasWidth) / 2;
+
+  renderer.setSize(canvasWidth, canvasHeight);
+  rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
+};
 
 window.addEventListener('resize', onWindowResize, false);
 
