@@ -14,7 +14,6 @@ header {
     width: 5.5vh;
     margin-top: -5px;
     margin-left: 10px;
-    align-items: center;
   }
   
   #header-right {
@@ -25,20 +24,17 @@ header {
   
   #header-right img {
     float: right;
-    display: flex;
     width: 2.2vh;
-    padding-top: 5px;
+    padding-top: 0.25vh;
     margin-right: 0.65vw;
-    align-items: center;
   }
   
   #header-right a:-webkit-any-link {
-    font-weight: 300;
+    font-weight: 500;
     color: rgb(143, 136, 85);
     text-decoration: none;
     margin-right: 0.13vw;
     font-family: "roboto";
-    padding-top: 5px;
   }
   
   

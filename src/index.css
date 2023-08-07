@@ -60,7 +60,6 @@ body {
   position: relative;
   display: flex;
   z-index: 2;
-  height: 95vh;
   margin-top: 5vh;
 }
 
@@ -68,8 +67,6 @@ body {
   text-shadow: 2px 2px 0px #675d28, 0px 0px 7.5px rgb(255, 247, 178);
   font-family: "roboto";
   text-align: center;
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
 }
 
@@ -87,8 +84,6 @@ body {
 }
 
 #box-1 {
-  display: flex;
-  flex-direction: column;
   width: 64%;
   float: right;
 }
@@ -97,7 +92,6 @@ body {
   font-size: 1.5vmin;
   color: rgb(143, 136, 85);
   font-family: "roboto";
-  text-align: left;
   background-color: rgba(22, 21, 9, 0.92);
   font-weight: 100;
   outline: 2px solid rgb(143, 136, 85);
@@ -137,12 +131,9 @@ body {
 #box-3 {
   font-size: 1.5vmin;
   font-family: "roboto";
-  text-align: left;
   background-color: rgba(22, 21, 9, 0.92);
   outline: 2px solid rgb(143, 136, 85);
   padding: 0.75%;
-  display: flex;
-  flex-direction: column;
   margin: 1.2%;
   margin-bottom: 0%;
   position: relative;
@@ -195,8 +186,6 @@ body {
   color: rgb(143, 136, 85);
   font-size: 1.5vmin;
   padding: 16px;
-  bottom: 8vmin;
-  width: 98%;
   text-align: center;
   font-weight: 100;
   flex: 1;
@@ -228,7 +217,7 @@ body {
 #threeDots {
   text-align:center;
   position: relative;
-  top: -4.25vh;
+  top: -4.5vh;
 }
 
 @keyframes fade {
@@ -239,8 +228,6 @@ body {
 
 #box-3 a img {
   width:98%;
-  display: flex;
-  align-items: center;
   border-radius: 20px;
   padding: 0.6vw;
   padding-top: 0vw;
@@ -248,8 +235,6 @@ body {
 
 #box-3 a video {
   width:98%;
-  display: flex;
-  align-items: center;
   border-radius: 20px;
   padding: 0.6vw;
   padding-top: 0vw;
