@@ -7,7 +7,7 @@
     "esModuleInterop": true,        
     "forceConsistentCasingInFileNames": true,            
     "sourceMap": true,
-    "outDir": "./dist"        
+    "outDir": "./src"        
   },
   "include": ["src/**/*.ts"],      
   "exclude": ["node_modules"]       
