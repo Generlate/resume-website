@@ -10,30 +10,25 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth / 2.9, window.innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
 const calculateAspectRatio = () => {
-    return window.innerWidth <= 1070 ? window.innerWidth / window.innerHeight : window.innerWidth / (2.9 * window.innerHeight);
+    return (window.innerWidth <= 1070) ? window.innerWidth / window.innerHeight : window.innerWidth / (2.9 * window.innerHeight);
 };
-const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000000);
-const adjustCanvasSize = () => {
+const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000);
+const onWindowResize = () => {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     camera.aspect = calculateAspectRatio();
     camera.updateProjectionMatrix();
-    const canvasWidth = windowWidth <= 1070 ? windowWidth : windowWidth / 2.9;
+    const canvasWidth = (windowWidth <= 1070) ? windowWidth : windowWidth / 2.9;
     const canvasHeight = windowHeight;
-    const canvasOffsetX = windowWidth > 1070 ? 0 : (windowWidth - canvasWidth) / 2;
+    const canvasOffsetX = (windowWidth > 1070) ? 0 : (windowWidth - canvasWidth) / 2;
     renderer.setSize(canvasWidth, canvasHeight);
     rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
 };
-// Initial canvas sizing on page load
-adjustCanvasSize();
-// Resize canvas and adjust content when window size changes
-window.addEventListener('resize', () => {
-    adjustCanvasSize();
-    // Here, you might also need to handle any content redrawing/repositioning
-}, false);
+window.addEventListener('resize', onWindowResize, false);
 const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);
 studioLight.position.set(-12.1, 3, -2.5);
 studioLight.target.position.set(-12.1, 0, -6.5);
