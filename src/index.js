@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { Mesh } from 'three';
 const scene = new THREE.Scene();
 const rendererCanvas = document.querySelector('#bg');
 const renderer = new THREE.WebGLRenderer({
@@ -128,7 +127,7 @@ characterLoader.load('../public/avatar.glb', function (glb) {
     root.position.set(-12.025, 0.1, -6.5);
     root.rotation.set(0, Math.PI, 0);
     root.traverse(function (object) {
-        if (object instanceof Mesh) {
+        if (object instanceof THREE.Mesh) {
             object.receiveShadow = true;
         }
     });

@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader, GLTF } from 'three/addons/loaders/GLTFLoader.js';
-import { Object3D, Mesh } from 'three';
 
 
 const scene = new THREE.Scene();
@@ -177,8 +176,8 @@ characterLoader.load('../public/avatar.glb', function ( glb: GLTF ) {
   root.position.set( -12.025, 0.1, -6.5)
   root.rotation.set(0, Math.PI, 0)
 
-  root.traverse(function (object: Object3D) {
-    if (object instanceof Mesh) {
+  root.traverse(function (object: THREE.Object3D) {
+    if (object instanceof THREE.Mesh) {
       object.receiveShadow = true;
     }
   });

@@ -291,4 +291,27 @@ span {
   #title div:nth-of-type(2) {
     font-size: 3vh;
   }
+
+  #box-2 {
+    font-size: 4.5vmin;
+  }
+
+  #box-3 {
+    font-size: 4.5vmin;
+  }
+
+  #flex-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    font-size: 4.5vmin;
+  }
+
+  .dot {
+    height: 4.2vmin;
+    width: 4.2vmin;
+  }
+
 }
