@@ -9,7 +9,8 @@ const renderer = new THREE.WebGLRenderer({
     antialias: true
 });
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth / 2.9, window.innerHeight);
+const initialCanvasWidth = window.innerWidth > 1070 ? window.innerWidth / 2.9 : window.innerWidth;
+renderer.setSize(initialCanvasWidth, window.innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
