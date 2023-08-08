@@ -26,7 +26,7 @@ const onWindowResize = () => {
     const canvasHeight = windowHeight;
     const canvasOffsetX = (windowWidth > 1375) ? 0 : (windowWidth - canvasWidth) / 2;
     renderer.setSize(canvasWidth, canvasHeight);
-    rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
+    // rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
 };
 window.addEventListener('resize', onWindowResize, false);
 const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);

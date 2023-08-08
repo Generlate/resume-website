@@ -37,7 +37,7 @@ const onWindowResize = () => {
   const canvasOffsetX = (windowWidth > 1375) ? 0 : (windowWidth - canvasWidth) / 2;
 
   renderer.setSize(canvasWidth, canvasHeight);
-  rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
+  // rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
 };
 
 window.addEventListener('resize', onWindowResize, false);
