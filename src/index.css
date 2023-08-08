@@ -71,7 +71,7 @@ body {
 }
 
 #title div:first-of-type {
-  font-size: 6.5vh;
+  font-size: 5.75vh;
   color: rgb(250, 229, 0);
   font-weight: 900;
   height: 6.5vh;
@@ -250,7 +250,7 @@ span {
   padding-top: 0.25vh;
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1375px) {
   #black-fill {
     position: fixed;
     height: 100%;
@@ -312,6 +312,10 @@ span {
   .dot {
     height: 4.2vmin;
     width: 4.2vmin;
+  }
+
+  #threeDots {
+    top: -8vh;
   }
 
 } 

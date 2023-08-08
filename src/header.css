@@ -37,7 +37,7 @@ header {
     font-family: "roboto";
   }
   
-  @media (max-width: 1070px) {
+  @media (max-width: 1375px) {
     #header-left img {
       float: left;
       display: flex;
