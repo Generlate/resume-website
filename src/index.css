@@ -250,7 +250,7 @@ span {
   padding-top: 0.25vh;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1550px) {
   #black-fill {
     position: fixed;
     height: 100%;
