@@ -198,14 +198,15 @@ body {
   height: 1.4vmin;
   width: 1.4vmin;
   margin: 0 2px;
-  background-color: rgb(143, 136, 85);
+  border: 2px solid rgb(143, 136, 85);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: rgb(255, 247, 178);
+  background-color: rgb(143, 136, 85);
+  border: 2px solid rgb(143, 136, 85);
 }
 
 /* Fading animation */
