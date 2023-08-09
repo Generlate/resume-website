@@ -219,7 +219,7 @@ body {
 #threeDots {
   text-align:center;
   position: relative;
-  top: -4.5vh;
+  top: -4.75vh;
 }
 
 @keyframes fade {
