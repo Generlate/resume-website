@@ -25,7 +25,6 @@ const onWindowResize = () => {
     const canvasWidth = (windowWidth <= 1375) ? windowWidth : windowWidth / 2.9;
     const canvasHeight = windowHeight;
     renderer.setSize(canvasWidth, canvasHeight);
-    // rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
 };
 window.addEventListener('resize', onWindowResize, false);
 const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);
@@ -48,8 +47,8 @@ const directionalLight = new THREE.DirectionalLight(0xFFF8DE, 0.2);
 directionalLight.position.set(2, 2, 5);
 const ambientLight = new THREE.AmbientLight(0xFFF8DE, 0.5);
 scene.add(studioLight, directionalLight, ambientLight);
-const lightHelper = new THREE.SpotLightHelper(studioLight);
-const lightHelper2 = new THREE.SpotLightHelper(studioLight2);
+// const lightHelper = new THREE.SpotLightHelper(studioLight)
+// const lightHelper2 = new THREE.SpotLightHelper(studioLight2)
 // const gridHelper = new THREE.GridHelper(2000, 200);
 // gridHelper.position.set(0, 0.1, 0);
 scene.add();
@@ -113,7 +112,7 @@ ringLight.penumbra = 5;
 ringLight.distance = 7;
 ringLight.decay = 0.5;
 ringLight.castShadow = true;
-const ringLightHelper = new THREE.SpotLightHelper(ringLight);
+// const ringLightHelper = new THREE.SpotLightHelper(ringLight)
 const ringMesh = new THREE.Mesh(ringGeometry, ringMaterial);
 ringMesh.position.set(-12.025, 0.1, -6.5);
 scene.add(ringMesh, ringLight);
