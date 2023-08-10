@@ -34,7 +34,6 @@ const onWindowResize = () => {
 
   const canvasWidth = (windowWidth <= 1375) ? windowWidth : windowWidth / 2.9;
   const canvasHeight = windowHeight;
-  const canvasOffsetX = (windowWidth > 1375) ? 0 : (windowWidth - canvasWidth) / 2;
 
   renderer.setSize(canvasWidth, canvasHeight);
   // rendererCanvas.style.marginLeft = `${canvasOffsetX}px`;
@@ -214,18 +213,17 @@ const edges = new THREE.EdgesGeometry(boxGeometry);
 const yMax = 4;
 const boxes:any = [];
 
-const createMesh = (() => {
-  
-  return () => {
+const createMesh = function() {
+  return function() {
     const r = 0.6 * Math.random();
     const theta = Math.random() * Math.PI;
-    
+
     const x = r * 0.6 * Math.cos(theta) - 12.025;
     const z = r * 0.6 * Math.sin(theta) - 6.5;
 
     const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
     boxMesh.position.set(x, 0, z);
-    
+
     scene.add(boxMesh);
 
     const lines = new THREE.LineSegments(edges, lineMaterial);
@@ -239,12 +237,12 @@ const createMesh = (() => {
       rotationAngle: new THREE.Vector2(Math.random() * Math.PI * 2, Math.random() * Math.PI * 2)
     });
   };
-})();
+}();
 
-const animate = (() => {
+const animate = function() {
   let frameCounter = 0;
 
-  return () => {
+  return function() {
     controls.update();
     requestAnimationFrame(animate);
 
@@ -254,7 +252,7 @@ const animate = (() => {
       createMesh();
     }
 
-    boxes.forEach((box:any, index:any) => {
+    boxes.forEach(function(box: any, index: any) {
       box.currPosY += 0.002;
 
       if (box.mesh.scale.y <= 0.02) {
@@ -277,7 +275,7 @@ const animate = (() => {
 
     renderer.render(scene, camera);
   };
-})();
+}();
+
 
 animate();
-
