@@ -14,16 +14,14 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
 const calculateAspectRatio = () => {
-    return (window.innerWidth <= 1375) ? window.innerWidth / window.innerHeight : window.innerWidth / (2.9 * window.innerHeight);
+    return (window.innerWidth > 1375) ? window.innerWidth / (2.9 * window.innerHeight) : window.innerWidth / window.innerHeight;
 };
 const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000);
 const onWindowResize = () => {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
     camera.aspect = calculateAspectRatio();
     camera.updateProjectionMatrix();
-    const canvasWidth = (windowWidth <= 1375) ? windowWidth : windowWidth / 2.9;
-    const canvasHeight = windowHeight;
+    const canvasWidth = (window.innerWidth > 1375) ? window.innerWidth / 2.9 : window.innerWidth;
+    const canvasHeight = window.innerHeight;
     renderer.setSize(canvasWidth, canvasHeight);
 };
 window.addEventListener('resize', onWindowResize, false);
