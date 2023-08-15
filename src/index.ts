@@ -189,88 +189,117 @@ scene.fog = new THREE.FogExp2(0x1C1C0E, 0.0016);
 
 
 //add particle effect
-const boxGeometry = new THREE.BoxGeometry(0.012, 0.012, 0.012);
-
-const boxMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0xffe500,
-  roughness: 0.35,
-  metalness: 1,
-  transparent: true,
-  opacity: 0.57,
-  emissive: 0xffe500,
-  emissiveIntensity: 0.85,
-  clearcoat: 1
-});
-
-const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffed4a });
-const edges = new THREE.EdgesGeometry(boxGeometry);
-
-const yMax = 4;
 const boxes:any = [];
+const yMax = 4;
 
-const createMesh = function() {
-  return function() {
-    const r = 0.6 * Math.random();
-    const theta = Math.random() * Math.PI;
+function generateRandomPosition(radius: number): { x: number, z: number } {
+  const theta = Math.random() * Math.PI;
+  const x = radius * theta - 12.15;
+  const z = radius * theta - 6.5;
+  return { x, z };
+}
 
-    const x = r * 0.6 * Math.cos(theta) - 12.025;
-    const z = r * 0.6 * Math.sin(theta) - 6.5;
+function createBoxMesh(): THREE.Mesh {
+  const boxGeometry = new THREE.BoxGeometry(0.012, 0.012, 0.012);
+  const boxMaterial = new THREE.MeshPhysicalMaterial({
+    color: 0xffe500,
+    roughness: 0.35,
+    metalness: 1,
+    transparent: true,
+    opacity: 0.57,
+    emissive: 0xffe500,
+    emissiveIntensity: 0.85,
+    clearcoat: 1
+  });
 
-    const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
-    boxMesh.position.set(x, 0, z);
+  const edges = new THREE.EdgesGeometry(boxGeometry);
+  const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffed4a });
 
-    scene.add(boxMesh);
+  const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
+  boxMesh.add(new THREE.LineSegments(edges, lineMaterial));
 
-    const lines = new THREE.LineSegments(edges, lineMaterial);
-    boxMesh.add(lines);
+  return boxMesh;
+}
 
-    boxes.push({
-      mesh: boxMesh,
-      maxPosY: yMax * Math.random(),
-      currPosY: 0,
-      rotationSpeed: Math.random() * 0.015 + 0.0025,
-      rotationAngle: new THREE.Vector2(Math.random() * Math.PI * 2, Math.random() * Math.PI * 2)
-    });
-  };
-}();
+function createMeshInstance(boxes: any[]): void {
+  const { x, z } = generateRandomPosition(0.125);
+  const boxMesh = createBoxMesh();
+  boxMesh.position.set(x, 0, z);
 
-const animate = function() {
-  let frameCounter = 0;
+  boxes.push({
+    mesh: boxMesh,
+    maxPosY: yMax * Math.random(),
+    currPosY: 0,
+    rotationSpeed: Math.random() * 0.016,
+    rotationAngle: new THREE.Vector2(Math.random() * Math.PI, Math.random() * Math.PI),
+  });
 
-  return function() {
-    controls.update();
-    requestAnimationFrame(animate);
+  scene.add(boxMesh);
+}
 
-    frameCounter++;
 
-    if (frameCounter % 10 === 0) {
-      createMesh();
-    }
 
-    boxes.forEach(function(box: any, index: any) {
-      box.currPosY += 0.002;
 
-      if (box.mesh.scale.y <= 0.02) {
-        scene.remove(box.mesh);
-        boxes.splice(index, 1);
-      } else {
-        const scaleFactor = Math.max(0.02, (2 - box.currPosY / box.maxPosY * 4));
-        box.mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
-        box.rotationAngle.addScalar(box.rotationSpeed);
-        box.mesh.rotation.set(box.rotationAngle.x, 0, box.rotationAngle.y);
-      }
 
-      const angle = box.currPosY / box.maxPosY * Math.PI * 8;
-      const x = box.mesh.position.x + Math.cos(angle + box.rotationAngle.x) * 0.003;
-      const z = box.mesh.position.z + Math.sin(angle + box.rotationAngle.y) * 0.003;
+let frameCounter = 0;
 
-      box.mesh.position.set(x, box.currPosY, z);
-    });
+function animate() {
+  controls.update();
+  requestAnimationFrame(animate);
 
-    renderer.render(scene, camera);
-  };
-}();
+  frameCounter++;
 
+  if (frameCounter % 10 === 0) {
+    createMeshInstance(boxes);
+  }
+
+  updateBoxes();
+  renderScene();
+}
+
+function updateBoxes() {
+  boxes.forEach(updateBox);
+}
+
+function updateBox(box: any, index: any) {
+  box.currPosY += 0.002;
+
+  if (shouldRemoveBox(box)) {
+    removeBox(box, index);
+  } else {
+    updateBoxScaleAndRotation(box);
+    updateBoxPosition(box);
+  }
+}
+
+function shouldRemoveBox(box: any) {
+  return box.mesh.scale.y <= 0.02;
+}
+
+function removeBox(box: any, index: any) {
+  scene.remove(box.mesh);
+  boxes.splice(index, 1);
+}
+ 
+function updateBoxScaleAndRotation(box: any) {
+  const scaleFactor = Math.max(0.02, (2 - box.currPosY / box.maxPosY * 4));
+  box.mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
+
+  box.rotationAngle.addScalar(box.rotationSpeed);
+  box.mesh.rotation.set(box.rotationAngle.x, 0, box.rotationAngle.y);
+}
+
+function updateBoxPosition(box: any) {
+  const angle = box.currPosY / box.maxPosY * Math.PI * 8;
+  const x = box.mesh.position.x + Math.cos(angle + box.rotationAngle.x) * 0.003;
+  const z = box.mesh.position.z + Math.sin(angle + box.rotationAngle.y) * 0.003;
+
+  box.mesh.position.set(x, box.currPosY, z);
+}
+
+function renderScene() {
+  renderer.render(scene, camera);
+}
 
 animate();
