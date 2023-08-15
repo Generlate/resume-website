@@ -194,7 +194,7 @@ const yMax = 4;
 
 function generateRandomPosition(radius: number): { x: number, z: number } {
   const theta = Math.random() * Math.PI;
-  const x = radius * theta - 12.15;
+  const x = radius * theta - 12.3;
   const z = radius * theta - 6.5;
   return { x, z };
 }
@@ -292,8 +292,8 @@ function updateBoxScaleAndRotation(box: any) {
 
 function updateBoxPosition(box: any) {
   const angle = box.currPosY / box.maxPosY * Math.PI * 8;
-  const x = box.mesh.position.x + Math.cos(angle + box.rotationAngle.x) * 0.003;
-  const z = box.mesh.position.z + Math.sin(angle + box.rotationAngle.y) * 0.003;
+  const x = box.mesh.position.x + Math.cos(angle) * 0.003;
+  const z = box.mesh.position.z + Math.sin(angle) * 0.003;
 
   box.mesh.position.set(x, box.currPosY, z);
 }
