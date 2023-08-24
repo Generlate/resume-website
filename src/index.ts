@@ -187,7 +187,7 @@ scene.fog = new THREE.FogExp2(0x1C1C0E, 0.0016);
 
 
 // add portal edge
-const circleRadius: any = 0.6;
+const circleRadius: any = 0.5;
 const circleSegments = 256;
 const circleVertices: any = [];
 const OFFSET_X = -12.025;
@@ -510,8 +510,8 @@ function updateLightningAnimation() {
 function updatePortalEdgeAnimation() {
     const waveFrequency1 = 2; 
     const waveFrequency2 = 12; 
-    const waveAmplitude1 = 0.011; 
-    const waveAmplitude2 = 0.007; 
+    const waveAmplitude1 = 0.009; 
+    const waveAmplitude2 = 0.004; 
     const vertices = portalEdgeGeometry.attributes.position.array;
 
     for (let i = 0; i <= circleSegments; i++) {
@@ -528,7 +528,7 @@ function updatePortalEdgeAnimation() {
 }
 
 function createEdgeParticleMesh() {
-    const particleGeometry = new THREE.BoxGeometry(0.035, 0.035, 0.035);
+    const particleGeometry = new THREE.BoxGeometry(0.03, 0.03, 0.03);
     const particleMaterial = new THREE.MeshPhysicalMaterial({
         color: 0xffe500,
         roughness: 0.35,
