@@ -71,17 +71,19 @@ body {
   margin: 0 auto;
 }
 
-#title div:first-of-type {
+#title h1 {
   font-size: 5.75vh;
   color: rgb(250, 229, 0);
   font-weight: 900;
   height: 6.5vh;
+  margin: 0px;
 }
 
-#title div:nth-of-type(2) {
+#title h2 {
   color: rgb(255, 247, 178);
   font-size: 3.5vh;
   font-weight: 500;
+  margin: 0px;
 }
 
 #box-1 {
@@ -146,6 +148,11 @@ body {
   color: rgb(255, 247, 178);
   font-weight: 500;
   padding:1vh;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 1.5vmin;
 }
 
 /* Hide the images by default */
@@ -286,14 +293,15 @@ span {
     margin: 20px auto; /* Add margin for spacing */
   }
   
-  #title div:first-of-type {
+  #title h1 {
     font-size: 5.25vh;
     height: 5.5vh;
-
+    margin: 0px;
   }
   
-  #title div:nth-of-type(2) {
+  #title h2 {
     font-size: 3vh;
+    margin: 0px;
   }
 
   #box-2 {
@@ -320,6 +328,11 @@ span {
 
   #threeDots {
     top: -8vh;
+  }
+
+  h3 {
+    font-size: 4.5vmin;
+    margin: 0px;
   }
 
 } 
