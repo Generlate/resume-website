@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:thin,medium,black');
 
+:root {
+  --second-color: hsl(54, 100%, 85%);
+  --third-color: hsl(53, 25%, 45%);
+  --fourth-color: hsl(55, 42%, 6%);
+}
+
 body {
-    background-color: hsl(55, 42%, 6%);
+    background-color: var(--fourth-color);
     cursor: url("../../public/cursor.png"), auto;
     font-family: "roboto";
-    color: hsl(53, 25%, 45%);
+    color: var(--third-color);
     font-size: 1.5vmin;
     font-weight: 100;
 } 
@@ -15,8 +21,8 @@ body {
     margin: 1vh;
     padding: 2vh;
     margin-top: 7vh;
-    outline: 2px solid hsl(53, 25%, 45%);
-    box-shadow: 0 0 20px hsl(54, 100, 85%);
+    outline: 2px solid var(--third-color);
+    box-shadow: 0 0 20px var(--second-color);
     border-radius: 1.5vh;
   }
 
@@ -37,6 +43,6 @@ body {
   }
 
   #flex span {
-    color: hsl(54, 100%, 85%);
+    color: var(--second-color);
     font-weight: 500;
   }

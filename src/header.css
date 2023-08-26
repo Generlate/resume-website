@@ -1,3 +1,7 @@
+:root {
+  --third-color: hsl(53, 25%, 45%);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -44,7 +48,7 @@ header {
 
   #header-right a:-webkit-any-link {
     font-weight: 500;
-    color: hsl(53, 25%, 45%);
+    color: var(--third-color);
     text-decoration: none;
     margin-right: 0.13vw;
     font-family: "roboto";
@@ -74,7 +78,7 @@ header {
     
     #header-right a:-webkit-any-link {
       font-weight: 500;
-      color: hsl(53, 25%, 45%);
+      color: var(--third-color);
       text-decoration: none;
       margin-right: 0.26vw;
       font-family: "roboto";
