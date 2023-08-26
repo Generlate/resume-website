@@ -137,14 +137,18 @@ li {
   padding-right:0.6vw;
 }
 
+li::before {
+  content: "▢";
+  font-size: 70%;
+  padding-top: 0.25vh;
+}
+
 #flex-2 div {
   padding-left:0.6vw;
   padding-right:0.6vw;
   display: flex;
   flex-direction: column;
 }
-
-
 
 #box-3 {
   font-size: 1.5vmin;
@@ -267,11 +271,6 @@ h3 {
 video::-webkit-media-controls-panel {
   display: none !important;
   opacity: 1 !important;
-}
-
-span {
-  font-size: 70%;
-  padding-top: 0.25vh;
 }
 
 @media (max-width: 1375px) {
