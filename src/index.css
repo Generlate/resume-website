@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #131313;
+  background: hsl(0, 0%, 7%);
   z-index: 3;
   transition: opacity 0.75s, visibility 0.75s;
 } 
@@ -18,8 +18,8 @@
   content: "";
   width: 3vw;
   height: 3vw;
-  border: 0.3vw solid #292929;
-  border-top-color: rgb(143, 136, 85);
+  border: 0.3vw solid hsl(0, 0%, 16%);
+  border-top-color: hsl(53, 25%, 45%);
   border-radius: 50%;
   animation: loading 0.75s ease infinite;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 #title {
-  text-shadow: 2px 2px 0px #675d28, 0px 0px 7.5px rgb(255, 247, 178);
+  text-shadow: 2px 2px 0px hsl(50, 44%, 28%), 0px 0px 7.5px hsl(54, 100%, 85%);
   font-family: "roboto";
   text-align: center;
   margin: 0 auto;
@@ -73,14 +73,14 @@ body {
 
 #title h1 {
   font-size: 5.75vh;
-  color: rgb(250, 229, 0);
+  color: hsl(55, 100%, 49%);
   font-weight: 900;
   height: 6.5vh;
   margin: 0px;
 }
 
 #title h2 {
-  color: rgb(255, 247, 178);
+  color: hsl(54, 100%, 85%);
   font-size: 3.5vh;
   font-weight: 500;
   margin: 0px;
@@ -93,20 +93,20 @@ body {
 
 #box-2 {
   font-size: 1.5vmin;
-  color: rgb(143, 136, 85);
+  color: hsl(53, 25%, 45%);
   font-family: "roboto";
-  background-color: rgba(22, 21, 9, 0.92);
+  background-color: hsla(55, 42%, 6%);
   font-weight: 100;
-  outline: 2px solid rgb(143, 136, 85);
+  outline: 2px solid hsl(53, 25%, 45%);
   padding: 2vh;
   margin: 0% 1.2%;
-  box-shadow: 0 0 20px rgb(255, 247, 178);
+  box-shadow: 0 0 20px hsl(54, 100%, 85%);
   border-radius: 1.5vh;
 }
 
 #box-2 a {
   text-decoration: none;
-  color:rgb(255, 247, 178);
+  color:hsl(54, 100%, 85%);
   display: block;
   text-align: center;
   padding-top: 3vh;
@@ -153,18 +153,18 @@ li::before {
 #box-3 {
   font-size: 1.5vmin;
   font-family: "roboto";
-  background-color: rgba(22, 21, 9, 0.92);
-  outline: 2px solid rgb(143, 136, 85);
+  background-color: hsla(55, 42%, 6%);
+  outline: 2px solid hsl(53, 25%, 45%);
   padding: 0.75%;
   margin: 1.2%;
   margin-bottom: 0%;
   position: relative;
-  box-shadow: 0 0 20px rgb(255, 247, 178); 
+  box-shadow: 0 0 20px hsl(54, 100%, 85%); 
   border-radius: 1.5vh; 
 }
 
 .projects {
-  color: rgb(255, 247, 178);
+  color: hsl(54, 100%, 85%);
   font-weight: 500;
   padding:1vh;
   margin: 0px;
@@ -188,13 +188,13 @@ h3 {
   width: auto;
   margin-top: 1vh;
   padding: 16px;
-  color: rgb(143, 136, 85);
+  color: hsl(53, 25%, 45%);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: rgba(22, 21, 9, 0.65)
+  background-color: hsla(55, 42%, 6%, 0.65)
 }
 
 /* Position the "next button" to the right */
@@ -205,12 +205,12 @@ h3 {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgb(22, 21, 9);
+  background-color: hsl(55, 42%, 6%);
 }
 
 /* Caption text */
 .text {
-  color: rgb(143, 136, 85);
+  color: hsl(53, 25%, 45%);
   font-size: 1.5vmin;
   padding: 16px;
   text-align: center;
@@ -224,15 +224,15 @@ h3 {
   height: 1.4vmin;
   width: 1.4vmin;
   margin: 0 2px;
-  border: 2px solid rgb(143, 136, 85);
+  border: 2px solid hsl(53, 25%, 45%);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: rgb(143, 136, 85);
-  border: 2px solid rgb(143, 136, 85);
+  background-color: hsl(53, 25%, 45%);
+  border: 2px solid hsl(53, 25%, 45%);
 }
 
 /* Fading animation */
@@ -349,4 +349,4 @@ video::-webkit-media-controls-panel {
     margin: 0px;
   }
 
-} 
+}
