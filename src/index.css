@@ -279,7 +279,6 @@ video::-webkit-media-controls-panel {
     height: 100%;
     width: 100%;
     background-color: black;
-    z-index: 0;
     top: 0;
     left: 0;
   }
