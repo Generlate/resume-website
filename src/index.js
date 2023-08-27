@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const scene = new THREE.Scene();
-const rendererCanvas = document.querySelector('#bg');
+const rendererCanvas = document.querySelector('canvas');
 const renderer = new THREE.WebGLRenderer({
     canvas: rendererCanvas,
     antialias: true

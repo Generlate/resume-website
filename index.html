@@ -36,74 +36,74 @@
 
     <canvas id="bg"></canvas>
     <script type="module" src="./src/index.js"></script>
-    <aside id="black-fill"></aside>
+    <aside></aside>
 
-    <main id="flex">
-      <section id="title">
+    <main>
+      <section>
         <h1>AUSTEN CABRET</h1>
         <h2>FRONT END ENGINEER</h2>
       </section>
-      <div id = "box-1">
-        <section id = "box-2">
+      <div>
+        <section>
           <p>
             Hi! I'm Austen, a creator at the intersection of code and architecture. With a solid foundation in each, I dream of disrupting building design.
             To do so, I've made Youtube videos, programs, digital spaces and even attempted a startup!
             Currently, I'm immersed in honing my web development skills. Here are some technologies that I'm using:
           </p>
-          <div id="flex-2">
+          <div>
             <ul>
-              <li>&nbsp;&nbsp;HTML5</li>
-              <li>&nbsp;&nbsp;Unreal Engine</li>
+              <li>HTML5</li>
+              <li>Unreal Engine</li>
             </ul>
             <ul>
-              <li>&nbsp;&nbsp;CSS3</li>
-              <li>&nbsp;&nbsp;Adobe Creative Cloud</li>
+              <li>CSS3</li>
+              <li>Adobe Creative Cloud</li>
             </ul>
             <ul>
-              <li>&nbsp;&nbsp;TypeScript</li>
-              <li>&nbsp;&nbsp;Azure</li>
+              <li>TypeScript</li>
+              <li>Azure</li>
             </ul>
             <ul>
-              <li>&nbsp;&nbsp;Node.js</li>
-              <li>&nbsp;&nbsp;Python</li>
+              <li>Node.js</li>
+              <li>Python</li>
             </ul>
             <ul>
-              <li>&nbsp;&nbsp;React</li>
-              <li>&nbsp;&nbsp;Pytorch</li>
+              <li>React</li>
+              <li>Pytorch</li>
             </ul>
             <ul>
-              <li>&nbsp;&nbsp;Three.js</li>
-              <li>&nbsp;&nbsp;PostgreSQL</li>
+              <li>Three.js</li>
+              <li>PostgreSQL</li>
             </ul>
           </div>
         </section>
   
-        <section id = "box-3">
-          <h3 class="projects">Projects</h3>
+        <section>
+          <h3>Projects</h3>
           
           <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <p class="text">Feed Forward Neural Network: Generates random cube models.</p>
+          <div class="slides">
+            <p>Feed Forward Neural Network: Generates random cube models.</p>
             <a href="./src/model-generator/model-generator.html"><img src="./public/model-generator-6.gif" alt="cube generator"></a>
           </div>
   
-          <div class="mySlides fade">
-            <p class="text">Building Code Consultant: A fine-tuned OpenAI model, that can answer questions about a municipality's ordinances.</p>
+          <div class="slides">
+            <p>Building Code Consultant: A fine-tuned OpenAI model, that can answer questions about a municipality's ordinances.</p>
             <a href="./src/building-code-consultant/building-code-consultant.html"><video src="./public/building-code-consultant-2.mp4" controls autoplay muted loop alt="building code consultant"></a>
           </div>
   
-          <div class="mySlides fade">
-            <p class="text">Visual Scripting: parametric geometry, built in Grasshopper.</p>
+          <div class="slides">
+            <p>Visual Scripting: parametric geometry, built in Grasshopper.</p>
             <a href="./src/visual-scripting/visual-scripting.html"><img src="./public/visual-scripting.png" alt="A parametric city model"></a>
           </div>
   
-          <div class="mySlides fade">
-            <p class="text">Architecture: Design, modeling, rendering, etc.</p>
+          <div class="slides">
+            <p>Architecture: Design, modeling, rendering, etc.</p>
             <a href="./src/architecture/architecture.html"><video src="./public/sterling-ridge.mp4" controls autoplay muted loop alt="A community entrance"></a>
           </div>
   
-          <div class="mySlides fade">
-            <p class="text">Space Invaders Game: game development.</p>
+          <div class="slides">
+            <p>Space Invaders Game: game development.</p>
             <a href="./src/space-invaders-game/space-invaders-game.html"><video src="./public/space-invaders-game-2.mp4" controls autoplay muted loop alt="A space invaders game"></a>
           </div>
   
@@ -114,13 +114,13 @@
         </section>
 
         <!-- The dots/circles -->
-        <div id="threeDots">
+        <ul>
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
           <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
+        </ul>
       </div>
 
       <script src="./src/slideShow.js"></script>

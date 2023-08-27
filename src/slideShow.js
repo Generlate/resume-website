@@ -8,7 +8,7 @@ function currentSlide(n) {
 }
 function showSlides(n) {
     let i;
-    const slides = document.getElementsByClassName("mySlides");
+    const slides = document.getElementsByClassName("slides");
     const dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
         slideIndex = 1;

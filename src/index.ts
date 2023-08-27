@@ -4,7 +4,7 @@ import { GLTFLoader, GLTF } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const scene = new THREE.Scene();
-const rendererCanvas = document.querySelector('#bg') as HTMLCanvasElement;
+const rendererCanvas = document.querySelector('canvas') as HTMLCanvasElement;
 const renderer = new THREE.WebGLRenderer({
   canvas: rendererCanvas,
   antialias: true

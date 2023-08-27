@@ -11,7 +11,7 @@ function currentSlide(n: number) {
 
 function showSlides(n: number) {
   let i;
-  const slides: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
+  const slides: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("slides") as HTMLCollectionOf<HTMLElement>;
   const dots: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("dot") as HTMLCollectionOf<HTMLElement>;
 
   if (n > slides.length) {
