@@ -10,51 +10,114 @@ header {
     height: 9vh;
     background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.95) 0%, hsla(0, 0%, 0%, 0.95) 50%, hsla(0, 0%, 0%, 0.75) 75%, hsla(0, 100%, 100%, 0) 100%);
     z-index: 2;
-  }
-  
-  #header-left img {
-    float: left;
     display: flex;
-    width: 5.5vh;
-    margin-top: -5px;
-    margin-left: 10px;
-  }
+    justify-content: flex-start;
+}
 
-  #header-left img:hover {
-    filter: brightness(70%);
-  }
-  
-  #header-right {
-    text-align: right;
-    font-size: 2vh;
-    padding: 0.8vh;
-  }
-  
-  #header-right img {
-    float: right;
-    width: 2.2vh;
-    padding-top: 0.25vh;
-    margin-right: 0.65vw;
-  }
-  
+header a:first-of-type {
+  margin-right: auto; /* Adjust this value as needed */
+}
 
-  #header-right img:hover {
-    filter: brightness(70%);
-  }
+header a:first-of-type img {
+  width: 5.5vh;
+  margin-top: -5px;
+  margin-left: 10px;  
+}
 
-  #header-right a:hover {
-    filter: brightness(70%);
-  }
+header a:nth-of-type(2):-webkit-any-link {
+  font-weight: 500;
+  color: var(--third-color);
+  text-decoration: none;
+  margin-right: 1.1vw;
+  font-family: "roboto";
+}
 
-  #header-right a:-webkit-any-link {
-    font-weight: 500;
-    color: var(--third-color);
-    text-decoration: none;
-    margin-right: 0.13vw;
-    font-family: "roboto";
-  }
+header a:not(:first-of-type) {
+  font-size: 2vh;
+  padding-top: 0.8vh;
+  padding-bottom: 0.8vh;
+  margin-right: 0.65vw;
+}
+
+header a:not(:first-of-type) img {
+  width: 2.2vh;
+  padding-top: 0.25vh;
+}
+
+header a:last-of-type img {
+  padding-right: 0.65vh;
+}
+
+
+
+
+
+
+
+/* header:first-of-type img:hover {
+  filter: brightness(70%);
+} */
+
+/* header:not(:first-of-type) img:hover {
+  filter: brightness(70%);
+}
+
+header:not(:first-of-type) a:hover {
+  filter: brightness(70%);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  @media (max-width: 1375px) {
+/* #header-right {
+  text-align: right;
+  font-size: 2vh;
+  padding: 0.8vh;
+}
+
+#header-right img {
+  float: right;
+  width: 2.2vh;
+  padding-top: 0.25vh;
+  margin-right: 0.65vw;
+} */
+
+
+/* #header-right img:hover {
+  filter: brightness(70%);
+}
+
+#header-right a:hover {
+  filter: brightness(70%);
+} */
+
+/* #header-right a:-webkit-any-link {
+  font-weight: 500;
+  color: var(--third-color);
+  text-decoration: none;
+  margin-right: 0.13vw;
+  font-family: "roboto";
+} */
+  
+  /* @media (max-width: 1375px) {
     #header-left img {
       float: left;
       display: flex;
@@ -84,4 +147,4 @@ header {
       font-family: "roboto";
     }
   
-  }
+  } */
