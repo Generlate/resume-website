@@ -15,7 +15,7 @@ header {
 }
 
 header a:first-of-type {
-  margin-right: auto; /* Adjust this value as needed */
+  margin-right: auto; 
 }
 
 header a:first-of-type img {
@@ -48,103 +48,24 @@ header a:last-of-type img {
   padding-right: 0.65vh;
 }
 
-
-
-
-
-
-
-/* header:first-of-type img:hover {
-  filter: brightness(70%);
-} */
-
-/* header:not(:first-of-type) img:hover {
+header a:hover {
   filter: brightness(70%);
 }
 
-header:not(:first-of-type) a:hover {
-  filter: brightness(70%);
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-/* #header-right {
-  text-align: right;
-  font-size: 2vh;
-  padding: 0.8vh;
+@media (max-width: 1375px) {
+  header a:first-of-type img {
+    width: 7vh;
+  }
+  
+  header a:not(:first-of-type) {
+    font-size: 3.25vh;
+    padding-right: 1.6vh;
+    padding-top: 1.15vh;
+  }
+  
+  header a:not(:first-of-type) img {
+    width: 3.25vh;
+  }
+
 }
-
-#header-right img {
-  float: right;
-  width: 2.2vh;
-  padding-top: 0.25vh;
-  margin-right: 0.65vw;
-} */
-
-
-/* #header-right img:hover {
-  filter: brightness(70%);
-}
-
-#header-right a:hover {
-  filter: brightness(70%);
-} */
-
-/* #header-right a:-webkit-any-link {
-  font-weight: 500;
-  color: var(--third-color);
-  text-decoration: none;
-  margin-right: 0.13vw;
-  font-family: "roboto";
-} */
-  
-  /* @media (max-width: 1375px) {
-    #header-left img {
-      float: left;
-      display: flex;
-      width: 7vh;
-      margin-top: -5px;
-      margin-left: 10px;
-    }
-    
-    #header-right {
-      text-align: right;
-      font-size: 2.75vh;
-      padding: 1.6vh;
-    }
-    
-    #header-right img {
-      float: right;
-      width: 2.75vh;
-      padding-top: 0.5vh;
-      margin-right: 1.3vw;
-    }
-    
-    #header-right a:-webkit-any-link {
-      font-weight: 500;
-      color: var(--third-color);
-      text-decoration: none;
-      margin-right: 0.26vw;
-      font-family: "roboto";
-    }
-  
-  } */
