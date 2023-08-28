@@ -6,7 +6,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 9vh;
     background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.95) 0%, hsla(0, 0%, 0%, 0.95) 50%, hsla(0, 0%, 0%, 0.75) 75%, hsla(0, 100%, 100%, 0) 100%);
     z-index: 2;
@@ -19,9 +19,8 @@ header a:first-of-type {
 }
 
 header a:first-of-type img {
-  width: 5.5vh;
-  margin-bottom: 5px;
-  margin-left: 10px;  
+  width: 5.5vmin;
+  margin-left: 1vmin;  
 }
 
 header a:nth-of-type(2):-webkit-any-link {
@@ -34,8 +33,8 @@ header a:nth-of-type(2):-webkit-any-link {
 
 header a:not(:first-of-type) {
   font-size: 2vh;
-  padding-top: 0.8vh;
-  padding-bottom: 0.8vh;
+  margin-top: 0.8vh;
+  margin-bottom: 0.8vh;
   margin-right: 0.65vw;
 }
 
@@ -57,17 +56,16 @@ header a:hover {
   header a:first-of-type img {
     width: 6.25vh;
     margin-left: 0.3vh;
-    padding-top: 0.5vh;
+    padding-top: 0vh;
   }
   
   header a:not(:first-of-type) {
     font-size: 2.75vh;
     padding-right: 0.6vh;
-    padding-top: 1.5vh;
+    padding-top: 0.75vh;
   }
   
   header a:not(:first-of-type) img {
     width: 3vh;
   }
-
 }
