@@ -8,6 +8,13 @@
   --fifth-color: hsl(0, 0%, 16%);
   --sixth-color: hsl(0, 0%, 7%);
   --seventh-color: black;
+  --circle-border-radius: 50%;
+  --section-border-radius: 1.5vh;
+  --media-border-radius: 20px;
+  --button-border-radius: 0 3px 3px 0;
+  --font-family: "roboto";
+  --mobile-font-size: 4.5vmin;
+  --border: 2px solid var(--third-color);
 }
 
 .loader {
@@ -30,7 +37,7 @@
   height: 3vw;
   border: 0.3vw solid var(--fifth-color);
   border-top-color: var(--third-color);
-  border-radius: 50%;
+  border-radius: var(--circle-border-radius);
   animation: loading 0.75s ease infinite;
 }
 
@@ -71,54 +78,52 @@ main {
   position: relative;
   display: flex;
   z-index: 2;
-  margin-top: 5vh;
+  margin-top: 5vmin;
 }
 
 main > section {
   text-shadow: 2px 2px 0px hsl(50, 44%, 28%), 0px 0px 7.5px var(--fifth-color);
-  font-family: "roboto";
+  font-family: var(--font-family);
   text-align: center;
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 5.75vh;
+  font-size: 5.7vmin;
   color: var(--main-color);
   font-weight: 900;
-  height: 6.5vh;
   margin: 0px;
 }
 
 h2 {
   color: var(--second-color);
-  font-size: 3.5vh;
+  font-size: 3.5vmin;
   font-weight: 500;
   margin: 0px;
+  margin-top: -0.6vmin;
 }
 
 main > div {
-  width: 64%;
-  float: right;
+  width: 63.33%;
 }
 
 main div section:first-of-type {
   font-size: 1.5vmin;
   color: var(--third-color);
-  font-family: "roboto";
+  font-family: var(--font-family);
   background-color: var(--fourth-color);
   font-weight: 100;
-  outline: 2px solid var(--third-color);
-  padding: 2vh;
+  outline: var(--border);
+  padding: 2vmin;
   margin: 0% 1.2%;
   box-shadow: 0 0 20px var(--second-color);
-  border-radius: 1.5vh;
+  border-radius: var(--section-border-radius);
 }
-
 
 main div section:first-of-type div {
   display: flex;
-  padding-top: 3.75vh;
-  padding-bottom: 2.25vh;
+  padding-top: 3.75vmin;
+  padding-bottom: 2.25vmin;
   justify-content: center;
 }
 
@@ -128,51 +133,50 @@ p {
 
 ul {
   margin: 0px;
-  padding-left:0.6vw;
-  padding-right:0.6vw;
+  padding-left:0.6vmin;
+  padding-right:0.6vmin;
 }
 
 li {
   list-style: none;
   display: flex;
   flex-direction: row;
-  padding-left:0.6vw;
-  padding-right:0.6vw;
+  padding-left:0.6vmin;
+  padding-right:0.6vmin;
 }
 
 li::before {
   content: "▢";
   font-size: 70%;
-  padding-top: 0.25vh;
-  padding-right: 0.75vh;
+  padding-right: 0.75vmin;
 }
 
 
 main div section:nth-of-type(2) {
-  font-size: 1.5vmin;
-  font-family: "roboto";
+  font-family: var(--font-family);
   background-color: var(--fourth-color);
-  outline: 2px solid var(--third-color);
+  outline: var(--border);
   padding: 0.75%;
   margin: 1.2%;
   margin-bottom: 0%;
   position: relative;
   box-shadow: 0 0 20px var(--second-color); 
-  border-radius: 1.5vh; 
+  border-radius: var(--section-border-radius); 
+
 }
 
 h3 {
   font-size: 1.5vmin;
   color: var(--second-color);
   font-weight: 500;
-  padding:1vh;
+  padding:1vmin;
   margin: 0px;
 }
 
 /* Hide the images by default */
 .slides {
   display: flex;
-  margin-top: 0.4vw;
+  margin-top: 0.4vmin;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -182,20 +186,19 @@ h3 {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: 1vh;
   padding: 16px;
   color: var(--third-color);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: var(--button-border-radius);
   user-select: none;
   background-color: hsla(55, 42%, 6%, 0.65)
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: var(--button-border-radius);
 }
 
 .prev:hover, .next:hover {
@@ -216,15 +219,15 @@ h3 {
   height: 1.4vmin;
   width: 1.4vmin;
   margin: 0 2px;
-  border: 2px solid var(--third-color);
-  border-radius: 50%;
+  border: var(--border);
+  border-radius: var(--circle-border-radius);
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
   background-color: var(--third-color);
-  border: 2px solid var(--third-color);
+  border: var(--border);
 }
 
 
@@ -232,7 +235,7 @@ h3 {
 main > div > ul {
   text-align:center;
   position: relative;
-  top: -4.75vh;
+  bottom: 4.75vmin;
 }
 
 @keyframes fade {
@@ -242,22 +245,23 @@ main > div > ul {
 
 
 main div section:nth-of-type(2) a img {
-  width:98%;
-  border-radius: 20px;
-  padding: 0.6vw;
-  padding-top: 0vw;
+  width:100%;
+  border-radius: var(--media-border-radius);
+  padding: 0.6vmin;
+  padding-top: 0vmin;
+  box-sizing: border-box;
 }
 
 main div section:nth-of-type(2) a video {
-  width:98%;
-  border-radius: 20px;
-  padding: 0.6vw;
-  padding-top: 0vw;
+  width:100%;
+  border-radius: var(--media-border-radius);
+  padding: 0.6vmin;
+  padding-top: 0vmin;
+  box-sizing: border-box;
 }
 
 video::-webkit-media-controls-panel {
   display: none;
-  opacity: 1; 
 }
 
 @media (max-width: 1375px) {
@@ -265,8 +269,6 @@ video::-webkit-media-controls-panel {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: var(--seventh-color);
-    top: 0;
     left: 0;
   }
 
@@ -282,13 +284,9 @@ video::-webkit-media-controls-panel {
 
   main > div {
     width: 100%; 
-    order: 2; 
-    flex-direction: column; 
-    align-items: center; 
   }
 
   main > section {
-    text-align: center;
     padding-bottom: 90vh;
     margin: 20px auto; 
   }
@@ -296,20 +294,14 @@ video::-webkit-media-controls-panel {
   h1 {
     font-size: 5.25vh;
     height: 5.5vh;
-    margin: 0px;
   }
   
   h2 {
     font-size: 3vh;
-    margin: 0px;
   }
 
   main div section:first-of-type {
-    font-size: 4.5vmin;
-  }
-
-  main div section:nth-of-type(2) {
-    font-size: 4.5vmin;
+    font-size: var(--mobile-font-size);
   }
 
   main div section:first-of-type div {
@@ -318,7 +310,7 @@ video::-webkit-media-controls-panel {
   }
 
   .slides p {
-    font-size: 4.5vmin;
+    font-size: var(--mobile-font-size);
   }
 
   .dot {
@@ -327,12 +319,12 @@ video::-webkit-media-controls-panel {
   }
 
   main > div > ul {
-    top: -8vh;
+    bottom: 8vh;
   }
 
   h3 {
-    font-size: 4.5vmin;
-    margin: 0px;
+    font-size: var(--mobile-font-size);
   }
 
 }
+
