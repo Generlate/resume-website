@@ -50,7 +50,6 @@ header a:last-of-type img {
 header a:hover {
   filter: brightness(70%);
 }
-
   
 @media (max-width: 1375px) {
   header a:first-of-type img {
