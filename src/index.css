@@ -13,7 +13,7 @@
   --media-border-radius: 20px;
   --button-border-radius: 0 3px 3px 0;
   --font-family: "roboto";
-  --mobile-font-size: 4.5vmin;
+  --mobile-font-size: 1.25rem;
   --border: 2px solid var(--third-color);
 }
 
@@ -117,6 +117,7 @@ main div section:first-of-type {
   margin: 0vmin 1.2vmin;
   box-shadow: 0 0 20px var(--second-color);
   border-radius: var(--section-border-radius);
+  height: 14vh;
 }
 
 main div section:first-of-type div {
@@ -156,11 +157,17 @@ main div section:nth-of-type(2) {
   outline: var(--border);
   padding: 1vmin;
   margin: 1.2%;
-  margin-bottom: 0vmin;
   position: relative;
   box-shadow: 0 0 20px var(--second-color); 
   border-radius: var(--section-border-radius); 
   padding-bottom: 0vmin;
+  height: 71vh;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+main div section:nth-of-type(2)::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Webkit browsers */
 }
 
 h3 {
@@ -250,6 +257,8 @@ main div section:nth-of-type(2) div a img, main div section:nth-of-type(2) div a
   box-sizing: border-box;
 }
 
+
+
 video::-webkit-media-controls-panel {
   display: none;
 }
@@ -282,17 +291,18 @@ video::-webkit-media-controls-panel {
   }
   
   h1 {
-    font-size: 5.25vh;
+    font-size: 2.75rem;
     height: 5.5vh;
     margin-top: 4vh;
   }
   
   h2 {
-    font-size: 3vh;
+    font-size: 1.5rem;
   }
 
   main div section:first-of-type {
     font-size: var(--mobile-font-size);
+    height: 62vh;
   }
 
   main div section:first-of-type div {
@@ -319,5 +329,9 @@ video::-webkit-media-controls-panel {
 
   main > div > section:nth-of-type(2) div ul {
     bottom: 6vmin;
+  }
+
+  main div section:nth-of-type(2) {
+    height: 36vh;
   }
 }
