@@ -170,6 +170,10 @@ main div section:nth-of-type(2)::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Webkit browsers */
 }
 
+main div section:nth-of-type(2) div {
+  height: 100%;
+}
+
 h3 {
   font-size: 2vmin;
   color: var(--second-color);
@@ -302,7 +306,7 @@ video::-webkit-media-controls-panel {
 
   main div section:first-of-type {
     font-size: var(--mobile-font-size);
-    height: 62vh;
+    height: 100%;
   }
 
   main div section:first-of-type div {
@@ -332,6 +336,6 @@ video::-webkit-media-controls-panel {
   }
 
   main div section:nth-of-type(2) {
-    height: 36vh;
+    height: 100%
   }
 }
