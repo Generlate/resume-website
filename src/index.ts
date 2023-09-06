@@ -245,13 +245,13 @@ const fillGradientMaterial = new THREE.MeshStandardMaterial({
     depthWrite: false,
     transparent: true
 });
-const fillGradientMesh = new THREE.Mesh(ringGeometry, fillGradientMaterial);
+const fillGradientMesh: THREE.Mesh = new THREE.Mesh(ringGeometry, fillGradientMaterial);
 fillGradientMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
 fillGradientMesh.rotation.x = quarterCircleAngleInRadians;
 scene.add(fillGradientMesh);
 
 // add smoke
-const smokeInstances = 15;
+const smokeInstances: number = 15;
 const smokeTexture = textureLoader.load('public/smoke.png');
 const portalSmokeMaterial = new THREE.MeshBasicMaterial({
     map: smokeTexture,
@@ -262,14 +262,14 @@ const portalSmokeMaterial = new THREE.MeshBasicMaterial({
     depthWrite: false // Prevent sorting issues with transparency
 });
 const smokeGroup = new THREE.Group();
-const smokeAngleIncrement = circleAngleInRadians / smokeInstances;
+const smokeAngleIncrement: number = circleAngleInRadians / smokeInstances;
 
 // Position smoke meshes evenly around the circle's edge
 for (let i = 0; i < smokeInstances; i++) {
-    const angle = i * smokeAngleIncrement;
+    const angle: number = i * smokeAngleIncrement;
     const smokeMesh: THREE.Mesh = new THREE.Mesh(ringGeometry, portalSmokeMaterial);
-    const x = circleRadius * Math.cos(angle) + OFFSET_X;
-    const z = circleRadius * Math.sin(angle) + OFFSET_Z;
+    const x: number = circleRadius * Math.cos(angle) + OFFSET_X;
+    const z: number = circleRadius * Math.sin(angle) + OFFSET_Z;
     smokeMesh.position.set(x, 0.1, z);
     smokeMesh.rotation.x = quarterCircleAngleInRadians;
     smokeMesh.scale.set(0.25, 0.25, 0.25);
@@ -278,7 +278,7 @@ for (let i = 0; i < smokeInstances; i++) {
 scene.add(smokeGroup);
 
 // add lightning
-const lightningInstances = 8;
+const lightningInstances: number = 8;
 const lightningTexture = textureLoader.load('public/lightning.png');
 const portalLightningMaterial = new THREE.MeshBasicMaterial({
     map: lightningTexture,
@@ -293,12 +293,12 @@ const lightningGroup = new THREE.Group();
 
 // Position lightning meshes evenly around the circle's edge
 for (let i = 0; i < lightningInstances; i++) {
-    const lightningAngleIncrement = circleAngleInRadians / lightningInstances;
-    const angle = i * lightningAngleIncrement;
-    const depth = 0.15; 
-    const x = (circleRadius - depth) * Math.cos(angle) + OFFSET_X;
-    const z = (circleRadius - depth) * Math.sin(angle) + OFFSET_Z;
-    const lightningMesh = new THREE.Mesh(ringGeometry, portalLightningMaterial);
+    const lightningAngleIncrement: number = circleAngleInRadians / lightningInstances;
+    const angle: number = i * lightningAngleIncrement;
+    const depth: number = 0.15; 
+    const x: number = (circleRadius - depth) * Math.cos(angle) + OFFSET_X;
+    const z: number = (circleRadius - depth) * Math.sin(angle) + OFFSET_Z;
+    const lightningMesh: THREE.Mesh = new THREE.Mesh(ringGeometry, portalLightningMaterial);
     lightningMesh.position.set(x, 0.1, z);
     lightningMesh.rotation.x = quarterCircleAngleInRadians;
     lightningMesh.scale.set(0.45, 0.45, 0.45);
@@ -307,8 +307,8 @@ for (let i = 0; i < lightningInstances; i++) {
 scene.add(lightningGroup);
 
 //add particles
-const randomHalfCircleAngle = Math.random() * Math.PI;
-const yMax = 4;
+const randomHalfCircleAngle: number = Math.random() * Math.PI;
+const yMax: number = 4;
 
 function createInteriorParticleMesh() {
     const particleGeometry = new THREE.BoxGeometry(0.004, 0.004, 0.004);
@@ -334,9 +334,9 @@ function createInteriorParticleMesh() {
 
 type Particle = {mesh: THREE.Mesh, maxPosY: number, currPosY: number, rotationSpeed: number, rotationAngle: THREE.Vector2}
 function createInteriorParticleInstance(particles: Particle[]) {
-    const angle = Math.random() * circleAngleInRadians;
-    const x = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
-    const z = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
+    const angle: number = Math.random() * circleAngleInRadians;
+    const x: number = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
+    const z: number = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
     const particleMesh = createInteriorParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
@@ -357,37 +357,37 @@ function createInteriorMeshInstance() {
 }
 
 // animations
-let frameCounter = 0;
+let frameCounter: number = 0;
 
 function updateOpacityAnimation(material: THREE.Material) {
-    const opacitySpeed = 0.01;
-    const minOpacity = 0.5; 
-    const maxOpacity = 1.0; 
-    const opacityRange = maxOpacity - minOpacity;
-    const opacityValue = minOpacity + opacityRange * (Math.sin(frameCounter * opacitySpeed) + 1) / 2;
+    const opacitySpeed: number = 0.01;
+    const minOpacity: number = 0.5; 
+    const maxOpacity: number = 1.0; 
+    const opacityRange: number = maxOpacity - minOpacity;
+    const opacityValue: number = minOpacity + opacityRange * (Math.sin(frameCounter * opacitySpeed) + 1) / 2;
     material.opacity = opacityValue;
 }
 
 function updateSmokeScaling(smokeMesh: THREE.Mesh, frameCounter: number) {
-    const smokeMinScale = 0.25;
-    const smokeMaxScale = 0.35;
-    const scalingSpeed = 0.005;
-    const scalingFactor = smokeMinScale + (smokeMaxScale - smokeMinScale) * (Math.sin(frameCounter * scalingSpeed) + 1) / 2;
+    const smokeMinScale: number = 0.25;
+    const smokeMaxScale: number = 0.35;
+    const scalingSpeed: number = 0.005;
+    const scalingFactor: number = smokeMinScale + (smokeMaxScale - smokeMinScale) * (Math.sin(frameCounter * scalingSpeed) + 1) / 2;
     smokeMesh.scale.set(scalingFactor, scalingFactor, scalingFactor);
 }
 
 function updateSmokeOpacity(smokeMesh: any) {
-    const smokeOpacitySpeed = 0.01; 
-    const smokeMinOpacity = 0.2; 
-    const smokeMaxOpacity = 0.8; 
-    const smokeOpacityRange = smokeMaxOpacity - smokeMinOpacity;
-    const smokeOpacityValue = smokeMinOpacity + (smokeOpacityRange) * (Math.sin(frameCounter * smokeOpacitySpeed) + 1) / 2;
+    const smokeOpacitySpeed: number = 0.01; 
+    const smokeMinOpacity: number = 0.2; 
+    const smokeMaxOpacity: number = 0.8; 
+    const smokeOpacityRange: number = smokeMaxOpacity - smokeMinOpacity;
+    const smokeOpacityValue: number = smokeMinOpacity + (smokeOpacityRange) * (Math.sin(frameCounter * smokeOpacitySpeed) + 1) / 2;
     smokeMesh.material.opacity = smokeOpacityValue;
 }
 
 function updateSmokeRotation(smokeMesh: THREE.Mesh) {
-    const smokeRotationSpeed = 0.004;
-    const randomValue = Math.random();
+    const smokeRotationSpeed: number = 0.004;
+    const randomValue: number = Math.random();
 
     if (randomValue < 0.3) {
         smokeMesh.rotation.z -= smokeRotationSpeed; 
@@ -405,15 +405,15 @@ function updateSmokeAnimation(smokeGroup: any, frameCounter: number) {
 }
 
 // add lightning animation
-let lightningOpacityLoopCounter = 0;
+let lightningOpacityLoopCounter: number = 0;
 
 function updateLightningOpacityLoop() {
-  const lightningOpacityMax = 1;
-  const opacityDecayRate = 0.0019;
+  const lightningOpacityMax: number = 1;
+  const opacityDecayRate: number = 0.0019;
 
   for (let i = 0; i < lightningGroup.children.length; i++) {
       const lightningMesh = lightningGroup.children[i] as THREE.Mesh;
-      const opacityValue = lightningOpacityMax - (lightningOpacityLoopCounter * opacityDecayRate);
+      const opacityValue: number = lightningOpacityMax - (lightningOpacityLoopCounter * opacityDecayRate);
 
       if (lightningMesh instanceof THREE.Mesh) {
           const material = lightningMesh.material as THREE.MeshStandardMaterial;
@@ -426,10 +426,10 @@ function updateLightningOpacityLoop() {
 
 
 function calculateNumVisibleLightning() {
-    const minVisibleLightning = 2; 
-    const maxVisibleLightning = 5;
-    const visibleLightningRange = maxVisibleLightning - minVisibleLightning;
-    const numVisibleLightning = Math.floor(Math.random() * (visibleLightningRange + 1)) + minVisibleLightning;
+    const minVisibleLightning: number = 2; 
+    const maxVisibleLightning: number = 5;
+    const visibleLightningRange: number = maxVisibleLightning - minVisibleLightning;
+    const numVisibleLightning: number = Math.floor(Math.random() * (visibleLightningRange + 1)) + minVisibleLightning;
     return numVisibleLightning;
 }
 
@@ -464,8 +464,8 @@ function resetLightningPositions() {
 }
 
 function moveLightningMeshes() {
-    const movementSpeed = 0.001;
-    const centerPosition = new THREE.Vector3(OFFSET_X, 0.1, OFFSET_Z);
+    const movementSpeed: number = 0.001;
+    const centerPosition: THREE.Vector3 = new THREE.Vector3(OFFSET_X, 0.1, OFFSET_Z);
     
     lightningGroup.children.forEach(function(lightningMesh: THREE.Mesh, index: number) {
         const isMovingToCenter = lightningMesh.visible;
@@ -481,7 +481,7 @@ function moveLightningMeshes() {
 }
 
 function updateVisibleLightning(frameCounter: number) {
-    const subsetDuration = 475;
+    const subsetDuration: number = 475;
 
     if (frameCounter % subsetDuration === 0) {
         const numVisibleLightning = calculateNumVisibleLightning();
@@ -503,19 +503,19 @@ function updateLightningAnimation() {
 
 // add circle edge animation
 function updatePortalEdgeAnimation() {
-    const waveFrequency1 = 2; 
-    const waveFrequency2 = 12; 
-    const waveAmplitude1 = 0.009; 
-    const waveAmplitude2 = 0.004; 
+    const waveFrequency1: number = 2; 
+    const waveFrequency2: number = 12; 
+    const waveAmplitude1: number = 0.009; 
+    const waveAmplitude2: number = 0.004; 
     const vertices = portalEdgeGeometry.attributes.position.array;
 
     for (let i = 0; i <= circleSegments; i++) {
-        const angle = (i / circleSegments) * circleAngleInRadians;
-        const vertexIndex = i * 3;
+        const angle: number = (i / circleSegments) * circleAngleInRadians;
+        const vertexIndex: number = i * 3;
         const originalY = circleVertices[i].y;
-        const waveOffset1 = Math.sin(angle * waveFrequency1 + (frameCounter * 0.01)) * waveAmplitude1;
-        const waveOffset2 = Math.cos(angle * waveFrequency2 + (frameCounter * 0.01)) * waveAmplitude2;
-        const combinedWaveOffset = waveOffset1 + waveOffset2;
+        const waveOffset1: number = Math.sin(angle * waveFrequency1 + (frameCounter * 0.01)) * waveAmplitude1;
+        const waveOffset2: number = Math.cos(angle * waveFrequency2 + (frameCounter * 0.01)) * waveAmplitude2;
+        const combinedWaveOffset: number = waveOffset1 + waveOffset2;
         vertices[vertexIndex + 1] = originalY - combinedWaveOffset;
     }
 
@@ -545,9 +545,9 @@ function createEdgeParticleMesh() {
 }
 
 function createEdgeParticleInstance(particles: Particle[]) {
-    const angle = Math.random() * circleAngleInRadians;
-    const x = Math.cos(angle) * circleRadius + OFFSET_X;
-    const z = Math.sin(angle) * circleRadius + OFFSET_Z;
+    const angle: number = Math.random() * circleAngleInRadians;
+    const x: number = Math.cos(angle) * circleRadius + OFFSET_X;
+    const z: number = Math.sin(angle) * circleRadius + OFFSET_Z;
     const particleMesh = createEdgeParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
@@ -583,16 +583,16 @@ function updateBoxAnimation() {
 }
 
 function updateBoxScaleAndRotation(box: Particle) {
-    const scaleFactor = Math.max(0.02, (2 - box.currPosY / box.maxPosY * 4));
+    const scaleFactor: number = Math.max(0.02, (2 - box.currPosY / box.maxPosY * 4));
     box.mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
     box.rotationAngle.addScalar(box.rotationSpeed);
     box.mesh.rotation.set(box.rotationAngle.x, 0, box.rotationAngle.y);
 }
 
 function updateBoxPosition(box: Particle) {
-    const angle = box.currPosY / box.maxPosY * Math.PI * 8;
-    const x = box.mesh.position.x + Math.cos(angle) * 0.0012;
-    const z = box.mesh.position.z + Math.sin(angle) * 0.0012;
+    const angle: number = box.currPosY / box.maxPosY * Math.PI * 8;
+    const x: number = box.mesh.position.x + Math.cos(angle) * 0.0012;
+    const z: number = box.mesh.position.z + Math.sin(angle) * 0.0012;
     box.mesh.position.set(x, box.currPosY, z);
 }
 
