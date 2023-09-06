@@ -265,8 +265,10 @@ function createInteriorParticleMesh() {
     particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
     return particleMesh;
 }
-function createInteriorParticleInstance(particles, positionGenerator) {
-    const { x, z } = positionGenerator(circleRadius);
+function createInteriorParticleInstance(particles) {
+    const angle = Math.random() * circleAngleInRadians;
+    const x = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
+    const z = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
     const particleMesh = createInteriorParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
@@ -278,16 +280,10 @@ function createInteriorParticleInstance(particles, positionGenerator) {
     });
     scene.add(particleMesh);
 }
-function generateRandomPositionOnCircleInterior(circleRadius) {
-    const angle = Math.random() * circleAngleInRadians;
-    const x = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
-    const z = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
-    return { x, z };
-}
 // Interior particles
 const interiorBoxes = [];
 function createInteriorMeshInstance() {
-    createInteriorParticleInstance(interiorBoxes, generateRandomPositionOnCircleInterior);
+    createInteriorParticleInstance(interiorBoxes);
 }
 // animations
 let frameCounter = 0;
@@ -446,8 +442,10 @@ function createEdgeParticleMesh() {
     particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
     return particleMesh;
 }
-function createEdgeParticleInstance(particles, positionGenerator) {
-    const { x, z } = positionGenerator(circleRadius);
+function createEdgeParticleInstance(particles) {
+    const angle = Math.random() * circleAngleInRadians;
+    const x = Math.cos(angle) * circleRadius + OFFSET_X;
+    const z = Math.sin(angle) * circleRadius + OFFSET_Z;
     const particleMesh = createEdgeParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
@@ -460,15 +458,9 @@ function createEdgeParticleInstance(particles, positionGenerator) {
     scene.add(particleMesh);
 }
 // Exterior particles
-function generateRandomPositionOnEdge(circleRadius) {
-    const angle = Math.random() * circleAngleInRadians;
-    const x = Math.cos(angle) * circleRadius + OFFSET_X;
-    const z = Math.sin(angle) * circleRadius + OFFSET_Z;
-    return { x, z };
-}
 const edgeBoxes = [];
 function createEdgeMeshInstance() {
-    createEdgeParticleInstance(edgeBoxes, generateRandomPositionOnEdge);
+    createEdgeParticleInstance(edgeBoxes);
 }
 // add box particle animation
 function updateBoxAnimation() {

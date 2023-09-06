@@ -76,7 +76,6 @@ controls.target.set(-12.5, 16, -150);
 
 
 // make sky
-
 const skyTexture = new THREE.TextureLoader().load('../public/sky.png');
 
 const sky = new THREE.Mesh(
@@ -187,15 +186,15 @@ scene.fog = new THREE.FogExp2(0x1C1C0E, 0.0016);
 
 
 // add portal edge
-const circleRadius: any = 0.5;
-const circleSegments = 256;
-const circleVertices: any = [];
-const OFFSET_X = -12.025;
-const OFFSET_Z = -6.5;
+const circleRadius: number = 0.5;
+const circleSegments: number = 256;
+const circleVertices: THREE.Vector3[] = [];
+const OFFSET_X: number = -12.025;
+const OFFSET_Z: number = -6.5;
 const ringGeometry = new THREE.CircleGeometry(circleRadius, circleSegments);
 const textureLoader = new THREE.TextureLoader();
-const circleAngleInRadians = 2 * Math.PI; 
-const quarterCircleAngleInRadians = Math.PI / 2;
+const circleAngleInRadians: number = 2 * Math.PI; 
+const quarterCircleAngleInRadians: number = Math.PI / 2;
 for (let i = 0; i <= circleSegments; i++) {
     const angle = (i / circleSegments) * circleAngleInRadians;
     const x = Math.cos(angle) * circleRadius;
@@ -220,7 +219,7 @@ const fuzzyRingMaterial = new THREE.MeshBasicMaterial({
     depthWrite: false, // Prevent sorting issues with transparency
     blending: THREE.AdditiveBlending 
 });
-const fuzzyRingMesh = new THREE.Mesh(ringGeometry, fuzzyRingMaterial);
+const fuzzyRingMesh: THREE.Mesh = new THREE.Mesh(ringGeometry, fuzzyRingMaterial);
 fuzzyRingMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
 fuzzyRingMesh.rotation.x = quarterCircleAngleInRadians; 
 fuzzyRingMesh.scale.set(1.9, 1.4, 1.4);
@@ -268,7 +267,7 @@ const smokeAngleIncrement = circleAngleInRadians / smokeInstances;
 // Position smoke meshes evenly around the circle's edge
 for (let i = 0; i < smokeInstances; i++) {
     const angle = i * smokeAngleIncrement;
-    const smokeMesh: any = new THREE.Mesh(ringGeometry, portalSmokeMaterial);
+    const smokeMesh: THREE.Mesh = new THREE.Mesh(ringGeometry, portalSmokeMaterial);
     const x = circleRadius * Math.cos(angle) + OFFSET_X;
     const z = circleRadius * Math.sin(angle) + OFFSET_Z;
     smokeMesh.position.set(x, 0.1, z);
@@ -333,8 +332,11 @@ function createInteriorParticleMesh() {
     return particleMesh;
 }
 
-function createInteriorParticleInstance(particles: any, positionGenerator: any) {
-    const { x, z } = positionGenerator(circleRadius);
+type Particle = {mesh: THREE.Mesh, maxPosY: number, currPosY: number, rotationSpeed: number, rotationAngle: THREE.Vector2}
+function createInteriorParticleInstance(particles: Particle[]) {
+    const angle = Math.random() * circleAngleInRadians;
+    const x = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
+    const z = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
     const particleMesh = createInteriorParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
@@ -347,24 +349,17 @@ function createInteriorParticleInstance(particles: any, positionGenerator: any) 
     scene.add(particleMesh);
 }
 
-function generateRandomPositionOnCircleInterior(circleRadius: any) {
-    const angle = Math.random() * circleAngleInRadians;
-    const x = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
-    const z = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
-    return { x, z };
-}
-
 // Interior particles
-const interiorBoxes: any = [];
+const interiorBoxes: Particle[] = [];
 
 function createInteriorMeshInstance() {
-    createInteriorParticleInstance(interiorBoxes, generateRandomPositionOnCircleInterior);
+    createInteriorParticleInstance(interiorBoxes);
 }
 
 // animations
 let frameCounter = 0;
 
-function updateOpacityAnimation(material: any) {
+function updateOpacityAnimation(material: THREE.Material) {
     const opacitySpeed = 0.01;
     const minOpacity = 0.5; 
     const maxOpacity = 1.0; 
@@ -373,7 +368,7 @@ function updateOpacityAnimation(material: any) {
     material.opacity = opacityValue;
 }
 
-function updateSmokeScaling(smokeMesh: any, frameCounter: any) {
+function updateSmokeScaling(smokeMesh: THREE.Mesh, frameCounter: number) {
     const smokeMinScale = 0.25;
     const smokeMaxScale = 0.35;
     const scalingSpeed = 0.005;
@@ -390,7 +385,7 @@ function updateSmokeOpacity(smokeMesh: any) {
     smokeMesh.material.opacity = smokeOpacityValue;
 }
 
-function updateSmokeRotation(smokeMesh: any) {
+function updateSmokeRotation(smokeMesh: THREE.Mesh) {
     const smokeRotationSpeed = 0.004;
     const randomValue = Math.random();
 
@@ -401,8 +396,8 @@ function updateSmokeRotation(smokeMesh: any) {
     }
 }
 
-function updateSmokeAnimation(smokeGroup: any, frameCounter: any) {
-    smokeGroup.children.forEach(function(smokeMesh: any) {
+function updateSmokeAnimation(smokeGroup: any, frameCounter: number) {
+    smokeGroup.children.forEach(function(smokeMesh: THREE.Mesh) {
         updateSmokeRotation(smokeMesh);
         updateSmokeOpacity(smokeMesh);
         updateSmokeScaling(smokeMesh, frameCounter);
@@ -438,7 +433,7 @@ function calculateNumVisibleLightning() {
     return numVisibleLightning;
 }
 
-function generateShuffledIndices(length: any) {
+function generateShuffledIndices(length: number) {
     const indices = Array.from({ length: length }, function(_, i) {
         return i;
     });
@@ -450,20 +445,20 @@ function generateShuffledIndices(length: any) {
     return shuffledIndices;
 }
 
-function setVisibleLightningIndices(lightningGroup: any, visibleIndices: any) {
+function setVisibleLightningIndices(lightningGroup: any, visibleIndices: number[]) {
     for (let i = 0; i < lightningInstances; i++) {
         lightningGroup.children[i].visible = visibleIndices.includes(i);
     }
 }
 
-const startingPositions: any = [];
+const startingPositions: THREE.Vector3[] = [];
 
-lightningGroup.children.forEach(function(lightningMesh: any) {
+lightningGroup.children.forEach(function(lightningMesh: THREE.Mesh) {
     startingPositions.push(lightningMesh.position.clone());
 });
 
 function resetLightningPositions() {
-    lightningGroup.children.forEach(function(lightningMesh: any, index: any) {
+    lightningGroup.children.forEach(function(lightningMesh: THREE.Mesh, index: number) {
         lightningMesh.position.copy(startingPositions[index]);
     });
 }
@@ -472,7 +467,7 @@ function moveLightningMeshes() {
     const movementSpeed = 0.001;
     const centerPosition = new THREE.Vector3(OFFSET_X, 0.1, OFFSET_Z);
     
-    lightningGroup.children.forEach(function(lightningMesh: any, index: any) {
+    lightningGroup.children.forEach(function(lightningMesh: THREE.Mesh, index: number) {
         const isMovingToCenter = lightningMesh.visible;
         const targetPosition = isMovingToCenter ? centerPosition : startingPositions[index];
         const direction = targetPosition.clone().sub(lightningMesh.position);
@@ -485,7 +480,7 @@ function moveLightningMeshes() {
     });
 }
 
-function updateVisibleLightning(frameCounter: any) {
+function updateVisibleLightning(frameCounter: number) {
     const subsetDuration = 475;
 
     if (frameCounter % subsetDuration === 0) {
@@ -549,8 +544,10 @@ function createEdgeParticleMesh() {
     return particleMesh;
 }
 
-function createEdgeParticleInstance(particles: any, positionGenerator: any) {
-    const { x, z } = positionGenerator(circleRadius);
+function createEdgeParticleInstance(particles: Particle[]) {
+    const angle = Math.random() * circleAngleInRadians;
+    const x = Math.cos(angle) * circleRadius + OFFSET_X;
+    const z = Math.sin(angle) * circleRadius + OFFSET_Z;
     const particleMesh = createEdgeParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
@@ -563,18 +560,12 @@ function createEdgeParticleInstance(particles: any, positionGenerator: any) {
     scene.add(particleMesh);
 }
 
-// Exterior particles
-function generateRandomPositionOnEdge(circleRadius: any) {
-    const angle = Math.random() * circleAngleInRadians;
-    const x = Math.cos(angle) * circleRadius + OFFSET_X;
-    const z = Math.sin(angle) * circleRadius + OFFSET_Z;
-    return { x, z };
-}
 
-const edgeBoxes: any = [];
+// Exterior particles
+const edgeBoxes: Particle[] = [];
 
 function createEdgeMeshInstance() {
-    createEdgeParticleInstance(edgeBoxes, generateRandomPositionOnEdge);
+    createEdgeParticleInstance(edgeBoxes);
 }
 
 // add box particle animation
@@ -591,21 +582,21 @@ function updateBoxAnimation() {
     interiorBoxes.forEach(updateInteriorBox);
 }
 
-function updateBoxScaleAndRotation(box: any) {
+function updateBoxScaleAndRotation(box: Particle) {
     const scaleFactor = Math.max(0.02, (2 - box.currPosY / box.maxPosY * 4));
     box.mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
     box.rotationAngle.addScalar(box.rotationSpeed);
     box.mesh.rotation.set(box.rotationAngle.x, 0, box.rotationAngle.y);
 }
 
-function updateBoxPosition(box: any) {
+function updateBoxPosition(box: Particle) {
     const angle = box.currPosY / box.maxPosY * Math.PI * 8;
     const x = box.mesh.position.x + Math.cos(angle) * 0.0012;
     const z = box.mesh.position.z + Math.sin(angle) * 0.0012;
     box.mesh.position.set(x, box.currPosY, z);
 }
 
-function updateEdgeBox(box: any, index: any) {
+function updateEdgeBox(box: Particle, index: number) {
     box.currPosY += 0.002;
     if (shouldRemoveBox(box)) {
         removeEdgeBox(box, index);
@@ -615,7 +606,7 @@ function updateEdgeBox(box: any, index: any) {
     }
 }
 
-function updateInteriorBox(box: any, index: any) {
+function updateInteriorBox(box: Particle, index: number) {
     box.currPosY += 0.002;
     if (shouldRemoveBox(box)) {
         removeInteriorBox(box, index);
@@ -625,16 +616,16 @@ function updateInteriorBox(box: any, index: any) {
     }
 }
 
-function shouldRemoveBox(box: any) {
+function shouldRemoveBox(box: Particle) {
     return box.mesh.scale.y <= 0.02;
 }
 
-function removeEdgeBox(box: any, index: any) {
+function removeEdgeBox(box: Particle, index: number) {
     scene.remove(box.mesh);
     edgeBoxes.splice(index, 1);
 }
 
-function removeInteriorBox(box: any, index: any) {
+function removeInteriorBox(box: Particle, index: number) {
     scene.remove(box.mesh);
     interiorBoxes.splice(index, 1);
 }
