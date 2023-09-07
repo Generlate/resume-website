@@ -13,18 +13,28 @@ renderer.setSize(initialCanvasWidth, window.innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
+// Define a function to calculate the aspect ratio
 const calculateAspectRatio = () => {
-    return (window.innerWidth > 1375) ? window.innerWidth / (2.9 * window.innerHeight) : window.innerWidth / window.innerHeight;
+    return (window.innerWidth > 1375)
+        ? window.innerWidth / (2.9 * window.innerHeight)
+        : window.innerWidth / window.innerHeight;
 };
-const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000);
-const onWindowResize = () => {
-    camera.aspect = calculateAspectRatio();
+// Initialize the camera with the initial aspect ratio
+const initialAspectRatio = calculateAspectRatio();
+const camera = new THREE.PerspectiveCamera(20, initialAspectRatio, 0.1, 1000);
+// Define a function to update the camera and renderer
+const updateCameraAndRenderer = () => {
+    const aspectRatio = calculateAspectRatio();
+    camera.aspect = aspectRatio;
     camera.updateProjectionMatrix();
     const canvasWidth = (window.innerWidth > 1375) ? window.innerWidth / 2.9 : window.innerWidth;
     const canvasHeight = window.innerHeight;
     renderer.setSize(canvasWidth, canvasHeight);
 };
-window.addEventListener('resize', onWindowResize, false);
+// Call the update function initially
+updateCameraAndRenderer();
+// Add an event listener for window resize
+window.addEventListener('resize', updateCameraAndRenderer, false);
 const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);
 studioLight.position.set(-12.1, 3, -2.5);
 studioLight.target.position.set(-12.1, 0, -6.5);
@@ -135,7 +145,7 @@ scene.fog = new THREE.FogExp2(0x1C1C0E, 0.0016);
 // add portal edge
 const circleRadius = 0.5;
 const circleSegments = 256;
-const circleVertices = [];
+let circleVertices = [];
 const OFFSET_X = -12.025;
 const OFFSET_Z = -6.5;
 const ringGeometry = new THREE.CircleGeometry(circleRadius, circleSegments);
