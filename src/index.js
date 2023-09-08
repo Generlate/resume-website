@@ -1,8 +1,8 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 const scene = new THREE.Scene();
-const rendererCanvas = document.querySelector('canvas');
+const rendererCanvas = document.querySelector("canvas");
 const renderer = new THREE.WebGLRenderer({
     canvas: rendererCanvas,
     antialias: true
@@ -13,28 +13,20 @@ renderer.setSize(initialCanvasWidth, window.innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
-// Define a function to calculate the aspect ratio
 const calculateAspectRatio = () => {
     return (window.innerWidth > 1375)
         ? window.innerWidth / (2.9 * window.innerHeight)
         : window.innerWidth / window.innerHeight;
 };
-// Initialize the camera with the initial aspect ratio
-const initialAspectRatio = calculateAspectRatio();
-const camera = new THREE.PerspectiveCamera(20, initialAspectRatio, 0.1, 1000);
-// Define a function to update the camera and renderer
+const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000);
 const updateCameraAndRenderer = () => {
-    const aspectRatio = calculateAspectRatio();
-    camera.aspect = aspectRatio;
+    camera.aspect = calculateAspectRatio();
     camera.updateProjectionMatrix();
     const canvasWidth = (window.innerWidth > 1375) ? window.innerWidth / 2.9 : window.innerWidth;
     const canvasHeight = window.innerHeight;
     renderer.setSize(canvasWidth, canvasHeight);
 };
-// Call the update function initially
-updateCameraAndRenderer();
-// Add an event listener for window resize
-window.addEventListener('resize', updateCameraAndRenderer, false);
+window.addEventListener("resize", updateCameraAndRenderer, false);
 const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);
 studioLight.position.set(-12.1, 3, -2.5);
 studioLight.target.position.set(-12.1, 0, -6.5);
@@ -55,16 +47,11 @@ const directionalLight = new THREE.DirectionalLight(0xFFF8DE, 0.2);
 directionalLight.position.set(2, 2, 5);
 const ambientLight = new THREE.AmbientLight(0xFFF8DE, 0.5);
 scene.add(studioLight, directionalLight, ambientLight);
-// const lightHelper = new THREE.SpotLightHelper(studioLight)
-// const lightHelper2 = new THREE.SpotLightHelper(studioLight2)
-// const gridHelper = new THREE.GridHelper(2000, 200);
-// gridHelper.position.set(0, 0.1, 0);
-scene.add();
 const controls = new OrbitControls(camera, renderer.domElement);
 camera.position.set(-12, 0.5, 0);
 controls.target.set(-12.5, 16, -150);
 // make sky
-const skyTexture = new THREE.TextureLoader().load('../public/sky.png');
+const skyTexture = new THREE.TextureLoader().load("../public/sky.png");
 const sky = new THREE.Mesh(new THREE.SphereGeometry(900, 32, 32), new THREE.MeshStandardMaterial({
     map: skyTexture,
     side: THREE.BackSide
@@ -87,10 +74,10 @@ scene.add(floorMesh);
 floorMesh.position.set(-2, -2, -5);
 // load buildings 
 const loader = new GLTFLoader();
-loader.load('../public/building.glb', function (glb) {
+loader.load("../public/building.glb", function (glb) {
     console.log(glb);
     const root = glb.scene;
-    const glassMesh = root.getObjectByName('KB3D_EVC_BldgLG_B_Main');
+    const glassMesh = root.getObjectByName("KB3D_EVC_BldgLG_B_Main");
     const glassMaterial = new THREE.MeshStandardMaterial({
         color: 0x818181,
         opacity: 0.75,
@@ -108,38 +95,32 @@ loader.load('../public/building.glb', function (glb) {
         loaderElement.parentNode?.removeChild(loaderElement);
     });
 });
-// make ring floor light 
-const lightGeometry = new THREE.CylinderGeometry(0.5, 0.5, 0.02, 128);
-const glassLoader = new THREE.TextureLoader();
-const ringMaterial = new THREE.MeshStandardMaterial({ map: glassLoader.load('../public/platform.jpg') });
-const ringLight = new THREE.SpotLight(0xB9B794, 4);
-ringLight.position.set(-12.025, -5, -6.5);
-ringLight.target.position.set(-12.025, 15, -6.5);
-ringLight.angle = Math.PI / 32;
-ringLight.penumbra = 5;
-ringLight.distance = 7;
-ringLight.decay = 0.5;
-ringLight.castShadow = true;
-// const ringLightHelper = new THREE.SpotLightHelper(ringLight)
 // load character
 const characterLoader = new GLTFLoader();
-characterLoader.load('../public/avatar.glb', function (glb) {
+characterLoader.load("../public/avatar.glb", characterTransformation, onProgress, onError);
+function characterTransformation(glb) {
     console.log(glb);
     const root = glb.scene;
     root.scale.set(0.95, 0.95, 0.95);
     root.position.set(-12.025, 0.1, -6.5);
     root.rotation.set(0, Math.PI, 0);
+    makeMeshesReceiveShadows(root);
+    scene.add(root);
+}
+function onProgress(xhr) {
+    const percentageLoaded = (xhr.loaded / xhr.total) * 100;
+    console.log(`${percentageLoaded}% loaded`);
+}
+function onError(error) {
+    console.error("An error occurred:", error);
+}
+function makeMeshesReceiveShadows(root) {
     root.traverse(function (object) {
         if (object instanceof THREE.Mesh) {
             object.receiveShadow = true;
         }
     });
-    scene.add(root);
-}, function (xhr) {
-    console.log((xhr.loaded / xhr.total * 100) + "% loaded");
-}, function (error) {
-    console.log('An error occurred');
-});
+}
 // add fog
 scene.fog = new THREE.FogExp2(0x1C1C0E, 0.0016);
 // add portal edge
@@ -164,7 +145,7 @@ const portalEdgeMesh = new THREE.LineLoop(portalEdgeGeometry, portalEdgeMaterial
 portalEdgeMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
 scene.add(portalEdgeMesh);
 // add fuzzy ring
-const fuzzyRingTexture = textureLoader.load('public/ring.jpg');
+const fuzzyRingTexture = textureLoader.load("public/ring.jpg");
 const fuzzyRingMaterial = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide,
     map: fuzzyRingTexture,
@@ -180,12 +161,12 @@ fuzzyRingMesh.rotation.x = quarterCircleAngleInRadians;
 fuzzyRingMesh.scale.set(1.9, 1.4, 1.4);
 scene.add(fuzzyRingMesh);
 // add gradient fill
-const gradientCanvas = document.createElement('canvas');
+const gradientCanvas = document.createElement("canvas");
 gradientCanvas.width, gradientCanvas.height = circleRadius * 426.67;
-const gradientCtx = gradientCanvas.getContext('2d');
+const gradientCtx = gradientCanvas.getContext("2d");
 const gradient = gradientCtx.createRadialGradient(gradientCanvas.width / 2, gradientCanvas.height / 2, 0, gradientCanvas.width / 2, gradientCanvas.height / 2, gradientCanvas.width / 2);
-gradient.addColorStop(0, 'rgb(168, 159, 82)');
-gradient.addColorStop(1, 'rgb(0, 0, 0)');
+gradient.addColorStop(0, "rgb(168, 159, 82)");
+gradient.addColorStop(1, "rgb(0, 0, 0)");
 gradientCtx.fillStyle = gradient;
 gradientCtx.fillRect(0, 0, gradientCanvas.width, gradientCanvas.height);
 const fillGradientTexture = new THREE.CanvasTexture(gradientCanvas);
@@ -202,7 +183,7 @@ fillGradientMesh.rotation.x = quarterCircleAngleInRadians;
 scene.add(fillGradientMesh);
 // add smoke
 const smokeInstances = 15;
-const smokeTexture = textureLoader.load('public/smoke.png');
+const smokeTexture = textureLoader.load("public/smoke.png");
 const portalSmokeMaterial = new THREE.MeshBasicMaterial({
     map: smokeTexture,
     color: 0xFFF282,
@@ -227,7 +208,7 @@ for (let i = 0; i < smokeInstances; i++) {
 scene.add(smokeGroup);
 // add lightning
 const lightningInstances = 8;
-const lightningTexture = textureLoader.load('public/lightning.png');
+const lightningTexture = textureLoader.load("public/lightning.png");
 const portalLightningMaterial = new THREE.MeshBasicMaterial({
     map: lightningTexture,
     color: 0xFFF282,
@@ -254,7 +235,7 @@ scene.add(lightningGroup);
 //add particles
 const randomHalfCircleAngle = Math.random() * Math.PI;
 const yMax = 4;
-function createInteriorParticleMesh() {
+function instantiateInteriorParticleMesh() {
     const particleGeometry = new THREE.BoxGeometry(0.004, 0.004, 0.004);
     const particleMaterial = new THREE.MeshPhysicalMaterial({
         color: 0xffe500,
@@ -275,11 +256,11 @@ function createInteriorParticleMesh() {
     particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
     return particleMesh;
 }
-function createInteriorParticleInstance(particles) {
+function createInteriorParticle(particles) {
     const angle = Math.random() * circleAngleInRadians;
     const x = Math.random() * Math.cos(angle) * circleRadius + OFFSET_X;
     const z = Math.random() * Math.sin(angle) * circleRadius + OFFSET_Z;
-    const particleMesh = createInteriorParticleMesh();
+    const particleMesh = instantiateInteriorParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
         mesh: particleMesh,
@@ -292,9 +273,6 @@ function createInteriorParticleInstance(particles) {
 }
 // Interior particles
 const interiorBoxes = [];
-function createInteriorMeshInstance() {
-    createInteriorParticleInstance(interiorBoxes);
-}
 // animations
 let frameCounter = 0;
 function updateOpacityAnimation(material) {
@@ -323,12 +301,7 @@ function updateSmokeOpacity(smokeMesh) {
 function updateSmokeRotation(smokeMesh) {
     const smokeRotationSpeed = 0.004;
     const randomValue = Math.random();
-    if (randomValue < 0.3) {
-        smokeMesh.rotation.z -= smokeRotationSpeed;
-    }
-    else {
-        smokeMesh.rotation.z += smokeRotationSpeed;
-    }
+    randomValue < 0.3 ? smokeMesh.rotation.z -= smokeRotationSpeed : smokeMesh.rotation.z += smokeRotationSpeed;
 }
 function updateSmokeAnimation(smokeGroup, frameCounter) {
     smokeGroup.children.forEach(function (smokeMesh) {
@@ -431,7 +404,7 @@ function updatePortalEdgeAnimation() {
     }
     portalEdgeGeometry.attributes.position.needsUpdate = true;
 }
-function createEdgeParticleMesh() {
+function instantiateEdgeParticleMesh() {
     const particleGeometry = new THREE.BoxGeometry(0.03, 0.03, 0.03);
     const particleMaterial = new THREE.MeshPhysicalMaterial({
         color: 0xffe500,
@@ -452,11 +425,11 @@ function createEdgeParticleMesh() {
     particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
     return particleMesh;
 }
-function createEdgeParticleInstance(particles) {
+function createEdgeParticle(particles) {
     const angle = Math.random() * circleAngleInRadians;
     const x = Math.cos(angle) * circleRadius + OFFSET_X;
     const z = Math.sin(angle) * circleRadius + OFFSET_Z;
-    const particleMesh = createEdgeParticleMesh();
+    const particleMesh = instantiateEdgeParticleMesh();
     particleMesh.position.set(x, 0, z);
     particles.push({
         mesh: particleMesh,
@@ -469,16 +442,13 @@ function createEdgeParticleInstance(particles) {
 }
 // Exterior particles
 const edgeBoxes = [];
-function createEdgeMeshInstance() {
-    createEdgeParticleInstance(edgeBoxes);
-}
 // add box particle animation
 function updateBoxAnimation() {
     if (frameCounter % 30 === 0) {
-        createEdgeMeshInstance();
+        createEdgeParticle(edgeBoxes);
     }
     if (frameCounter % 2 === 0) {
-        createInteriorMeshInstance();
+        createInteriorParticle(interiorBoxes);
     }
     edgeBoxes.forEach(updateEdgeBox);
     interiorBoxes.forEach(updateInteriorBox);
