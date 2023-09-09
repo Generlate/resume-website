@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { scene } from "./sceneModule.js";
+import { scene } from "./sceneInitialize.js";
 export function loadCharacterModel() {
     const characterLoader = new GLTFLoader();
     characterLoader.load("../public/avatar.glb", characterTransformation, onProgress, onError);
@@ -28,4 +28,4 @@ function makeMeshesReceiveShadows(root) {
         }
     });
 }
-//# sourceMappingURL=characterLoaderModule.js.map
+//# sourceMappingURL=character.js.map

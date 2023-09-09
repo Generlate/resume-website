@@ -1,8 +1,8 @@
 import * as THREE from "three";
-import { scene, renderer, camera, controls } from "./sceneModule.js";
+import { scene, renderer, camera, controls } from "./sceneInitialize.js";
 import { setupScene } from "./sceneSetup.js";
 import { loadBuildingModel } from "./building.js";
-import { loadCharacterModel } from "./characterLoaderModule.js";
+import { loadCharacterModel } from "./character.js";
 
 
 setupScene(scene);

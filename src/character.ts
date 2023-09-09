@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader, GLTF } from "three/addons/loaders/GLTFLoader.js";
-import { scene } from "./sceneModule.js"; 
+import { scene } from "./sceneInitialize.js"; 
 
 
 export function loadCharacterModel() {
