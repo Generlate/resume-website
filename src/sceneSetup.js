@@ -31,6 +31,6 @@ export function setupScene(scene) {
     scene.add(floorMesh);
     floorMesh.position.set(-2, -2, -5);
     // Fog
-    scene.fog = new THREE.FogExp2(0x1C1C0E, 0.0016);
+    scene.fog = new THREE.FogExp2(0x1C1C0E, 0.002);
 }
 //# sourceMappingURL=sceneSetup.js.map
