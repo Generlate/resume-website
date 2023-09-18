@@ -17,11 +17,6 @@ export function loadBuildingModel(scene) {
         root.scale.set(1, 1, 1);
         root.rotateY(1.57);
         scene.add(root);
-        const loaderElement = document.querySelector(".loader");
-        loaderElement?.classList.add("loader--hidden");
-        loaderElement?.addEventListener("transitionend", () => {
-            loaderElement.parentNode?.removeChild(loaderElement);
-        });
     });
 }
 //# sourceMappingURL=building.js.map

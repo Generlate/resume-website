@@ -20,11 +20,5 @@ export function loadBuildingModel(scene: THREE.Scene): void {
     root.rotateY(1.57);
 
     scene.add(root);
-
-    const loaderElement = document.querySelector(".loader");
-    loaderElement?.classList.add("loader--hidden");
-    loaderElement?.addEventListener("transitionend", () => {
-      loaderElement.parentNode?.removeChild(loaderElement);
-    });
   });
 }

@@ -12,6 +12,7 @@ export function loadCharacterModel() {
     onProgress,
     onError
   );
+  
 }
 
 function characterTransformation(glb: GLTF) {
@@ -25,6 +26,12 @@ function characterTransformation(glb: GLTF) {
   makeMeshesReceiveShadows(root);
 
   scene.add(root);
+  
+  const loaderElement = document.querySelector(".loader");
+  loaderElement?.classList.add("loader--hidden");
+  loaderElement?.addEventListener("transitionend", () => {
+    loaderElement.parentNode?.removeChild(loaderElement);
+  });
 }
 
 function onProgress(xhr: any) {
