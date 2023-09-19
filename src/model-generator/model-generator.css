@@ -47,7 +47,7 @@ main > p {
   margin: 0px;
 }
 
-main img {
+main img, main video {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
