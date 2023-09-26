@@ -23,9 +23,8 @@ function onProgress(xhr) {
     const percentageLoaded = (xhr.loaded / xhr.total) * 100;
     console.log(percentageLoaded);
     const loaderText = document.querySelector(".loader-text");
-    console.log(loaderText);
     loaderText.textContent = `${Math.round(percentageLoaded)}%`;
-    console.log(loaderText);
+    console.log(loaderText.textContent);
 }
 function onError(error) {
     console.error("An error occurred:", error);
