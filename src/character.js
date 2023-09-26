@@ -20,7 +20,7 @@ function characterTransformation(glb) {
     });
 }
 function onProgress(xhr) {
-    const percentageLoaded = (xhr.loaded / xhr.total) * 51;
+    const percentageLoaded = (xhr.loaded / xhr.total) * 100;
     const loaderText = document.querySelector(".loader-text");
     loaderText.textContent = `Loading ${parseInt(percentageLoaded)}%`;
 }
