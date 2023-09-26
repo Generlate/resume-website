@@ -12,7 +12,7 @@ export function loadCharacterModel() {
     onProgress,
     onError
   );
-  
+   
 }
 
 function characterTransformation(glb: GLTF) {
@@ -36,7 +36,8 @@ function characterTransformation(glb: GLTF) {
 
 function onProgress(xhr: any) {
   const percentageLoaded = (xhr.loaded / xhr.total) * 100;
-  console.log(`${percentageLoaded}% loaded`);
+  const loaderText = document.querySelector(".loader-text");
+  loaderText.textContent = `Loading ${parseInt(percentageLoaded)}%`;
 }
 
 function onError(error: any) {

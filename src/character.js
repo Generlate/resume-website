@@ -21,7 +21,9 @@ function characterTransformation(glb) {
 }
 function onProgress(xhr) {
     const percentageLoaded = (xhr.loaded / xhr.total) * 100;
-    console.log(`${percentageLoaded}% loaded`);
+    const loaderText = document.querySelector(".loader-text");
+    console.log(parseInt(percentageLoaded));
+    loaderText.textContent = `Loading ${parseInt(percentageLoaded)}%`;
 }
 function onError(error) {
     console.error("An error occurred:", error);

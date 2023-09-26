@@ -31,12 +31,23 @@
   transition: opacity 0.75s, visibility 0.75s;
 } 
 
+.loader-text {
+  font-size: 1.75vw;
+  color: var(--third-color);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-family);
+  font-weight: 500;
+
+}
+
 .loader::after {
   content: "";
-  width: 3vw;
-  height: 3vw;
-  border: 0.3vw solid var(--fifth-color);
-  border-top-color: var(--third-color);
+  width: 12vw;
+  height: 12vw;
+  border: 0.4vw solid var(--seventh-color);
+  border-top-color: var(--fifth-color);
   border-radius: var(--circle-border-radius);
   animation: loading 0.75s ease infinite;
 }
@@ -171,7 +182,6 @@ main div section:nth-of-type(2)::-webkit-scrollbar {
 }
 
 
-
 h3 {
   font-size: 2vmin;
   color: var(--second-color);
@@ -259,8 +269,6 @@ main div section:nth-of-type(2) div a img, main div section:nth-of-type(2) div a
   box-sizing: border-box;
 }
 
-
-
 video::-webkit-media-controls-panel {
   display: none;
 }
@@ -271,6 +279,18 @@ video::-webkit-media-controls-panel {
     height: 100%;
     width: 100%;
     left: 0;
+  }
+
+  .loader-text {
+    font-size: 6vw;
+  }
+
+  .loader::after {
+    width: 46vw;
+    height: 46vw;
+    border: 2vw solid var(--seventh-color);
+    border-top-color: var(--fifth-color);
+    
   }
 
   canvas {
