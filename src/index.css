@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:thin,medium,black');
+@import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
 
 :root {
   --main-color: hsl(55, 100%, 49%);
@@ -12,7 +12,7 @@
   --section-border-radius: 1.5vh;
   --media-border-radius: 20px;
   --button-border-radius: 0 3px 3px 0;
-  --font-family: "roboto";
+  --font-family: "Roboto", sans-serif;
   --mobile-font-size: 1.25rem;
   --border: 2px solid var(--third-color);
 }
@@ -122,7 +122,7 @@ main div section:first-of-type {
   color: var(--third-color);
   font-family: var(--font-family);
   background-color: var(--fourth-color);
-  font-weight: 100;
+  font-weight: 300;
   outline: var(--border);
   padding: 2vmin;
   margin: 0vmin 1.2vmin;
@@ -227,7 +227,7 @@ h3 {
   font-size: 1.5vmin;
   padding: 1.5vmin;
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
   flex: 1;
 }
  
