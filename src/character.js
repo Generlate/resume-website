@@ -20,9 +20,9 @@ function characterTransformation(glb) {
     });
 }
 function onProgress(xhr) {
-    const percentageLoaded = (xhr.loaded / xhr.total) * 51;
+    const percentageLoaded = (xhr.loaded / xhr.total) * 100;
     const loaderText = document.querySelector(".loader-text");
-    loaderText.textContent = `${parseInt(percentageLoaded)}%`;
+    loaderText.textContent = `${Math.round(percentageLoaded)}%`;
 }
 function onError(error) {
     console.error("An error occurred:", error);
