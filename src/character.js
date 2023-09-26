@@ -18,7 +18,7 @@ function characterTransformation(glb) {
     loaderElement?.addEventListener("transitionend", () => {
         loaderElement.parentNode?.removeChild(loaderElement);
     });
-}
+} 
 function onProgress(xhr) {
     const percentageLoaded = (xhr.loaded / xhr.total) * 52;
     const loaderText = document.querySelector(".loader-text");
