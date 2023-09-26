@@ -44,8 +44,8 @@
 
 .loader::after {
   content: "";
-  width: 12vw;
-  height: 12vw;
+  width: 8vw;
+  height: 8vw;
   border: 0.4vw solid var(--seventh-color);
   border-top-color: var(--fifth-color);
   border-radius: var(--circle-border-radius);
@@ -286,8 +286,8 @@ video::-webkit-media-controls-panel {
   }
 
   .loader::after {
-    width: 46vw;
-    height: 46vw;
+    width: 28vw;
+    height: 28vw;
     border: 2vw solid var(--seventh-color);
     border-top-color: var(--fifth-color);
     
