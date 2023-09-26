@@ -20,10 +20,10 @@ function characterTransformation(glb) {
     });
 }
 function onProgress(xhr) {
-    const percentageLoaded = (xhr.loaded / xhr.total) * 50;
+    const percentageLoaded = (xhr.loaded / xhr.total);
     console.log(percentageLoaded);
     const loaderText = document.querySelector(".loader-text");
-    loaderText.textContent = `${Math.round(percentageLoaded)}%`;
+    loaderText.textContent = `${Math.round(percentageLoaded * 50)}%`;
     console.log(loaderText.textContent);
 }
 function onError(error) {
