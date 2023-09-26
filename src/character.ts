@@ -35,7 +35,7 @@ function characterTransformation(glb: GLTF) {
 }
 
 function onProgress(xhr: any) {
-  const percentageLoaded = (xhr.loaded / xhr.total) * 52;
+  const percentageLoaded = (xhr.loaded / xhr.total) * 51;
   const loaderText: any = document.querySelector(".loader-text");
   loaderText.textContent = `${parseInt(percentageLoaded)}%`;
 }
