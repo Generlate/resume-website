@@ -21,8 +21,11 @@ function characterTransformation(glb) {
 }
 function onProgress(xhr) {
     const percentageLoaded = (xhr.loaded / xhr.total) * 100;
+    console.log(percentageLoaded);
     const loaderText = document.querySelector(".loader-text");
+    console.log(loaderText);
     loaderText.textContent = `${Math.round(percentageLoaded)}%`;
+    console.log(loaderText);
 }
 function onError(error) {
     console.error("An error occurred:", error);
