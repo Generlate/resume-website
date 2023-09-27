@@ -1,10 +1,10 @@
-import * as THREE from "three";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const scene = new THREE.Scene();
-const rendererCanvas = document.querySelector("canvas");
+const rendererCanvas = document.querySelector('canvas');
 const renderer = new THREE.WebGLRenderer({
     canvas: rendererCanvas,
-    antialias: true,
+    antialias: true
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 const initialCanvasWidth = window.innerWidth > 1375 ? window.innerWidth / 2.9 : window.innerWidth;
@@ -23,7 +23,7 @@ const updateCameraAndRenderer = () => {
     const canvasHeight = window.innerHeight;
     renderer.setSize(canvasWidth, canvasHeight);
 };
-window.addEventListener("resize", updateCameraAndRenderer, false);
+window.addEventListener('resize', updateCameraAndRenderer, false);
 const controls = new OrbitControls(camera, renderer.domElement);
 camera.position.set(-12, 0.5, 0);
 controls.target.set(-12.5, 16, -150);

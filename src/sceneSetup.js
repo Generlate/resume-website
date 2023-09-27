@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from 'three';
 export function setupScene(scene) {
     // Lights
     const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);
@@ -9,10 +9,10 @@ export function setupScene(scene) {
     const ambientLight = new THREE.AmbientLight(0xFFF8DE, 0.5);
     scene.add(studioLight, directionalLight, ambientLight);
     // Sky
-    const skyTexture = new THREE.TextureLoader().load("../public/sky.png");
+    const skyTexture = new THREE.TextureLoader().load('../public/sky.png');
     const sky = new THREE.Mesh(new THREE.SphereGeometry(900, 32, 32), new THREE.MeshStandardMaterial({
         map: skyTexture,
-        side: THREE.BackSide,
+        side: THREE.BackSide
     }));
     scene.add(sky);
     sky.position.z = 30;
@@ -23,7 +23,7 @@ export function setupScene(scene) {
         clearcoatRoughness: 0.15,
         metalness: 1,
         roughness: 0.05,
-        color: 0xffffff,
+        color: 0xffffff
     };
     const floorGeo = new THREE.BoxGeometry(3000, 4, 3000);
     const floorMat = new THREE.MeshPhysicalMaterial(floorMaterial);

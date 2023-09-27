@@ -22,7 +22,7 @@ export function createPortal(scene, camera, renderer, controls) {
     portalEdgeMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
     scene.add(portalEdgeMesh);
     // add fuzzy ring
-    const fuzzyRingTexture = textureLoader.load("public/ring.jpg");
+    const fuzzyRingTexture = textureLoader.load('public/ring.jpg');
     const fuzzyRingMaterial = new THREE.MeshBasicMaterial({
         side: THREE.DoubleSide,
         map: fuzzyRingTexture,
@@ -38,12 +38,12 @@ export function createPortal(scene, camera, renderer, controls) {
     fuzzyRingMesh.scale.set(1.9, 1.4, 1.4);
     scene.add(fuzzyRingMesh);
     // add gradient fill
-    const gradientCanvas = document.createElement("canvas");
+    const gradientCanvas = document.createElement('canvas');
     gradientCanvas.width, gradientCanvas.height = circleRadius * 426.67;
-    const gradientCtx = gradientCanvas.getContext("2d");
+    const gradientCtx = gradientCanvas.getContext('2d');
     const gradient = gradientCtx.createRadialGradient(gradientCanvas.width / 2, gradientCanvas.height / 2, 0, gradientCanvas.width / 2, gradientCanvas.height / 2, gradientCanvas.width / 2);
     gradient.addColorStop(0, "rgb(168, 159, 82)");
-    gradient.addColorStop(1, "rgb(0, 0, 0)");
+    gradient.addColorStop(1, 'rgb(0, 0, 0)');
     gradientCtx.fillStyle = gradient;
     gradientCtx.fillRect(0, 0, gradientCanvas.width, gradientCanvas.height);
     const fillGradientTexture = new THREE.CanvasTexture(gradientCanvas);
@@ -60,7 +60,7 @@ export function createPortal(scene, camera, renderer, controls) {
     scene.add(fillGradientMesh);
     // add smoke
     const smokeInstances = 15;
-    const smokeTexture = textureLoader.load("public/smoke.png");
+    const smokeTexture = textureLoader.load('public/smoke.png');
     const portalSmokeMaterial = new THREE.MeshBasicMaterial({
         map: smokeTexture,
         color: 0xFFF282,
@@ -144,7 +144,7 @@ export function createPortal(scene, camera, renderer, controls) {
             maxPosY: yMax * Math.random(),
             currPosY: 0.1,
             rotationSpeed: Math.random() * 0.016,
-            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle),
+            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle)
         });
         scene.add(particleMesh);
     }
