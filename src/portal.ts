@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from 'three';
 
 export function createPortal(
   scene: any,
@@ -35,7 +35,7 @@ export function createPortal(
   scene.add(portalEdgeMesh);
 
   // add fuzzy ring
-  const fuzzyRingTexture = textureLoader.load("public/ring.jpg");
+  const fuzzyRingTexture = textureLoader.load('public/ring.jpg');
   const fuzzyRingMaterial = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide,
     map: fuzzyRingTexture,
@@ -43,7 +43,7 @@ export function createPortal(
     opacity: 1,
     color: new THREE.Color(0xfff282),
     depthWrite: false, // Prevent sorting issues with transparency
-    blending: THREE.AdditiveBlending,
+    blending: THREE.AdditiveBlending
   });
   const fuzzyRingMesh: THREE.Mesh = new THREE.Mesh(
     ringGeometry,
@@ -55,10 +55,10 @@ export function createPortal(
   scene.add(fuzzyRingMesh);
 
   // add gradient fill
-  const gradientCanvas: any = document.createElement("canvas");
+  const gradientCanvas: any = document.createElement('canvas');
   gradientCanvas.width = circleRadius * 426.67;
   gradientCanvas.height = circleRadius * 426.67;
-  const gradientCtx: any = gradientCanvas.getContext("2d");
+  const gradientCtx: any = gradientCanvas.getContext('2d');
   const gradient: any = gradientCtx.createRadialGradient(
     gradientCanvas.width / 2,
     gradientCanvas.height / 2,
@@ -67,8 +67,8 @@ export function createPortal(
     gradientCanvas.height / 2,
     gradientCanvas.width / 2
   );
-  gradient.addColorStop(0, "rgb(168, 159, 82)");
-  gradient.addColorStop(1, "rgb(0, 0, 0)");
+  gradient.addColorStop(0, 'rgb(168, 159, 82)');
+  gradient.addColorStop(1, 'rgb(0, 0, 0)');
   gradientCtx.fillStyle = gradient;
   gradientCtx.fillRect(0, 0, gradientCanvas.width, gradientCanvas.height);
   const fillGradientTexture = new THREE.CanvasTexture(gradientCanvas);
@@ -77,7 +77,7 @@ export function createPortal(
     map: fillGradientTexture,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
-    transparent: true,
+    transparent: true
   });
   const fillGradientMesh: THREE.Mesh = new THREE.Mesh(
     ringGeometry,
@@ -89,14 +89,14 @@ export function createPortal(
 
   // add smoke
   const smokeInstances: number = 15;
-  const smokeTexture = textureLoader.load("public/smoke.png");
+  const smokeTexture = textureLoader.load('public/smoke.png');
   const portalSmokeMaterial = new THREE.MeshBasicMaterial({
     map: smokeTexture,
     color: 0xfff282,
     side: THREE.DoubleSide,
     transparent: true,
     blending: THREE.AdditiveBlending,
-    depthWrite: false, // Prevent sorting issues with transparency
+    depthWrite: false // Prevent sorting issues with transparency
   });
   const smokeGroup = new THREE.Group();
   const smokeAngleIncrement: number = circleAngleInRadians / smokeInstances;
@@ -119,14 +119,14 @@ export function createPortal(
 
   // add lightning
   const lightningInstances: number = 8;
-  const lightningTexture = textureLoader.load("public/lightning.png");
+  const lightningTexture = textureLoader.load('public/lightning.png');
   const portalLightningMaterial = new THREE.MeshBasicMaterial({
     map: lightningTexture,
     color: 0xfff282,
     side: THREE.DoubleSide,
     transparent: true,
     blending: THREE.AdditiveBlending,
-    depthWrite: false, // Prevent sorting issues with transparency
+    depthWrite: false // Prevent sorting issues with transparency
   });
 
   const lightningGroup = new THREE.Group();
@@ -165,11 +165,11 @@ export function createPortal(
       emissive: 0xffe500,
       emissiveIntensity: 0.85,
       clearcoat: 1,
-      blending: THREE.AdditiveBlending,
+      blending: THREE.AdditiveBlending
     });
     const edges = new THREE.EdgesGeometry(particleGeometry);
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0xffec43,
+      color: 0xffec43
     });
     const particleMesh = new THREE.Mesh(particleGeometry, particleMaterial);
     particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
@@ -197,7 +197,7 @@ export function createPortal(
       rotationAngle: new THREE.Vector2(
         randomHalfCircleAngle,
         randomHalfCircleAngle
-      ),
+      )
     });
     scene.add(particleMesh);
   }
@@ -409,11 +409,11 @@ export function createPortal(
       emissive: 0xffe500,
       emissiveIntensity: 0.85,
       clearcoat: 1,
-      blending: THREE.AdditiveBlending,
+      blending: THREE.AdditiveBlending
     });
     const edges = new THREE.EdgesGeometry(particleGeometry);
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0xffec43,
+      color: 0xffec43
     });
     const particleMesh = new THREE.Mesh(particleGeometry, particleMaterial);
     particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
@@ -434,7 +434,7 @@ export function createPortal(
       rotationAngle: new THREE.Vector2(
         randomHalfCircleAngle,
         randomHalfCircleAngle
-      ),
+      )
     });
     scene.add(particleMesh);
   }
