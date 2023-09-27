@@ -1,8 +1,8 @@
 import * as THREE from 'three'
 import { GLTFLoader, type GLTF } from 'three/addons/loaders/GLTFLoader.js'
-import { scene } from './sceneInitialize.js'
+import { scene } from '../dist/sceneInitialize.js'
 
-export function loadCharacterModel (): void {
+export function loadCharacterModel(): void {
   const characterLoader = new GLTFLoader()
 
   characterLoader.load(
@@ -13,7 +13,7 @@ export function loadCharacterModel (): void {
   )
 }
 
-function characterTransformation (glb: GLTF): void {
+function characterTransformation(glb: GLTF): void {
   console.log(glb)
 
   const root = glb.scene
@@ -32,18 +32,18 @@ function characterTransformation (glb: GLTF): void {
   })
 }
 
-function onProgress (xhr: any): void {
+function onProgress(xhr: any): void {
   const xhrTotal = 11280744
   const percentageLoaded = (xhr.loaded / xhrTotal) * 100
   const loaderText: any = document.querySelector('.loader-text')
   loaderText.textContent = `${Math.round(percentageLoaded)}%`
 }
 
-function onError (error: any): void {
+function onError(error: any): void {
   console.error('An error occurred:', error)
 }
 
-function makeMeshesReceiveShadows (root: any): void {
+function makeMeshesReceiveShadows(root: any): void {
   root.traverse(function (object: THREE.Object3D) {
     if (object instanceof THREE.Mesh) {
       object.receiveShadow = true

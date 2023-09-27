@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ESNext",             
-    "module": "ESNext",             
-    "noImplicitAny": true,          
-    "strictNullChecks": true,       
-    "esModuleInterop": true,        
-    "forceConsistentCasingInFileNames": true,            
+    "target": "ESNext",
+    "module": "ESNext",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
-    "outDir": "./src"        
+    "outDir": "./dist"
   },
-  "include": ["src/**/*.ts"],      
-  "exclude": ["node_modules"]       
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

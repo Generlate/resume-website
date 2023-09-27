@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
+@import url("https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black");
 
 :root {
   --main-color: hsl(55, 100%, 49%);
@@ -28,8 +28,10 @@
   justify-content: center;
   background: var(--sixth-color);
   z-index: 3;
-  transition: opacity 0.75s, visibility 0.75s;
-} 
+  transition:
+    opacity 0.75s,
+    visibility 0.75s;
+}
 
 .loader-text {
   font-size: 1.75vw;
@@ -39,7 +41,6 @@
   margin-right: auto;
   font-family: var(--font-family);
   font-weight: 500;
-
 }
 
 .loader::after {
@@ -53,8 +54,12 @@
 }
 
 @keyframes loading {
-  from {transform: rotate(0turn)}
-  to {transform: rotate(1turn)}
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 .loader--hidden {
@@ -63,7 +68,7 @@
 }
 
 body {
-  margin:0;
+  margin: 0;
   cursor: url("../public/cursor.png"), auto;
 }
 
@@ -92,7 +97,9 @@ main {
 }
 
 main > section {
-  text-shadow: 2px 2px 0px hsl(50, 44%, 28%), 0px 0px 7.5px var(--fifth-color);
+  text-shadow:
+    2px 2px 0px hsl(50, 44%, 28%),
+    0px 0px 7.5px var(--fifth-color);
   font-family: var(--font-family);
   text-align: center;
   margin: 0 auto;
@@ -144,16 +151,16 @@ p {
 
 ul {
   margin: 0px;
-  padding-left:0.6vmin;
-  padding-right:0.6vmin;
+  padding-left: 0.6vmin;
+  padding-right: 0.6vmin;
 }
 
 li {
   list-style: none;
   display: flex;
   flex-direction: row;
-  padding-left:1.5vmin;
-  padding-right:1.5vmin;
+  padding-left: 1.5vmin;
+  padding-right: 1.5vmin;
 }
 
 li::before {
@@ -169,8 +176,8 @@ main div section:nth-of-type(2) {
   padding: 1vmin;
   margin: 1.2%;
   position: relative;
-  box-shadow: 0 0 20px var(--second-color); 
-  border-radius: var(--section-border-radius); 
+  box-shadow: 0 0 20px var(--second-color);
+  border-radius: var(--section-border-radius);
   padding-bottom: 0vmin;
   height: 71vh;
   overflow: auto;
@@ -181,12 +188,11 @@ main div section:nth-of-type(2)::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Webkit browsers */
 }
 
-
 h3 {
   font-size: 2vmin;
   color: var(--second-color);
   font-weight: 500;
-  padding:1vmin;
+  padding: 1vmin;
   margin: 0vmin;
 }
 
@@ -198,7 +204,8 @@ h3 {
   animation-duration: 1.5s;
 }
 
-#prev, #next {
+#prev,
+#next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -210,7 +217,7 @@ h3 {
   transition: 0.6s ease;
   border-radius: var(--button-border-radius);
   user-select: none;
-  background-color: hsla(55, 42%, 6%, 0.65)
+  background-color: hsla(55, 42%, 6%, 0.65);
 }
 
 #next {
@@ -218,7 +225,8 @@ h3 {
   border-radius: var(--button-border-radius);
 }
 
-#prev:hover, #next:hover {
+#prev:hover,
+#next:hover {
   background-color: var(--fourth-color);
 }
 
@@ -230,7 +238,7 @@ h3 {
   font-weight: 300;
   flex: 1;
 }
- 
+
 .dot {
   cursor: pointer;
   height: 1.5vmin;
@@ -242,13 +250,14 @@ h3 {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: var(--third-color);
   border: var(--border);
 }
 
 main > div > section:nth-of-type(2) div ul {
-  text-align:center;
+  text-align: center;
   position: relative;
   bottom: 2.75vmin;
 }
@@ -258,12 +267,17 @@ main > div > section:nth-of-type(2) div div > a {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-main div section:nth-of-type(2) div a img, main div section:nth-of-type(2) div a video {
-  width:100%;
+main div section:nth-of-type(2) div a img,
+main div section:nth-of-type(2) div a video {
+  width: 100%;
   border-radius: var(--media-border-radius);
   padding: 0vmin 0.6vmin;
   box-sizing: border-box;
@@ -290,7 +304,6 @@ video::-webkit-media-controls-panel {
     height: 28vw;
     border: 2vw solid var(--seventh-color);
     border-top-color: var(--fifth-color);
-    
   }
 
   canvas {
@@ -298,25 +311,25 @@ video::-webkit-media-controls-panel {
   }
 
   main {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     z-index: 1;
   }
 
   main > div {
-    width: 100%; 
+    width: 100%;
   }
 
   main > section {
     padding-bottom: 90vh;
-    margin: 20px auto; 
+    margin: 20px auto;
   }
-  
+
   h1 {
     font-size: 2.75rem;
     margin-top: 4vh;
   }
-  
+
   h2 {
     font-size: 1.5rem;
     margin-top: -1.2vmin;
@@ -354,6 +367,6 @@ video::-webkit-media-controls-panel {
   }
 
   main div section:nth-of-type(2) {
-    height: 100%
+    height: 100%;
   }
 }

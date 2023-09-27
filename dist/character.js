@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { scene } from './sceneInitialize.js';
+import { scene } from '../dist/sceneInitialize.js';
 export function loadCharacterModel() {
     const characterLoader = new GLTFLoader();
     characterLoader.load('../public/avatar.glb', characterTransformation, onProgress, onError);

@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 export function createPortal(scene, camera, renderer, controls) {
     // add portal edge
     const circleRadius = 0.5;
@@ -22,15 +22,15 @@ export function createPortal(scene, camera, renderer, controls) {
     portalEdgeMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
     scene.add(portalEdgeMesh);
     // add fuzzy ring
-    const fuzzyRingTexture = textureLoader.load('public/ring.jpg');
+    const fuzzyRingTexture = textureLoader.load("public/ring.jpg");
     const fuzzyRingMaterial = new THREE.MeshBasicMaterial({
         side: THREE.DoubleSide,
         map: fuzzyRingTexture,
         transparent: true,
         opacity: 1,
-        color: new THREE.Color(0xFFF282),
+        color: new THREE.Color(0xfff282),
         depthWrite: false,
-        blending: THREE.AdditiveBlending
+        blending: THREE.AdditiveBlending,
     });
     const fuzzyRingMesh = new THREE.Mesh(ringGeometry, fuzzyRingMaterial);
     fuzzyRingMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
@@ -38,13 +38,13 @@ export function createPortal(scene, camera, renderer, controls) {
     fuzzyRingMesh.scale.set(1.9, 1.4, 1.4);
     scene.add(fuzzyRingMesh);
     // add gradient fill
-    const gradientCanvas = document.createElement('canvas');
+    const gradientCanvas = document.createElement("canvas");
     gradientCanvas.width = circleRadius * 426.67;
     gradientCanvas.height = circleRadius * 426.67;
-    const gradientCtx = gradientCanvas.getContext('2d');
+    const gradientCtx = gradientCanvas.getContext("2d");
     const gradient = gradientCtx.createRadialGradient(gradientCanvas.width / 2, gradientCanvas.height / 2, 0, gradientCanvas.width / 2, gradientCanvas.height / 2, gradientCanvas.width / 2);
-    gradient.addColorStop(0, 'rgb(168, 159, 82)');
-    gradient.addColorStop(1, 'rgb(0, 0, 0)');
+    gradient.addColorStop(0, "rgb(168, 159, 82)");
+    gradient.addColorStop(1, "rgb(0, 0, 0)");
     gradientCtx.fillStyle = gradient;
     gradientCtx.fillRect(0, 0, gradientCanvas.width, gradientCanvas.height);
     const fillGradientTexture = new THREE.CanvasTexture(gradientCanvas);
@@ -53,7 +53,7 @@ export function createPortal(scene, camera, renderer, controls) {
         map: fillGradientTexture,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
-        transparent: true
+        transparent: true,
     });
     const fillGradientMesh = new THREE.Mesh(ringGeometry, fillGradientMaterial);
     fillGradientMesh.position.set(OFFSET_X, 0.1, OFFSET_Z);
@@ -61,14 +61,14 @@ export function createPortal(scene, camera, renderer, controls) {
     scene.add(fillGradientMesh);
     // add smoke
     const smokeInstances = 15;
-    const smokeTexture = textureLoader.load('public/smoke.png');
+    const smokeTexture = textureLoader.load("public/smoke.png");
     const portalSmokeMaterial = new THREE.MeshBasicMaterial({
         map: smokeTexture,
-        color: 0xFFF282,
+        color: 0xfff282,
         side: THREE.DoubleSide,
         transparent: true,
         blending: THREE.AdditiveBlending,
-        depthWrite: false // Prevent sorting issues with transparency
+        depthWrite: false, // Prevent sorting issues with transparency
     });
     const smokeGroup = new THREE.Group();
     const smokeAngleIncrement = circleAngleInRadians / smokeInstances;
@@ -86,14 +86,14 @@ export function createPortal(scene, camera, renderer, controls) {
     scene.add(smokeGroup);
     // add lightning
     const lightningInstances = 8;
-    const lightningTexture = textureLoader.load('public/lightning.png');
+    const lightningTexture = textureLoader.load("public/lightning.png");
     const portalLightningMaterial = new THREE.MeshBasicMaterial({
         map: lightningTexture,
-        color: 0xFFF282,
+        color: 0xfff282,
         side: THREE.DoubleSide,
         transparent: true,
         blending: THREE.AdditiveBlending,
-        depthWrite: false // Prevent sorting issues with transparency
+        depthWrite: false, // Prevent sorting issues with transparency
     });
     const lightningGroup = new THREE.Group();
     // Position lightning meshes evenly around the circle's edge
@@ -124,11 +124,11 @@ export function createPortal(scene, camera, renderer, controls) {
             emissive: 0xffe500,
             emissiveIntensity: 0.85,
             clearcoat: 1,
-            blending: THREE.AdditiveBlending
+            blending: THREE.AdditiveBlending,
         });
         const edges = new THREE.EdgesGeometry(particleGeometry);
         const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0xFFEC43
+            color: 0xffec43,
         });
         const particleMesh = new THREE.Mesh(particleGeometry, particleMaterial);
         particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
@@ -145,7 +145,7 @@ export function createPortal(scene, camera, renderer, controls) {
             maxPosY: yMax * Math.random(),
             currPosY: 0.1,
             rotationSpeed: Math.random() * 0.016,
-            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle)
+            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle),
         });
         scene.add(particleMesh);
     }
@@ -157,14 +157,18 @@ export function createPortal(scene, camera, renderer, controls) {
         const minOpacity = 0.5;
         const maxOpacity = 1.0;
         const opacityRange = maxOpacity - minOpacity;
-        const opacityValue = minOpacity + opacityRange * (Math.sin(frameCounter * opacitySpeed) + 1) / 2;
+        const opacityValue = minOpacity +
+            (opacityRange * (Math.sin(frameCounter * opacitySpeed) + 1)) / 2;
         material.opacity = opacityValue;
     }
     function updateSmokeScaling(smokeMesh, frameCounter) {
         const smokeMinScale = 0.25;
         const smokeMaxScale = 0.35;
         const scalingSpeed = 0.005;
-        const scalingFactor = smokeMinScale + (smokeMaxScale - smokeMinScale) * (Math.sin(frameCounter * scalingSpeed) + 1) / 2;
+        const scalingFactor = smokeMinScale +
+            ((smokeMaxScale - smokeMinScale) *
+                (Math.sin(frameCounter * scalingSpeed) + 1)) /
+                2;
         smokeMesh.scale.set(scalingFactor, scalingFactor, scalingFactor);
     }
     function updateSmokeOpacity(smokeMesh) {
@@ -172,13 +176,17 @@ export function createPortal(scene, camera, renderer, controls) {
         const smokeMinOpacity = 0.2;
         const smokeMaxOpacity = 0.8;
         const smokeOpacityRange = smokeMaxOpacity - smokeMinOpacity;
-        const smokeOpacityValue = smokeMinOpacity + (smokeOpacityRange) * (Math.sin(frameCounter * smokeOpacitySpeed) + 1) / 2;
+        const smokeOpacityValue = smokeMinOpacity +
+            (smokeOpacityRange * (Math.sin(frameCounter * smokeOpacitySpeed) + 1)) /
+                2;
         smokeMesh.material.opacity = smokeOpacityValue;
     }
     function updateSmokeRotation(smokeMesh) {
         const smokeRotationSpeed = 0.004;
         const randomValue = Math.random();
-        randomValue < 0.3 ? smokeMesh.rotation.z -= smokeRotationSpeed : smokeMesh.rotation.z += smokeRotationSpeed;
+        randomValue < 0.3
+            ? (smokeMesh.rotation.z -= smokeRotationSpeed)
+            : (smokeMesh.rotation.z += smokeRotationSpeed);
     }
     function updateSmokeAnimation(smokeGroup, frameCounter) {
         smokeGroup.children.forEach(function (smokeMesh) {
@@ -194,7 +202,7 @@ export function createPortal(scene, camera, renderer, controls) {
         const opacityDecayRate = 0.0019;
         for (let i = 0; i < lightningGroup.children.length; i++) {
             const lightningMesh = lightningGroup.children[i];
-            const opacityValue = lightningOpacityMax - (lightningOpacityLoopCounter * opacityDecayRate);
+            const opacityValue = lightningOpacityMax - lightningOpacityLoopCounter * opacityDecayRate;
             if (lightningMesh instanceof THREE.Mesh) {
                 const material = lightningMesh.material;
                 material.opacity = opacityValue;
@@ -206,7 +214,8 @@ export function createPortal(scene, camera, renderer, controls) {
         const minVisibleLightning = 2;
         const maxVisibleLightning = 5;
         const visibleLightningRange = maxVisibleLightning - minVisibleLightning;
-        const numVisibleLightning = Math.floor(Math.random() * (visibleLightningRange + 1)) + minVisibleLightning;
+        const numVisibleLightning = Math.floor(Math.random() * (visibleLightningRange + 1)) +
+            minVisibleLightning;
         return numVisibleLightning;
     }
     function generateShuffledIndices(length) {
@@ -237,7 +246,9 @@ export function createPortal(scene, camera, renderer, controls) {
         const centerPosition = new THREE.Vector3(OFFSET_X, 0.1, OFFSET_Z);
         lightningGroup.children.forEach(function (lightningMesh, index) {
             const isMovingToCenter = lightningMesh.visible;
-            const targetPosition = isMovingToCenter ? centerPosition : startingPositions[index];
+            const targetPosition = isMovingToCenter
+                ? centerPosition
+                : startingPositions[index];
             const direction = targetPosition.clone().sub(lightningMesh.position);
             const distanceToTarget = direction.length();
             if (distanceToTarget > movementSpeed) {
@@ -274,8 +285,8 @@ export function createPortal(scene, camera, renderer, controls) {
             const angle = (i / circleSegments) * circleAngleInRadians;
             const vertexIndex = i * 3;
             const originalY = circleVertices[i].y;
-            const waveOffset1 = Math.sin(angle * waveFrequency1 + (frameCounter * 0.01)) * waveAmplitude1;
-            const waveOffset2 = Math.cos(angle * waveFrequency2 + (frameCounter * 0.01)) * waveAmplitude2;
+            const waveOffset1 = Math.sin(angle * waveFrequency1 + frameCounter * 0.01) * waveAmplitude1;
+            const waveOffset2 = Math.cos(angle * waveFrequency2 + frameCounter * 0.01) * waveAmplitude2;
             const combinedWaveOffset = waveOffset1 + waveOffset2;
             vertices[vertexIndex + 1] = originalY - combinedWaveOffset;
         }
@@ -292,11 +303,11 @@ export function createPortal(scene, camera, renderer, controls) {
             emissive: 0xffe500,
             emissiveIntensity: 0.85,
             clearcoat: 1,
-            blending: THREE.AdditiveBlending
+            blending: THREE.AdditiveBlending,
         });
         const edges = new THREE.EdgesGeometry(particleGeometry);
         const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0xFFEC43
+            color: 0xffec43,
         });
         const particleMesh = new THREE.Mesh(particleGeometry, particleMaterial);
         particleMesh.add(new THREE.LineSegments(edges, lineMaterial));
@@ -313,7 +324,7 @@ export function createPortal(scene, camera, renderer, controls) {
             maxPosY: yMax * Math.random(),
             currPosY: 0.1,
             rotationSpeed: Math.random() * 0.016,
-            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle)
+            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle),
         });
         scene.add(particleMesh);
     }
@@ -331,13 +342,13 @@ export function createPortal(scene, camera, renderer, controls) {
         interiorBoxes.forEach(updateInteriorBox);
     }
     function updateBoxScaleAndRotation(box) {
-        const scaleFactor = Math.max(0.02, (2 - box.currPosY / box.maxPosY * 4));
+        const scaleFactor = Math.max(0.02, 2 - (box.currPosY / box.maxPosY) * 4);
         box.mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
         box.rotationAngle.addScalar(box.rotationSpeed);
         box.mesh.rotation.set(box.rotationAngle.x, 0, box.rotationAngle.y);
     }
     function updateBoxPosition(box) {
-        const angle = box.currPosY / box.maxPosY * Math.PI * 8;
+        const angle = (box.currPosY / box.maxPosY) * Math.PI * 8;
         const x = box.mesh.position.x + Math.cos(angle) * 0.0012;
         const z = box.mesh.position.z + Math.sin(angle) * 0.0012;
         box.mesh.position.set(x, box.currPosY, z);

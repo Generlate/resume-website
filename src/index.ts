@@ -1,8 +1,8 @@
-import { scene, renderer, camera, controls } from './sceneInitialize.js'
-import { setupScene } from './sceneSetup.js'
-import { loadBuildingModel } from './building.js'
-import { loadCharacterModel } from './character.js'
-import { createPortal } from './portal.js'
+import { scene, renderer, camera, controls } from '../dist/sceneInitialize.js'
+import { setupScene } from '../dist/sceneSetup.js'
+import { loadBuildingModel } from '../dist/building.js'
+import { loadCharacterModel } from '../dist/character.js'
+import { createPortal } from '../dist/portal.js'
 
 setupScene(scene)
 loadBuildingModel(scene)
