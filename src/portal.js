@@ -3,7 +3,7 @@ export function createPortal(scene, camera, renderer, controls) {
     // add portal edge
     const circleRadius = 0.5;
     const circleSegments = 256;
-    let circleVertices = [];
+    const circleVertices = [];
     const OFFSET_X = -12.025;
     const OFFSET_Z = -6.5;
     const ringGeometry = new THREE.CircleGeometry(circleRadius, circleSegments);
@@ -39,10 +39,11 @@ export function createPortal(scene, camera, renderer, controls) {
     scene.add(fuzzyRingMesh);
     // add gradient fill
     const gradientCanvas = document.createElement('canvas');
-    gradientCanvas.width, gradientCanvas.height = circleRadius * 426.67;
+    gradientCanvas.width = circleRadius * 426.67;
+    gradientCanvas.height = circleRadius * 426.67;
     const gradientCtx = gradientCanvas.getContext('2d');
     const gradient = gradientCtx.createRadialGradient(gradientCanvas.width / 2, gradientCanvas.height / 2, 0, gradientCanvas.width / 2, gradientCanvas.height / 2, gradientCanvas.width / 2);
-    gradient.addColorStop(0, "rgb(168, 159, 82)");
+    gradient.addColorStop(0, 'rgb(168, 159, 82)');
     gradient.addColorStop(1, 'rgb(0, 0, 0)');
     gradientCtx.fillStyle = gradient;
     gradientCtx.fillRect(0, 0, gradientCanvas.width, gradientCanvas.height);
@@ -85,7 +86,7 @@ export function createPortal(scene, camera, renderer, controls) {
     scene.add(smokeGroup);
     // add lightning
     const lightningInstances = 8;
-    const lightningTexture = textureLoader.load("public/lightning.png");
+    const lightningTexture = textureLoader.load('public/lightning.png');
     const portalLightningMaterial = new THREE.MeshBasicMaterial({
         map: lightningTexture,
         color: 0xFFF282,
@@ -109,7 +110,7 @@ export function createPortal(scene, camera, renderer, controls) {
         lightningGroup.add(lightningMesh);
     }
     scene.add(lightningGroup);
-    //add particles
+    // add particles
     const randomHalfCircleAngle = Math.random() * Math.PI;
     const yMax = 4;
     function instantiateInteriorParticleMesh() {
@@ -209,7 +210,7 @@ export function createPortal(scene, camera, renderer, controls) {
         return numVisibleLightning;
     }
     function generateShuffledIndices(length) {
-        const indices = Array.from({ length: length }, function (_, i) {
+        const indices = Array.from({ length }, function (_, i) {
             return i;
         });
         const shuffledIndices = indices.sort(function () {
@@ -312,7 +313,7 @@ export function createPortal(scene, camera, renderer, controls) {
             maxPosY: yMax * Math.random(),
             currPosY: 0.1,
             rotationSpeed: Math.random() * 0.016,
-            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle),
+            rotationAngle: new THREE.Vector2(randomHalfCircleAngle, randomHalfCircleAngle)
         });
         scene.add(particleMesh);
     }
