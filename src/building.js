@@ -1,11 +1,11 @@
-import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 export function loadBuildingModel(scene) {
     const loader = new GLTFLoader();
-    loader.load("../public/building.glb", function (glb) {
+    loader.load('../public/building.glb', function (glb) {
         console.log(glb);
         const root = glb.scene;
-        const glassMesh = root.getObjectByName("KB3D_EVC_BldgLG_B_Main");
+        const glassMesh = root.getObjectByName('KB3D_EVC_BldgLG_B_Main');
         const glassMaterial = new THREE.MeshStandardMaterial({
             color: 0x818181,
             opacity: 0.75,
