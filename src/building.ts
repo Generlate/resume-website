@@ -5,7 +5,6 @@ export function loadBuildingModel(scene: THREE.Scene): void {
   const loader = new GLTFLoader();
 
   loader.load('../public/building.glb', function (glb: GLTF) {
-    console.log(glb);
     const root = glb.scene;
     const glassMesh = root.getObjectByName(
       'KB3D_EVC_BldgLG_B_Main'

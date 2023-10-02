@@ -176,13 +176,11 @@ export function createPortal(scene, camera, renderer, controls) {
         const smokeMinOpacity = 0.2;
         const smokeMaxOpacity = 0.8;
         const smokeOpacityRange = smokeMaxOpacity - smokeMinOpacity;
-        // Ensure that the material is of type THREE.Material
         const material = smokeMesh.material;
         if (material) {
             const smokeOpacityValue = smokeMinOpacity +
                 (smokeOpacityRange * (Math.sin(frameCounter * smokeOpacitySpeed) + 1)) /
                     2;
-            // Check if the material has an opacity property
             if ('opacity' in material) {
                 material.opacity = smokeOpacityValue;
             }

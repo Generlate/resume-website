@@ -261,7 +261,10 @@ export function createPortal(
       : (smokeMesh.rotation.z += smokeRotationSpeed);
   }
 
-  function updateSmokeAnimation(smokeGroup: any, frameCounter: number): void {
+  function updateSmokeAnimation(
+    smokeGroup: THREE.Group,
+    frameCounter: number
+  ): void {
     smokeGroup.children.forEach(function (smokeMesh: THREE.Mesh) {
       updateSmokeRotation(smokeMesh);
       updateSmokeOpacity(smokeMesh);
@@ -313,7 +316,7 @@ export function createPortal(
   }
 
   function setVisibleLightningIndices(
-    lightningGroup: any,
+    lightningGroup: THREE.Group,
     visibleIndices: number[]
   ): void {
     for (let i = 0; i < lightningInstances; i++) {

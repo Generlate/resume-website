@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { scene } from '../dist/sceneInitialize.js';
+import { scene } from './sceneInitialize.js';
 export function loadCharacterModel() {
     const characterLoader = new GLTFLoader();
     characterLoader.load('../public/avatar.glb', characterTransformation, onProgress, onError);
@@ -22,7 +22,9 @@ function onProgress(xhr) {
     const xhrTotal = 11280744;
     const percentageLoaded = (xhr.loaded / xhrTotal) * 100;
     const loaderText = document.querySelector('.loader-text');
-    loaderText.textContent = `${Math.round(percentageLoaded)}%`;
+    if (loaderText) {
+        loaderText.textContent = `${Math.round(percentageLoaded)}%`;
+    }
 }
 function onError(error) {
     console.error('An error occurred:', error);
