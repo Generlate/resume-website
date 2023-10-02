@@ -13,7 +13,9 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
 const calculateAspectRatio = () => {
-    return window.innerWidth > 1375 ? window.innerWidth / (2.9 * window.innerHeight) : window.innerWidth / window.innerHeight;
+    return window.innerWidth > 1375
+        ? window.innerWidth / (2.9 * window.innerHeight)
+        : window.innerWidth / window.innerHeight;
 };
 const camera = new THREE.PerspectiveCamera(20, calculateAspectRatio(), 0.1, 1000);
 const updateCameraAndRenderer = () => {

@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 
 export function createPortal(
-  scene: any,
-  camera: any,
-  renderer: any,
+  scene: THREE.Scene,
+  camera: THREE.PerspectiveCamera,
+  renderer: THREE.WebGLRenderer,
   controls: any
 ): void {
   // add portal edge
@@ -55,11 +55,11 @@ export function createPortal(
   scene.add(fuzzyRingMesh);
 
   // add gradient fill
-  const gradientCanvas: any = document.createElement('canvas');
+  const gradientCanvas: HTMLCanvasElement = document.createElement('canvas');
   gradientCanvas.width = circleRadius * 426.67;
   gradientCanvas.height = circleRadius * 426.67;
-  const gradientCtx: any = gradientCanvas.getContext('2d');
-  const gradient: any = gradientCtx.createRadialGradient(
+  const gradientCtx: CanvasRenderingContext2D = gradientCanvas.getContext('2d');
+  const gradient: CanvasGradient = gradientCtx.createRadialGradient(
     gradientCanvas.width / 2,
     gradientCanvas.height / 2,
     0,
@@ -233,16 +233,24 @@ export function createPortal(
     smokeMesh.scale.set(scalingFactor, scalingFactor, scalingFactor);
   }
 
-  function updateSmokeOpacity(smokeMesh: any): void {
+  function updateSmokeOpacity(smokeMesh: THREE.Mesh): void {
     const smokeOpacitySpeed: number = 0.01;
     const smokeMinOpacity: number = 0.2;
     const smokeMaxOpacity: number = 0.8;
     const smokeOpacityRange: number = smokeMaxOpacity - smokeMinOpacity;
-    const smokeOpacityValue: number =
-      smokeMinOpacity +
-      (smokeOpacityRange * (Math.sin(frameCounter * smokeOpacitySpeed) + 1)) /
-        2;
-    smokeMesh.material.opacity = smokeOpacityValue;
+
+    const material = smokeMesh.material as THREE.Material;
+
+    if (material) {
+      const smokeOpacityValue: number =
+        smokeMinOpacity +
+        (smokeOpacityRange * (Math.sin(frameCounter * smokeOpacitySpeed) + 1)) /
+          2;
+
+      if ('opacity' in material) {
+        material.opacity = smokeOpacityValue;
+      }
+    }
   }
 
   function updateSmokeRotation(smokeMesh: THREE.Mesh): void {

@@ -1,12 +1,12 @@
 import * as THREE from 'three';
 export function setupScene(scene) {
     // Lights
-    const studioLight = new THREE.SpotLight(0xFFF8DE, 0.3);
+    const studioLight = new THREE.SpotLight(0xfff8de, 0.3);
     studioLight.position.set(-12.1, 3, -2.5);
     studioLight.target.position.set(-12.1, 0, -6.5);
-    const directionalLight = new THREE.DirectionalLight(0xFFF8DE, 0.2);
+    const directionalLight = new THREE.DirectionalLight(0xfff8de, 0.2);
     directionalLight.position.set(2, 2, 5);
-    const ambientLight = new THREE.AmbientLight(0xFFF8DE, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xfff8de, 0.5);
     scene.add(studioLight, directionalLight, ambientLight);
     // Sky
     const skyTexture = new THREE.TextureLoader().load('../public/sky.png');
@@ -31,6 +31,6 @@ export function setupScene(scene) {
     scene.add(floorMesh);
     floorMesh.position.set(-2, -2, -5);
     // Fog
-    scene.fog = new THREE.FogExp2(0x1C1C0E, 0.002);
+    scene.fog = new THREE.FogExp2(0x1c1c0e, 0.002);
 }
 //# sourceMappingURL=sceneSetup.js.map

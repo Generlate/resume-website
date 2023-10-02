@@ -6,7 +6,6 @@ export function loadCharacterModel() {
     characterLoader.load('../public/avatar.glb', characterTransformation, onProgress, onError);
 }
 function characterTransformation(glb) {
-    console.log(glb);
     const root = glb.scene;
     root.scale.set(0.95, 0.95, 0.95);
     root.position.set(-12.025, 0.1, -6.5);
