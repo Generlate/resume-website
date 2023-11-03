@@ -266,6 +266,14 @@ main > div > section:nth-of-type(2) div div > a {
   display: flex;
 }
 
+.slides > p > a {
+  color: var(--third-color);
+}
+
+.slides > p > a:visited {
+  color: var(--third-color);
+}
+
 @keyframes fade {
   from {
     opacity: 0.4;
