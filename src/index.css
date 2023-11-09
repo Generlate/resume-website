@@ -291,10 +291,6 @@ main div section:nth-of-type(2) div a video {
   box-sizing: border-box;
 }
 
-video {
-  display: none;
-}
-
 video::-webkit-media-controls-panel {
   display: none;
 }
