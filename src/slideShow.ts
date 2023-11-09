@@ -1,14 +1,6 @@
 let slideIndex: number = 1;
 showSlides(slideIndex);
 
-function plusSlides(n: number): void {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n: number) {
-  showSlides((slideIndex = n));
-}
-
 function showSlides(n: number): void {
   let i;
   const slides: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName(
