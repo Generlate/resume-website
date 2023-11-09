@@ -353,6 +353,11 @@ video::-webkit-media-controls-panel {
     flex-direction: column;
   }
 
+  li::before {
+    font-size: 3vmin;
+    padding-right: 2.25vmin;
+  }
+
   .slides p {
     font-size: var(--mobile-font-size);
   }
