@@ -284,7 +284,7 @@ main > div > section:nth-of-type(2) div div > a {
 }
 
 main div section:nth-of-type(2) div a img,
-main div section:nth-of-type(2) div video {
+main div section:nth-of-type(2) div a video {
   width: 100%;
   border-radius: var(--media-border-radius);
   padding: 0vmin 0.6vmin;
@@ -321,7 +321,6 @@ video::-webkit-media-controls-panel {
   main {
     flex-direction: column;
     align-items: center;
-    z-index: 1;
   }
 
   main > div {
