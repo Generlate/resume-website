@@ -3,24 +3,30 @@
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 9vh;
-    background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.95) 0%, hsla(0, 0%, 0%, 0.95) 50%, hsla(0, 0%, 0%, 0.75) 75%, hsla(0, 100%, 100%, 0) 100%);
-    z-index: 2;
-    display: flex;
-    justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 9vh;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.95) 0%,
+    hsla(0, 0%, 0%, 0.95) 50%,
+    hsla(0, 0%, 0%, 0.75) 75%,
+    hsla(0, 100%, 100%, 0) 100%
+  );
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
 }
 
 header a:first-of-type {
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 header a:first-of-type img {
   width: 5.5vmin;
-  margin-left: 1vmin;  
+  margin-left: 1vmin;
 }
 
 header a:nth-of-type(2):-webkit-any-link {
@@ -28,7 +34,7 @@ header a:nth-of-type(2):-webkit-any-link {
   color: var(--third-color);
   text-decoration: none;
   margin-right: 1.1vw;
-  font-family: "roboto";
+  font-family: 'roboto';
 }
 
 header a:not(:first-of-type) {
@@ -47,23 +53,55 @@ header a:last-of-type img {
   padding-right: 0.65vh;
 }
 
-header a:hover {
-  filter: brightness(70%);
+header a:first-of-type:hover img {
+  filter: brightness(125%);
 }
-  
+
+header a:nth-of-type(2):hover {
+  filter: brightness(150%);
+}
+
+header a:nth-of-type(3):hover {
+  filter: brightness(150%);
+}
+
+header a:nth-of-type(4):hover {
+  filter: brightness(150%) saturate(10%);
+}
+
+header a:nth-of-type(5):hover {
+  filter: hue-rotate(320deg) brightness(80%) saturate(1000%);
+}
+
+header a:nth-of-type(6):hover {
+  filter: hue-rotate(150deg) brightness(60%) saturate(500%);
+}
+
+header a:nth-of-type(7):hover {
+  filter: brightness(200%) saturate(0%);
+}
+
+header a:nth-of-type(8):hover {
+  filter: hue-rotate(175deg) brightness(100%) saturate(1200%);
+}
+
+header a:nth-of-type(9):hover {
+  filter: hue-rotate(250deg) brightness(80%) saturate(1000%);
+}
+
 @media (max-width: 1375px) {
   header a:first-of-type img {
     width: 6.25vh;
     margin-left: 0.3vh;
     padding-top: 0vh;
   }
-  
+
   header a:not(:first-of-type) {
     font-size: 2.75vh;
     padding-right: 0.6vh;
     padding-top: 0.75vh;
   }
-  
+
   header a:not(:first-of-type) img {
     width: 3vh;
   }

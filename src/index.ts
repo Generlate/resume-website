@@ -9,18 +9,15 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: maybe make the bullets into rounded rectangles (not a button)
-// TODO: add spacing between the sections on mobile
-// TODO: add link symbol to generlate.com website link
-// TODO: make generlate.com change color and add underline on hover
-// TODO: maybe make sections have bevel and no stroke
 // TODO: decide if hover should be dark or light
 // TODO: make outer fillet = inner fillet + padding
 // TODO: slideshow arrows change color on hover
 // TODO: slideshow arrow buttons should be same color as background and hover to different color
 // TODO: maybe section stroke changes on hover
-// TODO: decide if i want to do media size flip or if text should scale with the browser window
+// TODO: decide if i want to do media size flip or if text should scale with the browser window, add spacing between the sections on mobile
 // TODO: fix instagram link
+// TODO: fix Austen Cabret overlapping the header on scroll (mobile)
+// TODO: add link symbol to generlate.com website link
 // TODO: swap out technology names for icons that are greyed out and color on hover (links to the tech's site)
 // TODO: socials turn the socials color on hover
 // TODO: consider using inter font instead of roboto.. maybe, idk
