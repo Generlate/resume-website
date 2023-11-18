@@ -90,6 +90,10 @@ header a:nth-of-type(9):hover {
 }
 
 @media (max-width: 1375px) {
+  header {
+    z-index: 3;
+  }
+
   header a:first-of-type img {
     width: 6.25vh;
     margin-left: 0.3vh;

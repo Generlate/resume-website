@@ -114,7 +114,7 @@ h1 {
 
 h2 {
   color: var(--second-color);
-  font-size: 3.5vmin;
+  font-size: 2.5vmin;
   font-weight: 500;
   margin: 0px;
   margin-top: -0.6vmin;
@@ -133,7 +133,6 @@ main div section:first-of-type {
   padding: 2vmin;
   margin: 0vmin 1.2vmin;
   border-radius: var(--section-border-radius);
-  height: 14vh;
   box-shadow:
     inset 0 0 2px 0 rgba(255, 255, 255, 0.4),
     inset 0 0 3px 0 rgba(0, 0, 0, 0.4),
@@ -148,8 +147,8 @@ main div section:first-of-type:hover {
 
 main div section:first-of-type div {
   display: flex;
-  padding-top: 3.75vmin;
-  padding-bottom: 2.25vmin;
+  padding-top: 1.5vmin;
+  padding-bottom: 0vmin;
   justify-content: center;
 }
 
@@ -157,10 +156,11 @@ p {
   margin: 0px;
 }
 
-ul {
+main div section:first-of-type div ul {
   margin: 0px;
   padding-left: 0.6vmin;
   padding-right: 0.6vmin;
+  display: flex;
 }
 
 li {
@@ -169,12 +169,6 @@ li {
   flex-direction: row;
   padding-left: 1.5vmin;
   padding-right: 1.5vmin;
-}
-
-li::before {
-  content: '▢';
-  font-size: 1.1vmin;
-  padding-right: 0.75vmin;
 }
 
 li a {
@@ -187,6 +181,11 @@ li a:hover {
   color: var(--second-color);
 }
 
+ul li a img {
+  height: 30px;
+  width: auto;
+}
+
 main div section:nth-of-type(2) {
   font-family: var(--font-family);
   background-color: var(--fourth-color);
@@ -195,7 +194,6 @@ main div section:nth-of-type(2) {
   position: relative;
   border-radius: var(--section-border-radius);
   padding-bottom: 0vmin;
-  height: 71vh;
   overflow: auto;
   -ms-overflow-style: none;
   box-shadow:
@@ -252,7 +250,7 @@ h3 {
   transition: 0.6s ease;
   border-radius: var(--button-border-radius);
   user-select: none;
-  background-color: hsla(55, 42%, 6%, 0.65);
+  background-color: hsla(55, 42%, 6%, 1);
   z-index: 3;
 }
 
@@ -264,6 +262,7 @@ h3 {
 #prev:hover,
 #next:hover {
   background-color: var(--fourth-color);
+  color: var(--second-color);
 }
 
 .slides p {
@@ -297,6 +296,9 @@ main > div > section:nth-of-type(2) div ul {
   text-align: center;
   position: relative;
   bottom: 2.75vmin;
+  margin: 0px;
+  padding-left: 0.6vmin;
+  padding-right: 0.6vmin;
 }
 
 main > div > section:nth-of-type(2) div div > a {
@@ -375,7 +377,7 @@ video::-webkit-media-controls-panel {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-top: -1.2vmin;
   }
 
@@ -387,11 +389,6 @@ video::-webkit-media-controls-panel {
   main div section:first-of-type div {
     display: flex;
     flex-direction: column;
-  }
-
-  li::before {
-    font-size: 3vmin;
-    padding-right: 2.25vmin;
   }
 
   .slides p {

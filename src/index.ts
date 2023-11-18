@@ -9,20 +9,19 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: decide if hover should be dark or light
-// TODO: make outer fillet = inner fillet + padding
+// TODO: decide if i want to do media size flip or if text should scale with the browser window, add spacing between the sections on mobile
+// mobile needs bigger padding and margin, i think it should be static sizing. font size should be static.
+// make header modular
 // TODO: slideshow arrows change color on hover
 // TODO: slideshow arrow buttons should be same color as background and hover to different color
-// TODO: maybe section stroke changes on hover
-// TODO: decide if i want to do media size flip or if text should scale with the browser window, add spacing between the sections on mobile
-// TODO: fix instagram link
-// TODO: fix Austen Cabret overlapping the header on scroll (mobile)
 // TODO: add link symbol to generlate.com website link
 // TODO: swap out technology names for icons that are greyed out and color on hover (links to the tech's site)
 // TODO: socials turn the socials color on hover
 // TODO: consider using inter font instead of roboto.. maybe, idk
 // TODO: maybe do 'Front End Software Engineer' instead
 // TODO: mess with the title's thickness
+// TODO: make outer fillet = inner fillet + padding
+// TODO: maybe section stroke changes on hover
 // TODO: fix projects not showing on mobile
 // TODO: maybe change slideshow to smaller project boxes?
 // TODO: Add an all projects page like Brittany Chiang's
