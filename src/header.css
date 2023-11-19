@@ -34,7 +34,7 @@ header a:nth-of-type(2):-webkit-any-link {
   color: var(--third-color);
   text-decoration: none;
   margin-right: 1rem;
-  font-family: 'roboto';
+  font-family: 'inter';
   font-size: 1.55rem;
 }
 

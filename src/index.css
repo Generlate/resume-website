@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:thin,extralight,light,regular,medium,semibold,bold,extrabold,black');
 @import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
 
 :root {
@@ -12,7 +13,7 @@
   --section-border-radius: 1.5vh;
   --media-border-radius: 20px;
   --button-border-radius: 0 4px 4px 0;
-  --font-family: 'Roboto', sans-serif;
+  --font-family: 'Inter', 'Roboto', sans-serif;
   --mobile-font-size: 1.25rem;
   --border: 2px solid var(--third-color);
 }
@@ -98,9 +99,6 @@ main {
 }
 
 main > section {
-  text-shadow:
-    2px 2px 0px hsl(50, 44%, 28%),
-    0px 0px 8px var(--fifth-color);
   font-family: var(--font-family);
   text-align: center;
   margin: 0 auto;
@@ -109,16 +107,32 @@ main > section {
 h1 {
   font-size: 3.8rem;
   color: var(--main-color);
-  font-weight: 900;
+  font-weight: 800;
   margin: 0rem;
+  text-shadow:
+    0px 0px 0 rgb(223, 202, 0),
+    0px -1px 0 rgb(197, 176, 0),
+    0px -2px 0 rgb(170, 149, 0),
+    0px -3px 0 rgb(143, 122, 0),
+    0px -4px 3px rgba(0, 0, 0, 0),
+    0px -4px 1px rgba(0, 0, 0, 0.5),
+    0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
   color: var(--second-color);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0rem;
   margin-top: -0.4rem;
+  text-shadow:
+    0px 0px 0 rgb(228, 220, 152),
+    0px -1px 0 rgb(202, 194, 126),
+    0px -2px 0 rgb(175, 167, 99),
+    0px -3px 0 rgb(148, 140, 72),
+    0px -4px 3px rgba(0, 0, 0, 0),
+    0px -4px 1px rgba(0, 0, 0, 0.5),
+    0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 main > div {
