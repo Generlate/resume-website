@@ -9,7 +9,6 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: consider using inter font instead of roboto.. maybe, idk
 // TODO: swap out technology names for icons that are greyed out and color on hover (links to the tech's site)
 // TODO: Add an all projects page like Brittany Chiang's
 // TODO: maybe change slideshow to smaller project boxes?
