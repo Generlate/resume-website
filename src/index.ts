@@ -9,9 +9,9 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: swap out technology names for icons that are greyed out and color on hover (links to the tech's site)
-// TODO: Add an all projects page like Brittany Chiang's
+// TODO: tech icons color on hover
 // TODO: maybe change slideshow to smaller project boxes?
+// TODO: Add an all projects page like Brittany Chiang's
 // TODO: add technologies used for each project
 // TODO: break down technologies section to programming languages, scripting languages, tools, design, etc. (look at brittany chiang v.3)
 // TODO: make outer fillet = inner fillet + padding

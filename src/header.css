@@ -38,6 +38,10 @@ header a:nth-of-type(2):-webkit-any-link {
   font-size: 1.55rem;
 }
 
+header a:nth-of-type(2):-webkit-any-link:hover {
+  color: var(--second-color);
+}
+
 header a:not(:first-of-type) {
   font-size: 1.5rem;
   margin-top: 0.6rem;
@@ -58,35 +62,35 @@ header a:first-of-type:hover img {
   filter: brightness(125%);
 }
 
-header a:nth-of-type(2):hover {
+header a:nth-of-type(2) img:hover {
   filter: brightness(150%);
 }
 
-header a:nth-of-type(3):hover {
+header a:nth-of-type(3) img:hover {
   filter: brightness(150%);
 }
 
-header a:nth-of-type(4):hover {
+header a:nth-of-type(4) img:hover {
   filter: brightness(150%) saturate(10%);
 }
 
-header a:nth-of-type(5):hover {
+header a:nth-of-type(5) img:hover {
   filter: hue-rotate(320deg) brightness(80%) saturate(1000%);
 }
 
-header a:nth-of-type(6):hover {
+header a:nth-of-type(6) img:hover {
   filter: hue-rotate(150deg) brightness(60%) saturate(500%);
 }
 
-header a:nth-of-type(7):hover {
+header a:nth-of-type(7) img:hover {
   filter: brightness(200%) saturate(0%);
 }
 
-header a:nth-of-type(8):hover {
+header a:nth-of-type(8) img:hover {
   filter: hue-rotate(175deg) brightness(100%) saturate(1200%);
 }
 
-header a:nth-of-type(9):hover {
+header a:nth-of-type(9) img:hover {
   filter: hue-rotate(250deg) brightness(80%) saturate(1000%);
 }
 
