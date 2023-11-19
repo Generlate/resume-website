@@ -398,6 +398,7 @@ video::-webkit-media-controls-panel {
 
   main div section:first-of-type {
     font-size: var(--mobile-font-size);
+    height: auto;
   }
 
   main div section:first-of-type div ul {
@@ -424,6 +425,6 @@ video::-webkit-media-controls-panel {
   }
 
   main div section:nth-of-type(2) {
-    height: 100%;
+    height: auto;
   }
 }
