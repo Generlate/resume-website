@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:thin,medium,black');
+@import url('https://fonts.googleapis.com/css?family=Inter:thin,extralight,light,regular,medium,semibold,bold,extrabold,black');
+@import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
 
 :root {
   --second-color: hsl(54, 100%, 85%);
@@ -7,13 +8,13 @@
 }
 
 body {
-    background-color: var(--fourth-color);
-    cursor: url("../../public/cursor.png"), auto;
-    font-family: "roboto";
-    color: var(--third-color);
-    font-size: 1.5vmin;
-    font-weight: 100;
-} 
+  background-color: var(--fourth-color);
+  cursor: url('../../public/cursor.png'), auto;
+  font-family: 'Inter', 'roboto';
+  color: var(--third-color);
+  font-size: 1.5vmin;
+  font-weight: 100;
+}
 
 main {
   display: flex;
@@ -47,7 +48,8 @@ main > p {
   margin: 0px;
 }
 
-main img, main video {
+main img,
+main video {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
