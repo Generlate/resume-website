@@ -9,6 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: make subpages mobile-first
 // TODO: maybe change slideshow to smaller project boxes?
 // TODO: Add an all projects page like Brittany Chiang's
 // TODO: add technologies used for each project
