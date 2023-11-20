@@ -367,6 +367,16 @@ video::-webkit-media-controls-panel {
   display: none;
 }
 
+div div > a {
+  color: var(--third-color);
+  text-decoration: none;
+  text-align: end;
+}
+
+div div > a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1376px) {
   aside {
     position: fixed;
