@@ -10,8 +10,8 @@
   --sixth-color: hsl(0, 0%, 7%);
   --seventh-color: black;
   --circle-border-radius: 50%;
-  --section-border-radius: 1.5vh;
-  --media-border-radius: 20px;
+  --section-border-radius: 1.5rem;
+  --media-border-radius: 1rem;
   --button-border-radius: 0 4px 4px 0;
   --font-family: 'Inter', 'Roboto', sans-serif;
   --mobile-font-size: 1.25rem;
@@ -137,7 +137,8 @@ h2 {
 
 main > div {
   width: 64%;
-  height: 100%;
+  height: calc(100% - 0.55rem);
+  margin-top: 0.55rem;
 }
 
 main div section:first-of-type {
@@ -153,7 +154,7 @@ main div section:first-of-type {
     inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
     inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
     2px 2px 4px 0 rgba(0, 0, 0, 0.25);
-  height: calc(17% - 4rem);
+  /* height: calc(17% - 4rem); */
   overflow: auto;
   -ms-overflow-style: none;
 }
@@ -161,10 +162,10 @@ main div section:first-of-type::-webkit-scrollbar {
   display: none;
 }
 
-main div section:first-of-type:hover {
+/* main div section:first-of-type:hover {
   box-shadow: 0 0 20px var(--second-color);
   outline: var(--border);
-}
+} */
 
 main div section:first-of-type div {
   display: flex;
@@ -223,22 +224,13 @@ main div section:nth-of-type(2) {
     inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
     inset 0 0 4px 8px rgba(0, 0, 0, 0.05),
     2px 2px 4px 0 rgba(0, 0, 0, 0.25);
-  height: calc(87% - 4rem);
+  height: calc(50% - 4rem);
 }
 
-main div section:nth-of-type(2):hover {
+/* main div section:nth-of-type(2):hover {
   box-shadow: 0 0 20px var(--second-color);
   outline: var(--border);
-}
-
-main div section:nth-of-type(2) div div p a {
-  text-decoration: none;
-}
-
-main div section:nth-of-type(2) div div p a:hover {
-  color: var(--second-color);
-  text-decoration: underline;
-}
+} */
 
 main div section:nth-of-type(2)::-webkit-scrollbar {
   display: none;
@@ -250,131 +242,116 @@ h3 {
   font-weight: 500;
   padding: 0.6rem;
   margin: 0rem;
+  margin-bottom: 1rem;
 }
 
-.slides {
+main div section:nth-of-type(2) div:first-of-type {
   display: flex;
-  margin-top: 0.2rem;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  flex-wrap: wrap;
 }
 
-#prev {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
+main div section:nth-of-type(2) div:first-of-type a {
+  /* justify-content: center; */
+  width: 29%;
+  margin: 0.5rem 0.5rem;
+  border-radius: 1.25rem;
   padding: 1rem;
-  color: var(--third-color);
-  font-weight: bold;
-  transition: 0.6s ease;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  user-select: none;
-  background-color: hsla(55, 42%, 6%, 1);
-  z-index: 3;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  border: 1px solid var(--sixth-color);
+  box-shadow: 0 0 5px black;
 }
 
-#next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 1rem;
-  color: var(--third-color);
-  font-weight: bold;
-  transition: 0.6s ease;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  user-select: none;
-  background-color: hsla(55, 42%, 6%, 1);
-  z-index: 3;
-  margin-right: 1vmin;
-  right: 0;
-}
-
-#prev:hover,
-#next:hover {
-  background-color: var(--fourth-color);
+main div section:nth-of-type(2) div:first-of-type a:hover {
+  background-color: var(--sixth-color);
+  box-shadow: 0 0 20px var(--second-color);
+  outline: var(--border);
   color: var(--second-color);
 }
 
-.slides p {
+main div section:nth-of-type(2) div:first-of-type a div p {
   color: var(--third-color);
-  padding: 1rem;
-  text-align: center;
+  padding: 0.25rem 1rem;
+  text-align: end;
   font-weight: 300;
-  flex: 1;
+  margin-left: auto;
 }
 
-.dot {
-  cursor: pointer;
-  height: 1rem;
-  width: 1rem;
-  margin: 0 2px;
-  border: var(--border);
-  border-radius: var(--circle-border-radius);
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  z-index: 3;
-}
-
-.active,
-.dot:hover {
-  background-color: var(--third-color);
-  border: var(--border);
-}
-
-main > div > section:nth-of-type(2) div ul {
-  text-align: center;
-  position: relative;
-  bottom: 2rem;
-  margin: 0rem;
-  padding-left: 0.6vmin;
-  padding-right: 0.6vmin;
-}
-
-main > div > section:nth-of-type(2) div div > a {
-  display: flex;
-}
-
-.slides > p > a {
+main div section:nth-of-type(2) div:first-of-type a div p:first-of-type {
+  font-size: 0.875rem;
+  font-weight: 600;
   color: var(--third-color);
 }
 
-.slides > p > a:visited {
-  color: var(--third-color);
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+main div section:nth-of-type(2) div:first-of-type a div p:nth-of-type(2) {
+  font-weight: 500;
 }
 
 main div section:nth-of-type(2) div a img,
 main div section:nth-of-type(2) div a video {
-  width: 100%;
+  width: 10vw;
   border-radius: var(--media-border-radius);
   padding: 0rem;
-  box-sizing: border-box;
+  border: 1px solid var(--fifth-color);
+}
+
+main div section:nth-of-type(2) > div:nth-of-type(2) {
+  text-align: end;
+  margin-top: 1rem;
+}
+
+main div section:nth-of-type(2) > div:nth-of-type(2) a {
+  color: var(--third-color);
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+main div section:nth-of-type(2) > div:nth-of-type(2) a:hover {
+  text-decoration: underline;
 }
 
 video::-webkit-media-controls-panel {
   display: none;
 }
 
-div div > a {
-  color: var(--third-color);
-  text-decoration: none;
-  text-align: end;
+main div section:nth-of-type(3) {
+  font-family: var(--font-family);
+  background-color: var(--fourth-color);
+  padding: 1.2rem;
+  margin: 0.8rem;
+  position: relative;
+  border-radius: var(--section-border-radius);
+  padding-bottom: 0rem;
+  overflow: auto;
+  -ms-overflow-style: none;
+  box-shadow:
+    inset 0 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
+    inset 0 0 4px 8px rgba(0, 0, 0, 0.05),
+    2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  height: calc(35% - 4rem);
 }
 
-div div > a:hover {
-  text-decoration: underline;
+main div section:nth-of-type(3) > div {
+  display: flex;
+  color: var(--third-color);
+}
+
+main div section:nth-of-type(3) > div div {
+  margin: auto;
+  text-align: center;
+}
+
+main div section:nth-of-type(3) > div div img {
+  width: 6rem;
+  filter: sepia(100%) brightness(80%);
+}
+
+main div section:nth-of-type(3) > div div img:hover {
+  width: 6rem;
+  filter: none;
 }
 
 @media (max-width: 1376px) {

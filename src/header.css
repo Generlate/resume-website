@@ -36,6 +36,7 @@ header a:nth-of-type(2):-webkit-any-link {
   margin-right: 1rem;
   font-family: 'inter';
   font-size: 1.55rem;
+  filter: brightness(150%);
 }
 
 header a:nth-of-type(2):-webkit-any-link:hover {
@@ -60,6 +61,38 @@ header a:last-of-type img {
 
 header a:first-of-type:hover img {
   filter: brightness(125%);
+}
+
+header a:nth-of-type(2) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(3) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(4) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(5) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(6) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(7) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(8) img {
+  filter: brightness(130%);
+}
+
+header a:nth-of-type(9) img {
+  filter: brightness(130%);
 }
 
 header a:nth-of-type(2) img:hover {
