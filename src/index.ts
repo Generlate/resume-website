@@ -9,13 +9,15 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: make subpages mobile-first
-// TODO: maybe change slideshow to smaller project boxes?
-// TODO: Add an all projects page like Brittany Chiang's
-// TODO: add technologies used for each project
+// TODO: make generlate.com default light theme
+// TODO: fix project videos that have black boarders
+// TODO: make projects descriptions like brittany Chiang's / add tech used.
 // TODO: break down technologies section to programming languages, scripting languages, tools, design, etc. (look at brittany chiang v.3)
-// TODO: tech icons color on hover
-// TODO: make outer fillet = inner fillet + padding
+// TODO: fix header colors
+// TODO: fix sub pages colors
+// TODO: make transitions delayed
+// TODO: add animations to hover/click
+// TODO: make subpages mobile-first
 // TODO: add mongodb
 // TODO: account for the video loading in the loader or compress video
 // TODO: better project descriptions (with code blocks?)
