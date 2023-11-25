@@ -41,7 +41,6 @@ header a:nth-of-type(2):-webkit-any-link {
 
 header a:nth-of-type(2):-webkit-any-link:hover {
   color: var(--third-color);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
@@ -63,86 +62,78 @@ header a:last-of-type img {
 
 header a:first-of-type:hover img {
   filter: brightness(100%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(2) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(3) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(4) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(5) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(6) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(7) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(8) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(9) img {
-  filter: brightness(100%);
+  filter: brightness(160%) saturate(150%);
 }
 
 header a:nth-of-type(2) img:hover {
   filter: brightness(150%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(3) img:hover {
   filter: brightness(150%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(4) img:hover {
   filter: brightness(150%) saturate(10%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(5) img:hover {
   filter: hue-rotate(320deg) brightness(80%) saturate(1000%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(6) img:hover {
   filter: hue-rotate(150deg) brightness(60%) saturate(500%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(7) img:hover {
   filter: brightness(200%) saturate(0%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 
 header a:nth-of-type(8) img:hover {
   filter: hue-rotate(175deg) brightness(100%) saturate(1200%);
-  transform: scale(1.1);
+  transition: 0.15s;
 }
 
 header a:nth-of-type(9) img:hover {
   filter: hue-rotate(250deg) brightness(80%) saturate(1000%);
-  transform: scale(1.1);
   transition: 0.15s;
 }
 

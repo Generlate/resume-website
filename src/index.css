@@ -272,7 +272,7 @@ main div section:nth-of-type(2) div:first-of-type a:hover {
   box-shadow: 0 0 20px var(--third-color);
   /* outline: var(--border); */
   color: var(--sixth-color);
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s;
 }
 

@@ -9,6 +9,8 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: make work on mobile
+// TODO: transitions
 // TODO: make generlate.com default light theme
 // TODO: fix project videos that have black boarders
 // TODO: make projects descriptions like brittany Chiang's / add tech used.
