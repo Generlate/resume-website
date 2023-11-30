@@ -9,14 +9,14 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: fix header hover colors + generlate icon not changing brightness
-// TODO: transitions
-// TODO: make generlate.com default light theme
-// TODO: fix project videos that have black boarders
 // TODO: make projects descriptions like brittany Chiang's / add tech used.
-// TODO: break down technologies section to programming languages, scripting languages, tools, design, etc. (look at brittany chiang v.3)
+// TODO: fix header hover colors + generlate icon not changing brightness
 // TODO: fix header colors
-// TODO: fix sub pages colors
+// TODO: make generlate.com default light theme
+// TODO: break down technologies section to programming languages, scripting languages, tools, design, etc. (look at brittany chiang v.3)
+// TODO: incorporate react
+// TODO: fix subpages
+// TODO: transitions
 // TODO: make transitions delayed
 // TODO: add animations to hover/click
 // TODO: make subpages mobile-first
