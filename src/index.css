@@ -266,10 +266,10 @@ main div section:nth-of-type(2) div:first-of-type a {
 }
 
 main div section:nth-of-type(2) div:first-of-type a:hover {
-  background-color: var(--third-color);
-  box-shadow: 0 0 20px var(--third-color);
-  /* outline: var(--border); */
-  color: var(--sixth-color);
+  background-color: rgb(18, 18, 11);
+  box-shadow:
+    inset 0 0 2px 0 rgba(255, 255, 255, 0.1),
+    0px 0px 20px 0 rgba(18, 18, 11, 1);
   transform: scale(1.05);
   transition: 0.5s;
 }

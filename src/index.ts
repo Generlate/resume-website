@@ -9,6 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: fix header hover colors + generlate icon not changing brightness
 // TODO: transitions
 // TODO: make generlate.com default light theme
 // TODO: fix project videos that have black boarders
