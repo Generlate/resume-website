@@ -9,8 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: switch one of the architecture projects for resume website
-// TODO: make projects descriptions like brittany Chiang's / add tech used.
+// TODO: fix mobile
 // TODO: fix header hover colors + generlate icon not changing brightness
 // TODO: fix header colors
 // TODO: make generlate.com default light theme

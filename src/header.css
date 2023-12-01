@@ -142,6 +142,10 @@ header a:nth-of-type(9) img:hover {
     z-index: 3;
   }
 
+  header a:first-of-type {
+    margin-left: 0rem;
+  }
+
   header a:first-of-type img {
     width: 3rem;
     margin-left: 0.2rem;

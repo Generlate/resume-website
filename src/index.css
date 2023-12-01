@@ -318,17 +318,17 @@ main div section:nth-of-type(2) div:first-of-type a div:nth-of-type(2) {
   justify-content: center;
   padding-top: 1rem;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   flex-wrap: wrap;
 }
 
 main div section:nth-of-type(2) div:first-of-type a div:nth-of-type(2) p {
-  /* border: 1px solid rgb(44, 43, 27); */
+  border: 1px solid hsl(53, 25%, 45%);
   border-radius: var(--button-border-radius);
-  color: var(--fifth-color);
+  color: hsl(53, 25%, 45%);
   padding: 0.25rem 0.5rem;
-  background-color: rgb(18, 18, 11);
-  font-weight: 300;
+  /* background-color: hsl(53, 25%, 45%); */
+  font-weight: 500;
 }
 
 /* bottom of group */
@@ -484,11 +484,7 @@ main div section:nth-of-type(3) > div div p {
   }
 
   main div section:nth-of-type(2) div:first-of-type {
-    display: block;
-  }
-
-  main div section:nth-of-type(2) div:first-of-type a div p {
-    padding-left: 0rem;
+    display: flex;
   }
 
   main div section:nth-of-type(2) div:first-of-type a {
@@ -497,8 +493,13 @@ main div section:nth-of-type(3) > div div p {
     margin: 1rem 0.5rem;
   }
 
-  main div section:nth-of-type(2) div a img,
-  main div section:nth-of-type(2) div a video {
+  main div section:nth-of-type(2) div:first-of-type a div div p {
+    padding-left: 0rem;
+    margin-left: 0rem;
+  }
+
+  main div section:nth-of-type(2) div:first-of-type a img,
+  main div section:nth-of-type(2) div:first-of-type a video {
     width: 45vw;
   }
 
