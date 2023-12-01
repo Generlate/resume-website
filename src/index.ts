@@ -9,9 +9,6 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: fix mobile
-// TODO: fix header hover colors + generlate icon not changing brightness
-// TODO: fix header colors
 // TODO: make generlate.com default light theme
 // TODO: break down technologies section to programming languages, scripting languages, tools, design, etc. (look at brittany chiang v.3)
 // TODO: minimize use of margin in favor of parent padding and gap with flexbox
