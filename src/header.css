@@ -1,5 +1,5 @@
 :root {
-  --third-color: hsl(53, 25%, 45%);
+  --third-color: hsl(53, 7%, 84%);
 }
 
 header {
@@ -61,7 +61,7 @@ header a:last-of-type img {
 }
 
 header a:first-of-type:hover img {
-  filter: brightness(100%);
+  filter: brightness(125%);
   transition: 0.15s;
 }
 
@@ -98,17 +98,16 @@ header a:nth-of-type(9) img {
 }
 
 header a:nth-of-type(2) img:hover {
-  filter: brightness(150%);
   transition: 0.15s;
 }
 
 header a:nth-of-type(3) img:hover {
-  filter: brightness(150%);
+  filter: brightness(200%) hue-rotate(173deg) saturate(900%);
   transition: 0.15s;
 }
 
 header a:nth-of-type(4) img:hover {
-  filter: brightness(150%) saturate(10%);
+  filter: brightness(300%) saturate(10%);
   transition: 0.15s;
 }
 
@@ -118,12 +117,12 @@ header a:nth-of-type(5) img:hover {
 }
 
 header a:nth-of-type(6) img:hover {
-  filter: hue-rotate(150deg) brightness(60%) saturate(500%);
+  filter: hue-rotate(150deg) brightness(100%) saturate(500%);
   transition: 0.15s;
 }
 
 header a:nth-of-type(7) img:hover {
-  filter: brightness(200%) saturate(0%);
+  filter: brightness(230%) saturate(0%);
   transition: 0.15s;
 }
 
