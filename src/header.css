@@ -22,11 +22,11 @@ header {
 
 header a:first-of-type {
   margin-right: auto;
+  margin-left: 0.6rem;
 }
 
 header a:first-of-type img {
   width: 55px;
-  margin-left: 0.6rem;
 }
 
 header a:nth-of-type(2):-webkit-any-link {

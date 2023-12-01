@@ -12,7 +12,7 @@
   --circle-border-radius: 50%;
   --section-border-radius: 1.5rem;
   --media-border-radius: 1rem;
-  --button-border-radius: 0 4px 4px 0;
+  --button-border-radius: 8px;
   --font-family: 'Inter', 'Roboto', sans-serif;
   --mobile-font-size: 1.25rem;
   --border: 2px solid var(--fifth-color);
@@ -258,7 +258,6 @@ main div section:nth-of-type(2) div:first-of-type a {
   padding: 1rem;
   align-items: center;
   text-decoration: none;
-  display: flex;
   /* border: 1px solid var(--sixth-color); */
   /* box-shadow: 0 0 5px black; */
   /* background-color: var(--fourth-color); */
@@ -274,30 +273,65 @@ main div section:nth-of-type(2) div:first-of-type a:hover {
   transition: 0.5s;
 }
 
-main div section:nth-of-type(2) div:first-of-type a div p {
+main div section:nth-of-type(2) div:first-of-type a div {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+main div section:nth-of-type(2) div:first-of-type a div div {
+  display: flex;
+  flex-direction: column;
+}
+
+main div section:nth-of-type(2) div:first-of-type a div div p {
   padding: 0.25rem 1rem;
   text-align: end;
   font-weight: 300;
   margin-left: auto;
+  flex-wrap: wrap;
 }
 
-main div section:nth-of-type(2) div:first-of-type a div p:first-of-type {
+main div section:nth-of-type(2) div:first-of-type a div div p:first-of-type {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--fourth-color);
 }
 
-main div section:nth-of-type(2) div:first-of-type a div p:nth-of-type(2) {
+main div section:nth-of-type(2) div:first-of-type a div div p:nth-of-type(2) {
   font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-main div section:nth-of-type(2) div a img,
-main div section:nth-of-type(2) div a video {
+main div section:nth-of-type(2) div:first-of-type a img,
+main div section:nth-of-type(2) div:first-of-type a video {
   width: 10vw;
   border-radius: var(--media-border-radius);
   padding: 0rem;
   border: 1px solid rgb(44, 43, 27);
 }
+
+main div section:nth-of-type(2) div:first-of-type a div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  padding-top: 1rem;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+}
+
+main div section:nth-of-type(2) div:first-of-type a div:nth-of-type(2) p {
+  /* border: 1px solid rgb(44, 43, 27); */
+  border-radius: var(--button-border-radius);
+  color: var(--fifth-color);
+  padding: 0.25rem 0.5rem;
+  background-color: rgb(18, 18, 11);
+  font-weight: 300;
+}
+
+/* bottom of group */
 
 main div section:nth-of-type(2) > div:nth-of-type(2) {
   text-align: end;
