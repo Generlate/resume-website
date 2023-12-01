@@ -94,7 +94,7 @@ main {
   position: relative;
   display: flex;
   z-index: 2;
-  margin-top: 4rem;
+  padding-top: 4rem;
 }
 
 main > section {
@@ -137,7 +137,7 @@ h2 {
 main > div {
   width: 64%;
   height: calc(100% - 0.55rem);
-  margin-top: 0.55rem;
+  padding: 0.55rem 0.8rem;
 }
 
 main div section:first-of-type {
@@ -146,7 +146,7 @@ main div section:first-of-type {
   background-color: var(--sixth-color);
   font-weight: 300;
   padding: 1.2rem;
-  margin: 0rem 0.8rem;
+  margin: 0rem 0rem;
   border-radius: var(--section-border-radius);
   box-shadow:
     inset 0 0 2px 0 rgba(61, 58, 41, 1),
@@ -156,8 +156,6 @@ main div section:first-of-type {
   /* height: calc(17% - 4rem); */
   -ms-overflow-style: none;
   flex-wrap: wrap;
-  display: flex;
-  justify-content: space-evenly;
 }
 main div section:first-of-type::-webkit-scrollbar {
   display: none;
@@ -173,6 +171,7 @@ main div section:first-of-type ul {
   padding-top: 1rem;
   padding-left: 0.25rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 main div section:first-of-type ul li {
@@ -207,7 +206,7 @@ main div section:nth-of-type(2) {
   font-family: var(--font-family);
   background-color: var(--sixth-color);
   padding: 1.2rem;
-  margin: 0.8rem;
+  margin: 0.8rem 0rem;
   position: relative;
   border-radius: var(--section-border-radius);
   overflow: hidden;
@@ -240,12 +239,12 @@ h3 {
 main div section:nth-of-type(2) div:first-of-type {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 main div section:nth-of-type(2) div:first-of-type a {
   /* justify-content: center; */
   width: 29%;
-  margin: 0.5rem 0.5rem;
   border-radius: 1.25rem;
   padding: 1rem;
   align-items: center;
@@ -324,15 +323,14 @@ main div section:nth-of-type(2) div:first-of-type a div:nth-of-type(2) p {
 }
 
 main div section:nth-of-type(2) > div:nth-of-type(2) {
-  text-align: end;
+  text-align: right;
 }
 
 main div section:nth-of-type(2) > div:nth-of-type(2) a {
   color: var(--fourth-color);
   text-decoration: none;
-  margin-left: auto;
-  margin-right: 0px;
   display: inline-block;
+  margin-left: auto;
 }
 
 main div section:nth-of-type(2) > div:nth-of-type(2) a:hover {
@@ -349,7 +347,7 @@ main div section:nth-of-type(3) {
   font-family: var(--font-family);
   background-color: var(--sixth-color);
   padding: 1.2rem;
-  margin: 0.8rem;
+  margin: 0rem;
   position: relative;
   border-radius: var(--section-border-radius);
   overflow: auto;
@@ -365,6 +363,8 @@ main div section:nth-of-type(3) {
 main div section:nth-of-type(3) h4 {
   font-weight: 600;
   font-size: 0.875rem;
+  margin: 0rem;
+  padding: 1rem 0rem;
 }
 
 main div section:nth-of-type(3) > div {
@@ -386,7 +386,7 @@ main div section:nth-of-type(3) > div div img {
   width: 6rem;
   filter: sepia(100%) brightness(80%);
   border-radius: var(--media-border-radius);
-  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 main div section:nth-of-type(3) > div div img:hover {

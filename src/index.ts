@@ -9,8 +9,8 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: fix sections overlapping canvas
 // TODO: make generlate.com default light theme
-// TODO: break down technologies section to programming languages, scripting languages, tools, design, etc. (look at brittany chiang v.3)
 // TODO: minimize use of margin in favor of parent padding and gap with flexbox
 // TODO: incorporate react
 // TODO: fix subpages
