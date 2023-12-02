@@ -2,29 +2,43 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
 
 :root {
-  --second-color: hsl(54, 100%, 85%);
-  --third-color: hsl(53, 25%, 45%);
-  --fourth-color: hsl(55, 42%, 6%);
+  --main-color: hsl(55, 100%, 49%);
+  --second-color: hsl(54, 0%, 94%);
+  --third-color: hsl(53, 7%, 84%);
+  --fourth-color: hsl(55, 16%, 34%);
+  --fifth-color: hsl(55, 24%, 18%);
+  --sixth-color: hsl(55, 28%, 4%);
+  --seventh-color: black;
+  --circle-border-radius: 50%;
+  --section-border-radius: 1.5rem;
+  --media-border-radius: 1rem;
+  --button-border-radius: 8px;
+  --font-family: 'Inter', 'Roboto', sans-serif;
+  --mobile-font-size: 1rem;
+  --border: 2px solid var(--fifth-color);
 }
 
 body {
-  background-color: var(--fourth-color);
+  background-color: black;
   cursor: url('../../public/cursor.png'), auto;
   font-family: 'Inter', 'roboto';
-  color: var(--third-color);
-  font-size: 1.5vmin;
-  font-weight: 100;
+  color: var(--fourth-color);
+  font-size: var(--mobile-font-size);
+  font-weight: 300;
 }
 
 main {
+  background-color: var(--sixth-color);
   display: flex;
   flex-direction: column;
-  margin: 1vh;
+  margin: 7vh 25vw 1vh 25vw;
   padding: 2vh;
-  margin-top: 7vh;
-  outline: 2px solid var(--third-color);
-  box-shadow: 0 0 20px var(--second-color);
   border-radius: 1.5vh;
+  box-shadow:
+    inset 0 0 2px 0 rgba(61, 58, 41, 1),
+    inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
+    inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
+    2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 section {
@@ -35,7 +49,7 @@ h3 {
   color: var(--second-color);
   font-weight: 500;
   margin: 0px;
-  font-size: 1.5vmin;
+  font-size: var(--mobile-font-size);
 }
 
 section p {
@@ -52,7 +66,11 @@ main img,
 main video {
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
-  max-width: 100%;
-  width: 60%;
+  width: 100%;
+}
+
+@media (max-width: 1376px) {
+  main {
+    margin: 7vh 1vw 1vh 1vw;
+  }
 }
