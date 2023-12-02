@@ -11,7 +11,6 @@ createPortal(scene, camera, renderer, controls);
 
 // TODO: fix sections overlapping canvas
 // TODO: make generlate.com default light theme
-// TODO: minimize use of margin in favor of parent padding and gap with flexbox
 // TODO: incorporate react
 // TODO: fix subpages
 // TODO: transitions

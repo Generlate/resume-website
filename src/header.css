@@ -7,7 +7,7 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 5.5rem;
+  height: 4.5rem;
   background-image: linear-gradient(
     to bottom,
     hsla(0, 0%, 0%, 0.95) 0%,
@@ -15,7 +15,7 @@ header {
     hsla(0, 0%, 0%, 0.75) 75%,
     hsla(0, 100%, 100%, 0) 100%
   );
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: flex-start;
 }
