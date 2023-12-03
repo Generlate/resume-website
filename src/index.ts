@@ -11,8 +11,8 @@ createPortal(scene, camera, renderer, controls);
 
 // TODO: fix sections overlapping canvas
 // TODO: make generlate.com default light theme
+// TODO: fix all the headers html
 // TODO: incorporate react
-// TODO: compress index.html videos to speed up loading
 // TODO: fix sub pages' mobile
 // TODO: transitions
 // TODO: make transitions delayed

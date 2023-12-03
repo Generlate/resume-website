@@ -7,7 +7,6 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 4.5rem;
   background-image: linear-gradient(
     to bottom,
     hsla(0, 0%, 0%, 0.95) 0%,
@@ -16,150 +15,123 @@ header {
     hsla(0, 100%, 100%, 0) 100%
   );
   z-index: 3;
+  padding-top: 0.6rem;
+  font-family: 'inter';
+}
+
+header div:first-of-type {
   display: flex;
   justify-content: flex-start;
+  gap: 0.6rem;
 }
 
-header a:first-of-type {
+header div:nth-of-type(2) {
+  height: 30px;
+}
+
+header div > a:first-of-type {
   margin-right: auto;
   margin-left: 0.6rem;
+  margin-top: 0.2rem;
 }
 
-header a:first-of-type img {
-  width: 55px;
+header div a:first-of-type svg {
+  fill: rgb(165, 160, 91);
+  width: 28px;
 }
 
-header a:nth-of-type(2):-webkit-any-link {
-  font-weight: 500;
-  color: var(--fourth-color);
-  text-decoration: none;
-  margin-right: 1rem;
-  font-family: 'inter';
-  font-size: 1.55rem;
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(2):-webkit-any-link:hover {
-  color: var(--third-color);
-  transition: 0.15s;
-}
-
-header a:not(:first-of-type) {
-  font-size: 1.5rem;
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
-  margin-right: 0.6rem;
-}
-
-header a:not(:first-of-type) img {
-  width: 1.6rem;
-  padding-top: 0.16rem;
-}
-
-header a:last-of-type img {
-  padding-right: 0.45rem;
-}
-
-header a:first-of-type:hover img {
+header div a:first-of-type:hover svg {
   filter: brightness(125%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(2) img {
-  filter: brightness(160%) saturate(150%);
+header div a:nth-of-type(2):-webkit-any-link {
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: rgb(165, 160, 91);
+  text-decoration: none;
 }
 
-header a:nth-of-type(3) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(4) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(5) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(6) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(7) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(8) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(9) img {
-  filter: brightness(160%) saturate(150%);
-}
-
-header a:nth-of-type(2) img:hover {
+header div a:nth-of-type(2):-webkit-any-link:hover {
+  color: var(--third-color);
   transition: 0.15s;
 }
 
-header a:nth-of-type(3) img:hover {
+header div a:nth-of-type(n + 3):nth-of-type(-n + 9) img {
+  width: 1.6rem;
+  padding-top: 0.16rem;
+  filter: brightness(160%) saturate(150%);
+}
+
+header div a:nth-of-type(3) img:hover {
   filter: brightness(200%) hue-rotate(173deg) saturate(900%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(4) img:hover {
+header div a:nth-of-type(4) img:hover {
   filter: brightness(300%) saturate(10%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(5) img:hover {
+header div a:nth-of-type(5) img:hover {
   filter: hue-rotate(320deg) brightness(80%) saturate(1000%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(6) img:hover {
+header div a:nth-of-type(6) img:hover {
   filter: hue-rotate(150deg) brightness(100%) saturate(500%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(7) img:hover {
+header div a:nth-of-type(7) img:hover {
   filter: brightness(230%) saturate(0%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(8) img:hover {
+header div a:nth-of-type(8) img:hover {
   filter: hue-rotate(175deg) brightness(100%) saturate(1200%);
   transition: 0.15s;
 }
 
-header a:nth-of-type(9) img:hover {
+header div a:last-of-type img:hover {
   filter: hue-rotate(250deg) brightness(80%) saturate(1000%);
   transition: 0.15s;
 }
 
+header div a:last-of-type {
+  margin-right: 0.5rem;
+}
+
 @media (max-width: 1375px) {
   header {
-    z-index: 3;
+    padding-top: 1.2rem;
   }
 
-  header a:first-of-type {
-    margin-left: 0rem;
+  header div:first-of-type {
+    gap: 0rem;
   }
 
-  header a:first-of-type img {
-    width: 3rem;
-    margin-left: 0.2rem;
-    margin-top: 0.4rem;
+  header div a:first-of-type {
+    margin-left: 1rem;
+    margin-top: 0.07rem;
   }
 
-  header a:not(:first-of-type) {
+  header div a:first-of-type svg {
+    width: 1.6rem;
+  }
+
+  header div a:not(:first-of-type) {
     font-size: 1.3rem;
     padding-right: 0rem;
-    padding-top: 0.4rem;
     margin-right: 0.4rem;
     margin-bottom: 0rem;
   }
 
-  header a:not(:first-of-type) img {
+  header div a:not(:first-of-type) img {
     width: 1.6rem;
+  }
+
+  header div a:last-of-type {
+    margin-right: 1rem;
   }
 }
