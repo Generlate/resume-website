@@ -37,61 +37,51 @@ main {
     inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
     inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
     2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  gap: 1rem;
 }
 
 main > p {
-  padding: 2vh;
   margin: 0px;
-  margin-left: 1.5vh;
 }
 
-section {
+main section {
   display: flex;
 }
 
-section p {
-  padding-left: 1.25vw;
-  margin: 0px;
-}
-
-h3 {
+main section h3 {
   color: var(--second-color);
   font-weight: 500;
   margin: 0px;
   font-size: var(--mobile-font-size);
 }
 
-ul {
+main ul {
   display: flex;
   flex-direction: column;
+  margin-top: 0px;
   padding-left: 0vh;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
+  gap: 1rem;
 }
 
-li img,
-li video {
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  width: 60%;
-}
-
-li {
+main ul li {
   display: flex;
-  flex-direction: row;
-  padding: 2vh;
   list-style: none;
 }
 
-li:nth-of-type(even) div {
-  padding-left: 3vw;
+main ul li img,
+main ul li video {
+  width: 60%;
+  object-fit: cover;
+}
+
+main ul li:nth-of-type(even) div {
   margin-left: auto;
   text-align: right;
 }
 
-li:nth-of-type(odd) img,
-li:nth-of-type(odd) video {
+main ul li:nth-of-type(odd) img,
+main ul li:nth-of-type(odd) video {
   margin-left: auto;
 }
 
@@ -100,13 +90,13 @@ video::-webkit-media-controls-panel {
   opacity: 1;
 }
 
-ul li div p:nth-of-type(2) {
-  padding-left: 1vw;
-  padding-right: 1vw;
+main ul li div p:nth-of-type(2) {
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0px;
 }
 
-ul li div p:nth-of-type(1) {
+main ul li div p:nth-of-type(1) {
   margin-bottom: 0px;
 }
 
