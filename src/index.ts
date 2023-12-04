@@ -9,7 +9,6 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: make experiences an even number
 // TODO: make shirt white
 // TODO: fix all the headers html
 // TODO: fix sub pages' mobile
