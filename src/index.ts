@@ -9,6 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: move character to the right to center on text
 // TODO: fix sections overlapping canvas
 // TODO: make generlate.com default light theme
 // TODO: fix all the headers html

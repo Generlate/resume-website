@@ -218,11 +218,6 @@ main div section:nth-of-type(2) {
   height: calc(50% - 4rem);
 }
 
-/* main div section:nth-of-type(2):hover {
-  box-shadow: 0 0 20px var(--second-color);
-  outline: var(--border);
-} */
-
 main div section:nth-of-type(2)::-webkit-scrollbar {
   display: none;
 }
@@ -245,7 +240,7 @@ main div section:nth-of-type(2) div:first-of-type a {
   /* justify-content: center; */
   width: 29%;
   border-radius: 1.25rem;
-  padding: 1rem;
+  padding: 1vw;
   align-items: center;
   text-decoration: none;
   /* border: 1px solid var(--sixth-color); */
@@ -271,16 +266,16 @@ main div section:nth-of-type(2) div:first-of-type a div {
 main div section:nth-of-type(2) div:first-of-type a div div {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: calc(40% - 0.25rem);
 }
 
 main div section:nth-of-type(2) div:first-of-type a div div p {
-  padding: 0.25rem 0rem;
   text-align: end;
   font-weight: 300;
   margin-left: auto;
   flex-wrap: wrap;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 main div section:nth-of-type(2) div:first-of-type a div div p:first-of-type {
@@ -291,13 +286,11 @@ main div section:nth-of-type(2) div:first-of-type a div div p:first-of-type {
 
 main div section:nth-of-type(2) div:first-of-type a div div p:nth-of-type(2) {
   font-weight: 400;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 main div section:nth-of-type(2) div:first-of-type a img,
 main div section:nth-of-type(2) div:first-of-type a video {
-  width: 10vw;
+  width: calc(60% - 0.25rem - 2px);
   border-radius: var(--media-border-radius);
   padding: 0rem;
   border: 1px solid rgb(44, 43, 27);
