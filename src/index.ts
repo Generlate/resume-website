@@ -10,7 +10,6 @@ loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
 // TODO: make shirt white
-// TODO: fix all the headers html
 // TODO: fix sub pages' mobile
 // TODO: fix broken environment on very skinny window
 // TODO: move character to the right to center on text
@@ -21,7 +20,6 @@ createPortal(scene, camera, renderer, controls);
 // TODO: make generlate.com default light theme
 // TODO: network and add some social proof
 // TODO: make cube animations use time instead of frames
-// TODO: incorporate react
 // TODO: add easter eggs
 // TODO: add character click animation
 // TODO: make the projects work on the website instead of just linking to them
