@@ -9,19 +9,18 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: move character to the right to center on text
-// TODO: fix sections overlapping canvas
-// TODO: make generlate.com default light theme
 // TODO: fix all the headers html
-// TODO: incorporate react
 // TODO: fix sub pages' mobile
+// TODO: fix broken environment on very skinny window
+// TODO: move character to the right to center on text
 // TODO: transitions
 // TODO: make transitions delayed
 // TODO: add animations to hover/click
-// TODO: swap generlate icon with a home icon
 // TODO: better project descriptions (with code blocks?)
-// TODO: add easter eggs
+// TODO: make generlate.com default light theme
 // TODO: network and add some social proof
+// TODO: incorporate react
+// TODO: add easter eggs
 // TODO: add character click animation
 // TODO: make the projects work on the website instead of just linking to them
 // TODO: add link symbol to generlate.com website link
