@@ -9,7 +9,6 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: fix sub pages' mobile
 // TODO: transitions
 // TODO: make transitions delayed
 // TODO: add animations to hover/click
@@ -24,3 +23,4 @@ createPortal(scene, camera, renderer, controls);
 // TODO: make the projects work on the website instead of just linking to them
 // TODO: add link symbol to generlate.com website link
 // TODO: make shirt white
+// TODO: test on different browsers

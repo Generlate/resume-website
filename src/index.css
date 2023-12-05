@@ -198,7 +198,7 @@ main div section:first-of-type ul li a svg {
 main div section:first-of-type ul li a svg:hover {
   fill: var(--third-color);
   transform: scale(1.2);
-  transition: 0.15s;
+  transition: 0.2s ease;
 }
 
 main div section:nth-of-type(2) {
@@ -330,7 +330,7 @@ main div section:nth-of-type(2) > div:nth-of-type(2) a {
 main div section:nth-of-type(2) > div:nth-of-type(2) a:hover {
   text-decoration: underline;
   transform: scale(1.1);
-  transition: 0.15s;
+  transition: 0.5s;
 }
 
 video::-webkit-media-controls-panel {
@@ -365,7 +365,6 @@ main div section:nth-of-type(3) > div {
   display: flex;
   color: var(--fourth-color);
   width: 100%;
-
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
@@ -387,7 +386,7 @@ main div section:nth-of-type(3) > div div img:hover {
   width: 6rem;
   filter: none;
   transform: scale(1.1);
-  transition: 0.15s;
+  transition: 0.3s;
 }
 
 main div section:nth-of-type(3) > div div p {
