@@ -31,7 +31,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 7vh 25vw 1vh 25vw;
-  padding: 2vh;
+  padding: 1.2rem;
   /* outline: 2px solid var(--third-color); */
   height: 100%;
   border-radius: var(--section-border-radius);
@@ -65,11 +65,6 @@ video::-webkit-media-controls-panel {
 section {
   display: flex;
   flex-direction: row;
-}
-
-section p {
-  margin: 0px;
-  padding-left: 1.25vmin;
 }
 
 main > p {
