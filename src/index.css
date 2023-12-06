@@ -65,12 +65,13 @@
 
 .loader--hidden {
   opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 body {
   margin: 0;
   cursor: url('../public/cursor.png'), auto;
+  background-color: var(--seventh-color);
 }
 
 canvas {
