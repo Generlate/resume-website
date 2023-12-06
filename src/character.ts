@@ -16,18 +16,12 @@ export function loadCharacterModel(): void {
 function characterTransformation(glb: GLTF): void {
   const root = glb.scene;
   root.scale.set(0.95, 0.95, 0.95);
-  root.position.set(-12.025, 0.1, -6.5);
+  root.position.set(-12.08, 0.1, -6.5);
   root.rotation.set(0, Math.PI, 0);
 
   makeMeshesReceiveShadows(root);
 
   scene.add(root);
-
-  const loaderElement = document.querySelector('.loader');
-  loaderElement?.classList.add('loader--hidden');
-  loaderElement?.addEventListener('transitionend', () => {
-    loaderElement.parentNode?.removeChild(loaderElement);
-  });
 }
 
 function onProgress(xhr: ProgressEvent): void {
@@ -51,3 +45,9 @@ function makeMeshesReceiveShadows(root: THREE.Object3D): void {
     }
   });
 }
+
+const loaderElement = document.querySelector('.loader');
+loaderElement?.classList.add('loader--hidden');
+loaderElement?.addEventListener('transitionend', () => {
+  loaderElement.parentNode?.removeChild(loaderElement);
+});

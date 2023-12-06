@@ -318,20 +318,29 @@ main div section:nth-of-type(2) div:first-of-type a div:nth-of-type(2) p {
 }
 
 main div section:nth-of-type(2) > div:nth-of-type(2) {
-  text-align: right;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: flex-end; /* Right-align the content */
 }
 
 main div section:nth-of-type(2) > div:nth-of-type(2) a {
   color: var(--fourth-color);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center; /* Vertically align the content within the link */
   margin-left: auto;
+  transition: transform 0.5s;
+  fill: var(--fourth-color);
+  gap: 0.5rem;
 }
 
 main div section:nth-of-type(2) > div:nth-of-type(2) a:hover {
   text-decoration: underline;
   transform: scale(1.1);
-  transition: 0.5s;
+}
+
+main div section:nth-of-type(2) > div:nth-of-type(2) a svg {
+  width: 20px;
 }
 
 video::-webkit-media-controls-panel {

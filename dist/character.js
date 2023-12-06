@@ -8,15 +8,10 @@ export function loadCharacterModel() {
 function characterTransformation(glb) {
     const root = glb.scene;
     root.scale.set(0.95, 0.95, 0.95);
-    root.position.set(-12.025, 0.1, -6.5);
+    root.position.set(-12.08, 0.1, -6.5);
     root.rotation.set(0, Math.PI, 0);
     makeMeshesReceiveShadows(root);
     scene.add(root);
-    const loaderElement = document.querySelector('.loader');
-    loaderElement?.classList.add('loader--hidden');
-    loaderElement?.addEventListener('transitionend', () => {
-        loaderElement.parentNode?.removeChild(loaderElement);
-    });
 }
 function onProgress(xhr) {
     const xhrTotal = 11280744;
@@ -36,4 +31,9 @@ function makeMeshesReceiveShadows(root) {
         }
     });
 }
+const loaderElement = document.querySelector('.loader');
+loaderElement?.classList.add('loader--hidden');
+loaderElement?.addEventListener('transitionend', () => {
+    loaderElement.parentNode?.removeChild(loaderElement);
+});
 //# sourceMappingURL=character.js.map

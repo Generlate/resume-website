@@ -10,7 +10,7 @@ export function createPortal(
   const circleRadius: number = 0.5;
   const circleSegments: number = 256;
   const circleVertices: THREE.Vector3[] = [];
-  const OFFSET_X: number = -12.025;
+  const OFFSET_X: number = -12.11;
   const OFFSET_Z: number = -6.5;
   const ringGeometry = new THREE.CircleGeometry(circleRadius, circleSegments);
   const textureLoader = new THREE.TextureLoader();

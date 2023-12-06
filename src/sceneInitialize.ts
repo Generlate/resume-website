@@ -43,6 +43,6 @@ window.addEventListener('resize', updateCameraAndRenderer, false);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 camera.position.set(-12, 0.5, 0);
-controls.target.set(-12.5, 16, -150);
+controls.target.set(-14.5, 16, -150);
 
 export { scene, renderer, camera, controls };

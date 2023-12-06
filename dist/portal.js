@@ -4,7 +4,7 @@ export function createPortal(scene, camera, renderer, controls) {
     const circleRadius = 0.5;
     const circleSegments = 256;
     const circleVertices = [];
-    const OFFSET_X = -12.025;
+    const OFFSET_X = -12.11;
     const OFFSET_Z = -6.5;
     const ringGeometry = new THREE.CircleGeometry(circleRadius, circleSegments);
     const textureLoader = new THREE.TextureLoader();
