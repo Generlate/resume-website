@@ -12,6 +12,11 @@ function characterTransformation(glb) {
     root.rotation.set(0, Math.PI, 0);
     makeMeshesReceiveShadows(root);
     scene.add(root);
+    const loaderElement = document.querySelector('.loader');
+    loaderElement?.classList.add('loader--hidden');
+    loaderElement?.addEventListener('transitionend', () => {
+        loaderElement.parentNode?.removeChild(loaderElement);
+    });
 }
 function onProgress(xhr) {
     const xhrTotal = 11280744;
@@ -31,9 +36,4 @@ function makeMeshesReceiveShadows(root) {
         }
     });
 }
-const loaderElement = document.querySelector('.loader');
-loaderElement?.classList.add('loader--hidden');
-loaderElement?.addEventListener('transitionend', () => {
-    loaderElement.parentNode?.removeChild(loaderElement);
-});
 //# sourceMappingURL=character.js.map

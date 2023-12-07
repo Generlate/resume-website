@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
   background: var(--sixth-color);
-  z-index: 3;
+  z-index: 4;
   transition:
     opacity 0.75s,
     visibility 0.75s;
@@ -84,7 +84,7 @@ canvas {
 aside {
   position: absolute;
   height: 100vh;
-  background-color: var(--seventh-color);
+  /* background-color: var(--seventh-color); */
   z-index: 0;
   width: 100vw;
   right: 0;

@@ -22,6 +22,12 @@ function characterTransformation(glb: GLTF): void {
   makeMeshesReceiveShadows(root);
 
   scene.add(root);
+
+  const loaderElement = document.querySelector('.loader');
+  loaderElement?.classList.add('loader--hidden');
+  loaderElement?.addEventListener('transitionend', () => {
+    loaderElement.parentNode?.removeChild(loaderElement);
+  });
 }
 
 function onProgress(xhr: ProgressEvent): void {
@@ -45,9 +51,3 @@ function makeMeshesReceiveShadows(root: THREE.Object3D): void {
     }
   });
 }
-
-const loaderElement = document.querySelector('.loader');
-loaderElement?.classList.add('loader--hidden');
-loaderElement?.addEventListener('transitionend', () => {
-  loaderElement.parentNode?.removeChild(loaderElement);
-});

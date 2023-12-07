@@ -8,10 +8,8 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 // TODO: fix header appearing before loading screen
-// TODO: add link symbol to generlate.com website link
 // TODO: page change animations
 // TODO: fix broken environment on very skinny window
-// TODO: move character to the right to center on text
 // TODO: test on different browsers
 // TODO: clean up public folder
 //# sourceMappingURL=index.js.map
