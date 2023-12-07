@@ -9,8 +9,6 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: fix header appearing before loading screen
 // TODO: page change animations
 // TODO: fix broken environment on very skinny window
 // TODO: test on different browsers
-// TODO: clean up public folder
