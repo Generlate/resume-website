@@ -17,211 +17,215 @@ header {
   z-index: 3;
   padding-top: 0.6rem;
   font-family: 'inter';
-}
 
-header div:first-of-type {
-  display: flex;
-  justify-content: flex-start;
-  gap: 0.6rem;
-}
+  div:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
 
-header div:nth-of-type(2) {
-  height: 30px;
-}
+  div:nth-of-type(2) {
+    height: 30px;
+  }
 
-header div > a:first-of-type {
-  margin-right: auto;
-  margin-left: 0.6rem;
-  margin-top: 0.2rem;
-}
-header div a:first-of-type svg {
-  fill: rgb(165, 160, 91);
-  width: 28px;
-  transition: 0.3s ease;
-}
+  div > a:first-of-type {
+    margin-right: auto;
+    margin-left: 0.6rem;
+    margin-top: 0.2rem;
+  }
 
-header div a:first-of-type:hover svg {
-  filter: brightness(125%);
-  transition: 0.15s;
-  transition: 0.3s ease;
-}
+  div a:first-of-type svg {
+    fill: rgb(165, 160, 91);
+    width: 28px;
+    transition: 0.3s ease;
+  }
 
-header div a:nth-of-type(2):-webkit-any-link {
-  font-size: 1.55rem;
-  font-weight: 500;
-  color: rgb(165, 160, 91);
-  text-decoration: none;
-}
+  div a:first-of-type:hover svg {
+    filter: brightness(125%);
+    transition: 0.15s;
+    transition: 0.3s ease;
+  }
 
-header div a:nth-of-type(2):any-link {
-  font-size: 1.55rem;
-  font-weight: 500;
-  color: rgb(165, 160, 91);
-  text-decoration: none;
-}
+  div a:nth-of-type(2):-webkit-any-link {
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: rgb(165, 160, 91);
+    text-decoration: none;
+  }
 
-header div a:nth-of-type(2):-webkit-any-link:hover {
-  color: var(--third-color);
-  transition: 0.15s;
-}
+  div a:nth-of-type(2):any-link {
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: rgb(165, 160, 91);
+    text-decoration: none;
+  }
 
-header div a:nth-of-type(2):any-link:hover {
-  color: var(--third-color);
-  transition: 0.15s;
-}
+  div a:nth-of-type(2):-webkit-any-link:hover {
+    color: var(--third-color);
+    transition: 0.15s;
+  }
 
-header div a:nth-of-type(n + 3):nth-of-type(-n + 9) img {
-  width: 1.6rem;
-  padding-top: 0.16rem;
-}
+  div a:nth-of-type(2):any-link:hover {
+    color: var(--third-color);
+    transition: 0.15s;
+  }
 
-header div a:nth-of-type(3) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/email.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(n + 3):nth-of-type(-n + 9) img {
+    width: 1.6rem;
+    padding-top: 0.16rem;
+  }
 
-header div a:nth-of-type(3):hover {
-  transition: 0.15s;
-  background-image: url('../public/email2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(3) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/email.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(4) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/github.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(3):hover {
+    transition: 0.15s;
+    background-image: url('../public/email2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(4):hover {
-  transition: 0.15s;
-  background-image: url('../public/github2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
-header div a:nth-of-type(5) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/youtube.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(4) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/github.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(5):hover {
-  transition: 0.15s;
-  background-image: url('../public/youtube2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
-header div a:nth-of-type(6) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/linkedin.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(4):hover {
+    transition: 0.15s;
+    background-image: url('../public/github2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(6):hover {
-  transition: 0.15s;
-  background-image: url('../public/linkedin2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
-header div a:nth-of-type(7) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/x.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-  border-radius: 0.2rem;
-}
+  div a:nth-of-type(5) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/youtube.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(7):hover {
-  transition: 0.15s;
-  background-image: url('../public/x2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(5):hover {
+    transition: 0.15s;
+    background-image: url('../public/youtube2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(8) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/facebook.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(6) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/linkedin.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(8):hover {
-  transition: 0.15s;
-  background-image: url('../public/facebook2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
-}
+  div a:nth-of-type(6):hover {
+    transition: 0.15s;
+    background-image: url('../public/linkedin2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 
-header div a:nth-of-type(9) {
-  width: 30px;
-  height: 30px;
-  background-image: url('../public/instagram.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-  margin-right: 0.5rem;
-}
+  div a:nth-of-type(7) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/x.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    border-radius: 0.2rem;
+  }
 
-header div a:nth-of-type(9):hover {
-  transition: 0.15s;
-  background-image: url('../public/instagram2.png');
-  width: 30px;
-  height: 30px;
-  background-size: cover;
-  transition: background-image 0.3s ease;
+  div a:nth-of-type(7):hover {
+    transition: 0.15s;
+    background-image: url('../public/x2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
+
+  div a:nth-of-type(8) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/facebook.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
+
+  div a:nth-of-type(8):hover {
+    transition: 0.15s;
+    background-image: url('../public/facebook2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
+
+  div a:nth-of-type(9) {
+    width: 30px;
+    height: 30px;
+    background-image: url('../public/instagram.png');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    margin-right: 0.5rem;
+  }
+
+  div a:nth-of-type(9):hover {
+    transition: 0.15s;
+    background-image: url('../public/instagram2.png');
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
 }
 
 @media (max-width: 1375px) {
   header {
     padding-top: 1.2rem;
-  }
 
-  header div:first-of-type {
-    gap: 0.2rem;
-  }
+    div:first-of-type {
+      gap: 0.2rem;
+    }
 
-  header div a:first-of-type {
-    margin-left: 1rem;
-    margin-top: 0.07rem;
-  }
+    div a:first-of-type {
+      margin-left: 1rem;
+      margin-top: 0.07rem;
 
-  header div a:first-of-type svg {
-    width: 1.6rem;
-  }
+      svg {
+        width: 1.6rem;
+      }
+    }
 
-  header div a:not(:first-of-type) {
-    font-size: 1.3rem;
-    padding-right: 0rem;
-    margin-bottom: 0rem;
-  }
+    div a:not(:first-of-type) {
+      font-size: 1.3rem;
+      padding-right: 0rem;
+      margin-bottom: 0rem;
 
-  header div a:not(:first-of-type) img {
-    width: 1.6rem;
-  }
+      img {
+        width: 1.6rem;
+      }
+    }
 
-  header div a:last-of-type {
-    margin-right: 1rem;
+    div a:last-of-type {
+      margin-right: 1rem;
+    }
   }
 }

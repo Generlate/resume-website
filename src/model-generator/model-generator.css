@@ -25,43 +25,43 @@ body {
   color: var(--fourth-color);
   font-size: var(--mobile-font-size);
   font-weight: 300;
-}
 
-main {
-  background-color: var(--sixth-color);
-  display: flex;
-  flex-direction: column;
-  margin: 7vh 25vw 1vh 25vw;
-  padding: 1.2rem;
-  border-radius: 1.5rem;
-  box-shadow:
-    inset 0 0 2px 0 rgba(61, 58, 41, 1),
-    inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
-    inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
-    2px 2px 4px 0 rgba(0, 0, 0, 0.25);
-  gap: 1rem;
-}
+  main {
+    background-color: var(--sixth-color);
+    display: flex;
+    flex-direction: column;
+    margin: 7vh 25vw 1vh 25vw;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    box-shadow:
+      inset 0 0 2px 0 rgba(61, 58, 41, 1),
+      inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
+      inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
+      2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    gap: 1rem;
 
-section {
-  display: flex;
-}
+    section {
+      display: flex;
 
-h3 {
-  color: var(--second-color);
-  font-weight: 500;
-  margin: 0px;
-  font-size: var(--mobile-font-size);
-}
+      h3 {
+        color: var(--second-color);
+        font-weight: 500;
+        margin: 0px;
+        font-size: var(--mobile-font-size);
+      }
+    }
 
-main > p {
-  margin: 0px;
-}
+    > p {
+      margin: 0px;
+    }
 
-main img,
-main video {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+    img,
+    video {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 1376px) {
