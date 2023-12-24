@@ -9,5 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: consider using clamp() and minmax() in CSS
+// TODO: try @media (orientation: landscape)
 // TODO: page change animations
 // TODO: fix broken environment on very skinny window
