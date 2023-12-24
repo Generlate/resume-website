@@ -13,3 +13,4 @@ createPortal(scene, camera, renderer, controls);
 // TODO: try @media (orientation: landscape)
 // TODO: page change animations
 // TODO: fix broken environment on very skinny window
+// TODO: reduce building.glb size to reduce load time

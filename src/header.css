@@ -79,14 +79,14 @@ header {
     a:nth-of-type(3) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/email.png');
+      background-image: url('../public/email.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
     }
 
     a:nth-of-type(3):hover {
       transition: 0.15s;
-      background-image: url('../public/email2.png');
+      background-image: url('../public/email2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -96,14 +96,14 @@ header {
     a:nth-of-type(4) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/github.png');
+      background-image: url('../public/github.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
     }
 
     a:nth-of-type(4):hover {
       transition: 0.15s;
-      background-image: url('../public/github2.png');
+      background-image: url('../public/github2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -113,14 +113,14 @@ header {
     a:nth-of-type(5) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/youtube.png');
+      background-image: url('../public/youtube.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
     }
 
     a:nth-of-type(5):hover {
       transition: 0.15s;
-      background-image: url('../public/youtube2.png');
+      background-image: url('../public/youtube2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -130,14 +130,14 @@ header {
     a:nth-of-type(6) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/linkedin.png');
+      background-image: url('../public/linkedin.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
     }
 
     a:nth-of-type(6):hover {
       transition: 0.15s;
-      background-image: url('../public/linkedin2.png');
+      background-image: url('../public/linkedin2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -147,7 +147,7 @@ header {
     a:nth-of-type(7) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/x.png');
+      background-image: url('../public/x.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
       border-radius: 0.2rem;
@@ -155,7 +155,7 @@ header {
 
     a:nth-of-type(7):hover {
       transition: 0.15s;
-      background-image: url('../public/x2.png');
+      background-image: url('../public/x2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -165,14 +165,14 @@ header {
     a:nth-of-type(8) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/facebook.png');
+      background-image: url('../public/facebook.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
     }
 
     a:nth-of-type(8):hover {
       transition: 0.15s;
-      background-image: url('../public/facebook2.png');
+      background-image: url('../public/facebook2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;
@@ -182,7 +182,7 @@ header {
     a:nth-of-type(9) {
       width: 30px;
       height: 30px;
-      background-image: url('../public/instagram.png');
+      background-image: url('../public/instagram.webp');
       background-size: cover;
       transition: background-image 0.3s ease;
       margin-right: 0.5rem;
@@ -190,7 +190,7 @@ header {
 
     a:nth-of-type(9):hover {
       transition: 0.15s;
-      background-image: url('../public/instagram2.png');
+      background-image: url('../public/instagram2.webp');
       width: 30px;
       height: 30px;
       background-size: cover;

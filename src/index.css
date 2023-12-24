@@ -70,7 +70,7 @@
 
 body {
   margin: 0;
-  cursor: url('../public/cursor.png'), auto;
+  cursor: url('../public/cursor.webp'), auto;
   background-color: var(--seventh-color);
 
   canvas {

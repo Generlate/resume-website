@@ -20,7 +20,7 @@
 
 body {
   background-color: black;
-  cursor: url('../../public/cursor.png'), auto;
+  cursor: url('../../public/cursor.webp'), auto;
   font-family: 'Inter', 'roboto';
   color: var(--fourth-color);
   font-weight: 300;
