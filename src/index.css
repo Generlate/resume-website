@@ -386,7 +386,6 @@ body {
             }
 
             img:hover {
-              width: 6rem;
               filter: none;
               transform: scale(1.1);
               transition: 0.3s;

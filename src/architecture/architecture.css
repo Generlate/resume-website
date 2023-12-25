@@ -67,7 +67,11 @@ body {
         display: flex;
         list-style: none;
 
-        img,
+        img {
+          width: 60%;
+          object-fit: cover;
+        }
+
         video {
           width: 60%;
           object-fit: cover;
