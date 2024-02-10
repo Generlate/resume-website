@@ -9,6 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: remove controls and add autoplay to home page videos on mobile
 // TODO: consider using clamp() and minmax() in CSS
 // TODO: try @media (orientation: landscape)
 // TODO: page change animations
