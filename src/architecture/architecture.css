@@ -128,9 +128,9 @@ video::-webkit-media-controls-panel {
                     flex-direction: row;
                 }
 
-                div {
+                /* div {
                     text-align: left;
-                }
+                } */
             }
         }
     }

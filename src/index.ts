@@ -9,7 +9,8 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: fix sub page css makes the page width too small
+// TODO: add min height to sub pages' height
+// TODO: fix project titles on architecture sub page
 // TODO: fix spacing from character to description section
 // TODO: make work on ipad and large screens
 // TODO: remove controls and add autoplay to home page videos on mobile
