@@ -30,7 +30,7 @@ body {
         background-color: var(--sixth-color);
         display: flex;
         flex-direction: column;
-        margin: 7vh 1vw 1vh 1vw;
+        margin: 7vh 25vw 1vh 25vw;
         padding: 1.2rem;
         border-radius: 1.5rem;
         box-shadow:
@@ -65,7 +65,9 @@ body {
 }
 
 @media (max-width: 1376px) {
-    main {
-        margin: 7vh 25vw 1vh 25vw;
+    body {
+        main {
+            margin: 7vh 1vw 1vh 1vw;
+        }
     }
 }

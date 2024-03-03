@@ -29,7 +29,7 @@ body {
     main {
         display: flex;
         flex-direction: column;
-        margin: 7vh 1vw 1vh 1vw;
+        margin: 7vh 25vw 1vh 25vw;
         padding: 1.2rem;
         /* outline: 2px solid var(--third-color); */
         height: 100%;
@@ -75,7 +75,7 @@ video::-webkit-media-controls-panel {
 @media (max-width: 1376px) {
     body {
         main {
-            margin: 7vh 25vw 1vh 25vw;
+            margin: 7vh 1vw 1vh 1vw;
         }
     }
 }
