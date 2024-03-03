@@ -1,550 +1,584 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
-    <link rel="apple-touch-icon" href="./public/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="resume website" />
-    <meta name="author" content="Austen Cabret" />
-    <link rel="stylesheet" href="./src/header.css" />
-    <link rel="stylesheet" href="./src/index.css" />
-    <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <title>Austen Cabret</title>
-    <script
-      async
-      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
-    ></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.151.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.151.0/examples/jsm/"
-        }
-      }
-    </script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
+        <link rel="apple-touch-icon" href="./public/icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="resume website" />
+        <meta name="author" content="Austen Cabret" />
+        <link rel="stylesheet" href="./src/header.css" />
+        <link rel="stylesheet" href="./src/index.css" />
+        <link rel="preconnect" href="https://unpkg.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <title>Austen Cabret</title>
+        <script
+            async
+            src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+        ></script>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.151.0/build/three.module.js",
+                    "three/addons/": "https://unpkg.com/three@0.151.0/examples/jsm/"
+                }
+            }
+        </script>
+    </head>
 
-  <body>
-    <aside class="loader">
-      <div class="loader-text">0%</div>
-    </aside>
-    <script>
-      fetch('./src/header.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('header-container').innerHTML = data;
-        });
-    </script>
-    <div id="header-container"></div>
+    <body>
+        <aside class="loader">
+            <div class="loader-text">0%</div>
+        </aside>
+        <script>
+            fetch("./src/header.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("header-container").innerHTML =
+                        data;
+                });
+        </script>
+        <div id="header-container"></div>
 
-    <canvas></canvas>
-    <script type="module" src="./dist/index.js"></script>
-    <aside></aside>
+        <canvas></canvas>
+        <script type="module" src="./dist/index.js"></script>
+        <aside></aside>
 
-    <main>
-      <section>
-        <h1>AUSTEN CABRET</h1>
-        <h2>FRONT END SOFTWARE ENGINEER</h2>
-      </section>
-      <div>
-        <section>
-          <p>
-            Hi! I'm a creator at the intersection of code and architecture. With
-            a solid foundation in each, I dream of disrupting building design.
-            To do so, I've made Youtube videos, programs, digital spaces and
-            even attempted a startup! Currently, I'm immersed in honing my web
-            development skills. Here are some technologies that I'm using.
-          </p>
-
-          <ul>
-            <li>
-              <a href="https://html.spec.whatwg.org/multipage/">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.w3.org/Style/CSS/">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.typescriptlang.org/">
-                <svg
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>TypeScript</title>
-                  <path
-                    d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.python.org/">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.iso.org/standard/76583.html">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  fill="#000000"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M48,120a8,8,0,0,0,8-8V40h88V88a8,8,0,0,0,8,8h48v16a8,8,0,0,0,16,0V88a8,8,0,0,0-2.34-5.66l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40v72A8,8,0,0,0,48,120ZM160,51.31,188.69,80H160ZM228,208a8,8,0,0,1-8,8H192a8,8,0,0,1-8-8V152a8,8,0,0,1,16,0v48h20A8,8,0,0,1,228,208ZM91.82,196.31a20.82,20.82,0,0,1-9.19,15.23C77.44,215,71,216,65.14,216A60.72,60.72,0,0,1,50,214a8,8,0,0,1,4.3-15.41c4.38,1.2,14.95,2.7,19.55-.36.89-.59,1.83-1.52,2.14-3.93.35-2.67-.71-4.1-12.78-7.59-9.35-2.7-25-7.23-23-23.11a20.55,20.55,0,0,1,9-14.95c11.84-8,30.72-3.31,32.83-2.76a8,8,0,0,1-4.08,15.48c-4.49-1.17-15.22-2.56-19.82.56a4.54,4.54,0,0,0-2,3.67c-.12.9-.14,1.08,1.12,1.9,2.31,1.49,6.44,2.68,10.45,3.84C77.5,174.17,94.06,179,91.82,196.31Zm71,3.23A39.05,39.05,0,0,0,168,180c0-19.85-14.35-36-32-36s-32,16.15-32,36,14.35,36,32,36a29.18,29.18,0,0,0,15.9-4.78l2.44,2.44a8,8,0,0,0,11.31-11.32ZM136,200c-8.82,0-16-9-16-20s7.18-20,16-20,16,9,16,20a24.41,24.41,0,0,1-1.18,7.51l-1.17-1.17a8,8,0,1,0-11.31,11.32l1.68,1.67A12.93,12.93,0,0,1,136,200Z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://ohmyz.sh/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  fill="#000000"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1.9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2.6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6.4 19.5.6 29.5.6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8.9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://threejs.org/">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                  <g color="#000" font-weight="400" font-family="sans-serif">
-                    <path
-                      style="
-                        line-height: normal;
-                        font-variant-ligatures: normal;
-                        font-variant-position: normal;
-                        font-variant-caps: normal;
-                        font-variant-numeric: normal;
-                        font-variant-alternates: normal;
-                        font-variant-east-asian: normal;
-                        font-feature-settings: normal;
-                        font-variation-settings: normal;
-                        text-indent: 0;
-                        text-align: start;
-                        text-decoration-line: none;
-                        text-decoration-style: solid;
-                        text-decoration-color: #000;
-                        text-transform: none;
-                        text-orientation: mixed;
-                        white-space: normal;
-                        shape-padding: 0;
-                        shape-margin: 0;
-                        inline-size: 0;
-                        isolation: auto;
-                        mix-blend-mode: normal;
-                        solid-color: #000;
-                        solid-opacity: 1;
-                      "
-                      d="M16.219 15.762a1.129 1.129 0 00-1.076 1.399l24.394 98.742a1.129 1.129 0 001.879.544l73.386-70.59a1.129 1.129 0 00-.47-1.899L16.55 15.806a1.129 1.129 0 00-.331-.044zm1.584 2.754l94.024 27.07-70.566 67.877-23.458-94.947z"
-                      overflow="visible"
-                    />
-                    <path
-                      style="
-                        line-height: normal;
-                        font-variant-ligatures: normal;
-                        font-variant-position: normal;
-                        font-variant-caps: normal;
-                        font-variant-numeric: normal;
-                        font-variant-alternates: normal;
-                        font-variant-east-asian: normal;
-                        font-feature-settings: normal;
-                        font-variation-settings: normal;
-                        text-indent: 0;
-                        text-align: start;
-                        text-decoration-line: none;
-                        text-decoration-style: solid;
-                        text-decoration-color: #000;
-                        text-transform: none;
-                        text-orientation: mixed;
-                        white-space: normal;
-                        shape-padding: 0;
-                        shape-margin: 0;
-                        inline-size: 0;
-                        isolation: auto;
-                        mix-blend-mode: normal;
-                        solid-color: #000;
-                        solid-opacity: 1;
-                      "
-                      d="M65.137 29.84a1.129 1.129 0 00-.807.315L27.654 65.46a1.129 1.129 0 00.471 1.898L76.984 81.44a1.129 1.129 0 001.409-1.355L66.21 30.698a1.129 1.129 0 00-1.073-.858zm-.651 3.3L75.734 78.73l-45.104-13L64.486 33.14z"
-                      overflow="visible"
-                    />
-                    <path
-                      style="
-                        line-height: normal;
-                        font-variant-ligatures: normal;
-                        font-variant-position: normal;
-                        font-variant-caps: normal;
-                        font-variant-numeric: normal;
-                        font-variant-alternates: normal;
-                        font-variant-east-asian: normal;
-                        font-feature-settings: normal;
-                        font-variation-settings: normal;
-                        text-indent: 0;
-                        text-align: start;
-                        text-decoration-line: none;
-                        text-decoration-style: solid;
-                        text-decoration-color: #000;
-                        text-transform: none;
-                        text-orientation: mixed;
-                        white-space: normal;
-                        shape-padding: 0;
-                        shape-margin: 0;
-                        inline-size: 0;
-                        isolation: auto;
-                        mix-blend-mode: normal;
-                        solid-color: #000;
-                        solid-opacity: 1;
-                      "
-                      d="M46.914 47.313a1.129 1.129 0 00-1.076 1.399l6.054 24.531a1.129 1.129 0 001.88.543l18.222-17.563a1.129 1.129 0 00-.472-1.898l-24.277-6.968a1.129 1.129 0 00-.331-.044zm1.583 2.751l20.522 5.89L53.614 70.8l-5.117-20.736z"
-                      overflow="visible"
-                    />
-                    <path
-                      style="
-                        line-height: normal;
-                        font-variant-ligatures: normal;
-                        font-variant-position: normal;
-                        font-variant-caps: normal;
-                        font-variant-numeric: normal;
-                        font-variant-alternates: normal;
-                        font-variant-east-asian: normal;
-                        font-feature-settings: normal;
-                        font-variation-settings: normal;
-                        text-indent: 0;
-                        text-align: start;
-                        text-decoration-line: none;
-                        text-decoration-style: solid;
-                        text-decoration-color: #000;
-                        text-transform: none;
-                        text-orientation: mixed;
-                        white-space: normal;
-                        shape-padding: 0;
-                        shape-margin: 0;
-                        inline-size: 0;
-                        isolation: auto;
-                        mix-blend-mode: normal;
-                        solid-color: #000;
-                        solid-opacity: 1;
-                      "
-                      d="M40.902 22.809a1.129 1.129 0 00-.807.316L21.873 40.687a1.129 1.129 0 00.472 1.898l24.273 6.969a1.129 1.129 0 001.408-1.356l-6.051-24.53a1.129 1.129 0 00-1.073-.86zm-.65 3.3l5.114 20.736-20.517-5.89 15.403-14.847zM89.453 36.793a1.129 1.129 0 00-.806.316L70.423 54.67a1.129 1.129 0 00.472 1.899l24.274 6.968a1.129 1.129 0 001.408-1.356l-6.05-24.53a1.129 1.129 0 00-1.074-.859zm-.65 3.3l5.114 20.737L73.4 54.94l15.403-14.846zM52.944 71.864a1.129 1.129 0 00-.74.315L33.982 89.742a1.129 1.129 0 00.472 1.898l24.278 6.968a1.129 1.129 0 001.407-1.355l-6.055-24.531a1.129 1.129 0 00-1.14-.858zm-.582 3.3l5.118 20.737-20.522-5.89 15.404-14.846z"
-                      overflow="visible"
-                    />
-                  </g>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://pytorch.org/">
-                <svg
-                  role="img"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>PyTorch</title>
-                  <path
-                    d="M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 00-1.327 1.327 1.327 1.327 0 001.327 1.328A1.327 1.327 0 0016.9 5.226 1.327 1.327 0 0015.573 3.9z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.djangoproject.com/">
-                <svg viewBox="0 0 128 128">
-                  <path
-                    d="M59.448 0h20.93v96.88c-10.737 2.04-18.62 2.855-27.181 2.855-25.551-.001-38.87-11.551-38.87-33.705 0-21.338 14.135-35.2 36.015-35.2 3.398 0 5.98.272 9.106 1.087zm0 48.765c-2.446-.815-4.485-1.086-7.067-1.086-10.6 0-16.717 6.523-16.717 17.939 0 11.145 5.845 17.26 16.582 17.26 2.309 0 4.212-.136 7.202-.542z"
-                  ></path>
-                  <path
-                    d="M113.672 32.321V80.84c0 16.717-1.224 24.735-4.893 31.666-3.398 6.661-7.883 10.873-17.124 15.494l-19.435-9.241c9.242-4.35 13.726-8.153 16.58-14 2.99-5.979 3.943-12.91 3.943-31.122V32.321zM92.742.111h20.93v21.474h-20.93z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="16"
-                  width="15.5"
-                  viewBox="0 0 496 512"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.figma.com/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="100"
-                  height="100"
-                  viewBox="0 0 50 50"
-                >
-                  <path
-                    d="M25 2v14h-7c-3.855 0-7-3.145-7-7 0-3.855 3.145-7 7-7H25zM25 18v14h-7c-3.855 0-7-3.145-7-7 0-3.855 3.145-7 7-7H25zM25 34v7c0 3.855-3.145 7-7 7s-7-3.145-7-7c0-3.855 3.145-7 7-7H25zM41 9c0 3.855-3.145 7-7 7h-7V2h7C37.855 2 41 5.145 41 9zM34 18A7 7 0 1034 32 7 7 0 1034 18z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Projects</h3>
-          <div>
-            <a href="https://generlate.com" title="generlate.com">
-              <div>
-                <div>
-                  <p>Generlate.com</p>
-                  <p>Commercial Website</p>
-                </div>
-                <video
-                  src="./public/generlate-website.mp4"
-                  controls
-                  autoplay
-                  muted
-                  loop
-                  alt="a commercial website"
-                ></video>
-              </div>
-              <div>
-                <p>PostgreSQL</p>
-                <p>Django</p>
-                <p>React</p>
-                <p>TypeScript</p>
-              </div>
-            </a>
-
-            <a href="https://austencabret.com">
-              <div>
-                <div>
-                  <p>Austencabret.com</p>
-                  <p>Resume Website</p>
-                </div>
-                <video
-                  src="./public/austencabret.com.mp4"
-                  controls
-                  autoplay
-                  muted
-                  loop
-                  alt="austencabret.com"
-                ></video>
-              </div>
-              <div>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>TypeScript</p>
-                <p>Three</p>
-              </div>
-            </a>
-
-            <a
-              href="./src/model-generator/model-generator.html"
-              title="model generator"
-            >
-              <div>
-                <div>
-                  <p>Random Cube Generator</p>
-                  <p>Machine Learning</p>
-                </div>
-                <video
-                  src="./public/model-generator-6.mp4"
-                  controls
-                  autoplay
-                  muted
-                  loop
-                  alt="a community entrance"
-                ></video>
-              </div>
-              <div>
-                <p>Python</p>
-                <p>Pytorch</p>
-                <p>Omniverse</p>
-              </div>
-            </a>
-            <a
-              href="./src/building-code-consultant/building-code-consultant.html"
-              title="building code consultant"
-            >
-              <div>
-                <div>
-                  <p>Building Code Consultant</p>
-                  <p>Fine-Tuned LLM</p>
-                </div>
-                <video
-                  src="./public/building-code-consultant.mp4"
-                  controls
-                  autoplay
-                  muted
-                  loop
-                  alt="building code consultant"
-                ></video>
-              </div>
-              <div>
-                <p>Python</p>
-                <p>OpenAI API</p>
-              </div>
-            </a>
-
-            <a
-              href="./src/space-invaders-game/space-invaders-game.html"
-              title="space invaders game"
-            >
-              <div>
-                <div>
-                  <p>Space Invaders Game</p>
-                  <p>Game Development</p>
-                </div>
-                <video
-                  src="./public/space-invaders-game-cropped.mp4"
-                  controls
-                  autoplay
-                  muted
-                  loop
-                  alt="A space invaders game"
-                ></video>
-              </div>
-              <div>
-                <p>Python</p>
-                <p>Pygame</p>
-              </div>
-            </a>
-
-            <a href="./src/architecture/architecture.html" title="architecture">
-              <div>
-                <div>
-                  <p>Architecture</p>
-                  <p>Visual Scripting</p>
-                </div>
-                <video
-                  src="./public/sterling-ridge.mp4"
-                  controls
-                  autoplay
-                  muted
-                  loop
-                  alt="A community entrance"
-                ></video>
-              </div>
-              <div>
-                <p>Adobe Suite</p>
-                <p>Autocad</p>
-                <p>Rhino</p>
-                <p>Unreal Engine</p>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="./src/all-projects/all-projects.html"
-              >All Projects
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="ionicon"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  d="M208 352h-64a96 96 0 010-192h64M304 160h64a96 96 0 010 192h-64M163.29 256h187.42"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="24"
-                />
-              </svg>
-            </a>
-          </div>
-        </section>
-        <section>
-          <h3>Experience</h3>
-          <div>
+        <main>
+            <section>
+                <h1>AUSTEN CABRET</h1>
+                <h2>FRONT END SOFTWARE ENGINEER</h2>
+            </section>
             <div>
-              <h4>GIS Intern</h4>
-              <a href="https://www.wellingtonfl.gov/">
-                <img
-                  src="./public/village-of-wellington.webp"
-                  alt="The Village of Wellington"
-                />
-              </a>
-              <p>@Wellington</p>
-              <p>2015 - 2015</p>
+                <section>
+                    <p>
+                        Hi! I'm a creator at the intersection of code and
+                        architecture. With a solid foundation in each, I dream
+                        of disrupting building design. To do so, I've made
+                        Youtube videos, programs, digital spaces and even
+                        attempted a startup! Currently, I'm immersed in honing
+                        my web development skills. Here are some technologies
+                        that I'm using.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="https://html.spec.whatwg.org/multipage/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/Style/CSS/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.typescriptlang.org/">
+                                <svg
+                                    role="img"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <title>TypeScript</title>
+                                    <path
+                                        d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.python.org/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.iso.org/standard/76583.html">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    fill="#000000"
+                                    viewBox="0 0 256 256"
+                                >
+                                    <path
+                                        d="M48,120a8,8,0,0,0,8-8V40h88V88a8,8,0,0,0,8,8h48v16a8,8,0,0,0,16,0V88a8,8,0,0,0-2.34-5.66l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40v72A8,8,0,0,0,48,120ZM160,51.31,188.69,80H160ZM228,208a8,8,0,0,1-8,8H192a8,8,0,0,1-8-8V152a8,8,0,0,1,16,0v48h20A8,8,0,0,1,228,208ZM91.82,196.31a20.82,20.82,0,0,1-9.19,15.23C77.44,215,71,216,65.14,216A60.72,60.72,0,0,1,50,214a8,8,0,0,1,4.3-15.41c4.38,1.2,14.95,2.7,19.55-.36.89-.59,1.83-1.52,2.14-3.93.35-2.67-.71-4.1-12.78-7.59-9.35-2.7-25-7.23-23-23.11a20.55,20.55,0,0,1,9-14.95c11.84-8,30.72-3.31,32.83-2.76a8,8,0,0,1-4.08,15.48c-4.49-1.17-15.22-2.56-19.82.56a4.54,4.54,0,0,0-2,3.67c-.12.9-.14,1.08,1.12,1.9,2.31,1.49,6.44,2.68,10.45,3.84C77.5,174.17,94.06,179,91.82,196.31Zm71,3.23A39.05,39.05,0,0,0,168,180c0-19.85-14.35-36-32-36s-32,16.15-32,36,14.35,36,32,36a29.18,29.18,0,0,0,15.9-4.78l2.44,2.44a8,8,0,0,0,11.31-11.32ZM136,200c-8.82,0-16-9-16-20s7.18-20,16-20,16,9,16,20a24.41,24.41,0,0,1-1.18,7.51l-1.17-1.17a8,8,0,1,0-11.31,11.32l1.68,1.67A12.93,12.93,0,0,1,136,200Z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ohmyz.sh/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    fill="#000000"
+                                    viewBox="0 0 256 256"
+                                >
+                                    <path
+                                        d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://react.dev/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1.9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2.6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6.4 19.5.6 29.5.6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8.9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://threejs.org/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 128 128"
+                                >
+                                    <g
+                                        color="#000"
+                                        font-weight="400"
+                                        font-family="sans-serif"
+                                    >
+                                        <path
+                                            style="
+                                                line-height: normal;
+                                                font-variant-ligatures: normal;
+                                                font-variant-position: normal;
+                                                font-variant-caps: normal;
+                                                font-variant-numeric: normal;
+                                                font-variant-alternates: normal;
+                                                font-variant-east-asian: normal;
+                                                font-feature-settings: normal;
+                                                font-variation-settings: normal;
+                                                text-indent: 0;
+                                                text-align: start;
+                                                text-decoration-line: none;
+                                                text-decoration-style: solid;
+                                                text-decoration-color: #000;
+                                                text-transform: none;
+                                                text-orientation: mixed;
+                                                white-space: normal;
+                                                shape-padding: 0;
+                                                shape-margin: 0;
+                                                inline-size: 0;
+                                                isolation: auto;
+                                                mix-blend-mode: normal;
+                                                solid-color: #000;
+                                                solid-opacity: 1;
+                                            "
+                                            d="M16.219 15.762a1.129 1.129 0 00-1.076 1.399l24.394 98.742a1.129 1.129 0 001.879.544l73.386-70.59a1.129 1.129 0 00-.47-1.899L16.55 15.806a1.129 1.129 0 00-.331-.044zm1.584 2.754l94.024 27.07-70.566 67.877-23.458-94.947z"
+                                            overflow="visible"
+                                        />
+                                        <path
+                                            style="
+                                                line-height: normal;
+                                                font-variant-ligatures: normal;
+                                                font-variant-position: normal;
+                                                font-variant-caps: normal;
+                                                font-variant-numeric: normal;
+                                                font-variant-alternates: normal;
+                                                font-variant-east-asian: normal;
+                                                font-feature-settings: normal;
+                                                font-variation-settings: normal;
+                                                text-indent: 0;
+                                                text-align: start;
+                                                text-decoration-line: none;
+                                                text-decoration-style: solid;
+                                                text-decoration-color: #000;
+                                                text-transform: none;
+                                                text-orientation: mixed;
+                                                white-space: normal;
+                                                shape-padding: 0;
+                                                shape-margin: 0;
+                                                inline-size: 0;
+                                                isolation: auto;
+                                                mix-blend-mode: normal;
+                                                solid-color: #000;
+                                                solid-opacity: 1;
+                                            "
+                                            d="M65.137 29.84a1.129 1.129 0 00-.807.315L27.654 65.46a1.129 1.129 0 00.471 1.898L76.984 81.44a1.129 1.129 0 001.409-1.355L66.21 30.698a1.129 1.129 0 00-1.073-.858zm-.651 3.3L75.734 78.73l-45.104-13L64.486 33.14z"
+                                            overflow="visible"
+                                        />
+                                        <path
+                                            style="
+                                                line-height: normal;
+                                                font-variant-ligatures: normal;
+                                                font-variant-position: normal;
+                                                font-variant-caps: normal;
+                                                font-variant-numeric: normal;
+                                                font-variant-alternates: normal;
+                                                font-variant-east-asian: normal;
+                                                font-feature-settings: normal;
+                                                font-variation-settings: normal;
+                                                text-indent: 0;
+                                                text-align: start;
+                                                text-decoration-line: none;
+                                                text-decoration-style: solid;
+                                                text-decoration-color: #000;
+                                                text-transform: none;
+                                                text-orientation: mixed;
+                                                white-space: normal;
+                                                shape-padding: 0;
+                                                shape-margin: 0;
+                                                inline-size: 0;
+                                                isolation: auto;
+                                                mix-blend-mode: normal;
+                                                solid-color: #000;
+                                                solid-opacity: 1;
+                                            "
+                                            d="M46.914 47.313a1.129 1.129 0 00-1.076 1.399l6.054 24.531a1.129 1.129 0 001.88.543l18.222-17.563a1.129 1.129 0 00-.472-1.898l-24.277-6.968a1.129 1.129 0 00-.331-.044zm1.583 2.751l20.522 5.89L53.614 70.8l-5.117-20.736z"
+                                            overflow="visible"
+                                        />
+                                        <path
+                                            style="
+                                                line-height: normal;
+                                                font-variant-ligatures: normal;
+                                                font-variant-position: normal;
+                                                font-variant-caps: normal;
+                                                font-variant-numeric: normal;
+                                                font-variant-alternates: normal;
+                                                font-variant-east-asian: normal;
+                                                font-feature-settings: normal;
+                                                font-variation-settings: normal;
+                                                text-indent: 0;
+                                                text-align: start;
+                                                text-decoration-line: none;
+                                                text-decoration-style: solid;
+                                                text-decoration-color: #000;
+                                                text-transform: none;
+                                                text-orientation: mixed;
+                                                white-space: normal;
+                                                shape-padding: 0;
+                                                shape-margin: 0;
+                                                inline-size: 0;
+                                                isolation: auto;
+                                                mix-blend-mode: normal;
+                                                solid-color: #000;
+                                                solid-opacity: 1;
+                                            "
+                                            d="M40.902 22.809a1.129 1.129 0 00-.807.316L21.873 40.687a1.129 1.129 0 00.472 1.898l24.273 6.969a1.129 1.129 0 001.408-1.356l-6.051-24.53a1.129 1.129 0 00-1.073-.86zm-.65 3.3l5.114 20.736-20.517-5.89 15.403-14.847zM89.453 36.793a1.129 1.129 0 00-.806.316L70.423 54.67a1.129 1.129 0 00.472 1.899l24.274 6.968a1.129 1.129 0 001.408-1.356l-6.05-24.53a1.129 1.129 0 00-1.074-.859zm-.65 3.3l5.114 20.737L73.4 54.94l15.403-14.846zM52.944 71.864a1.129 1.129 0 00-.74.315L33.982 89.742a1.129 1.129 0 00.472 1.898l24.278 6.968a1.129 1.129 0 001.407-1.355l-6.055-24.531a1.129 1.129 0 00-1.14-.858zm-.582 3.3l5.118 20.737-20.522-5.89 15.404-14.846z"
+                                            overflow="visible"
+                                        />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pytorch.org/">
+                                <svg
+                                    role="img"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <title>PyTorch</title>
+                                    <path
+                                        d="M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 00-1.327 1.327 1.327 1.327 0 001.327 1.328A1.327 1.327 0 0016.9 5.226 1.327 1.327 0 0015.573 3.9z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.djangoproject.com/">
+                                <svg viewBox="0 0 128 128">
+                                    <path
+                                        d="M59.448 0h20.93v96.88c-10.737 2.04-18.62 2.855-27.181 2.855-25.551-.001-38.87-11.551-38.87-33.705 0-21.338 14.135-35.2 36.015-35.2 3.398 0 5.98.272 9.106 1.087zm0 48.765c-2.446-.815-4.485-1.086-7.067-1.086-10.6 0-16.717 6.523-16.717 17.939 0 11.145 5.845 17.26 16.582 17.26 2.309 0 4.212-.136 7.202-.542z"
+                                    ></path>
+                                    <path
+                                        d="M113.672 32.321V80.84c0 16.717-1.224 24.735-4.893 31.666-3.398 6.661-7.883 10.873-17.124 15.494l-19.435-9.241c9.242-4.35 13.726-8.153 16.58-14 2.99-5.979 3.943-12.91 3.943-31.122V32.321zM92.742.111h20.93v21.474h-20.93z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="16"
+                                    width="15.5"
+                                    viewBox="0 0 496 512"
+                                >
+                                    <path
+                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.figma.com/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    x="0px"
+                                    y="0px"
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 50 50"
+                                >
+                                    <path
+                                        d="M25 2v14h-7c-3.855 0-7-3.145-7-7 0-3.855 3.145-7 7-7H25zM25 18v14h-7c-3.855 0-7-3.145-7-7 0-3.855 3.145-7 7-7H25zM25 34v7c0 3.855-3.145 7-7 7s-7-3.145-7-7c0-3.855 3.145-7 7-7H25zM41 9c0 3.855-3.145 7-7 7h-7V2h7C37.855 2 41 5.145 41 9zM34 18A7 7 0 1034 32 7 7 0 1034 18z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Projects</h3>
+                    <div>
+                        <a href="https://generlate.com" title="generlate.com">
+                            <div>
+                                <div>
+                                    <p>Generlate.com</p>
+                                    <p>Commercial Website</p>
+                                </div>
+                                <video
+                                    src="./public/generlate-website.mp4"
+                                    controls
+                                    autoplay
+                                    muted
+                                    loop
+                                    alt="a commercial website"
+                                ></video>
+                            </div>
+                            <div>
+                                <p>PostgreSQL</p>
+                                <p>Django</p>
+                                <p>React</p>
+                                <p>TypeScript</p>
+                            </div>
+                        </a>
+
+                        <a href="https://austencabret.com">
+                            <div>
+                                <div>
+                                    <p>Austencabret.com</p>
+                                    <p>Resume Website</p>
+                                </div>
+                                <video
+                                    src="./public/austencabret.com.mp4"
+                                    controls
+                                    autoplay
+                                    muted
+                                    loop
+                                    alt="austencabret.com"
+                                ></video>
+                            </div>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>TypeScript</p>
+                                <p>Three</p>
+                            </div>
+                        </a>
+
+                        <a
+                            href="./src/model-generator/model-generator.html"
+                            title="model generator"
+                        >
+                            <div>
+                                <div>
+                                    <p>Random Cube Generator</p>
+                                    <p>Machine Learning</p>
+                                </div>
+                                <video
+                                    src="./public/model-generator-6.mp4"
+                                    controls
+                                    autoplay
+                                    muted
+                                    loop
+                                    alt="a community entrance"
+                                ></video>
+                            </div>
+                            <div>
+                                <p>Python</p>
+                                <p>Pytorch</p>
+                                <p>Omniverse</p>
+                            </div>
+                        </a>
+                        <a
+                            href="./src/building-code-consultant/building-code-consultant.html"
+                            title="building code consultant"
+                        >
+                            <div>
+                                <div>
+                                    <p>Building Code Consultant</p>
+                                    <p>Fine-Tuned LLM</p>
+                                </div>
+                                <video
+                                    src="./public/building-code-consultant.mp4"
+                                    controls
+                                    autoplay
+                                    muted
+                                    loop
+                                    playsinline
+                                    alt="building code consultant"
+                                ></video>
+                            </div>
+                            <div>
+                                <p>Python</p>
+                                <p>OpenAI API</p>
+                            </div>
+                        </a>
+
+                        <a
+                            href="./src/space-invaders-game/space-invaders-game.html"
+                            title="space invaders game"
+                        >
+                            <div>
+                                <div>
+                                    <p>Space Invaders Game</p>
+                                    <p>Game Development</p>
+                                </div>
+                                <video
+                                    src="./public/space-invaders-game-cropped.mp4"
+                                    controls
+                                    autoplay
+                                    muted
+                                    loop
+                                    alt="A space invaders game"
+                                ></video>
+                            </div>
+                            <div>
+                                <p>Python</p>
+                                <p>Pygame</p>
+                            </div>
+                        </a>
+
+                        <a
+                            href="./src/architecture/architecture.html"
+                            title="architecture"
+                        >
+                            <div>
+                                <div>
+                                    <p>Architecture</p>
+                                    <p>Visual Scripting</p>
+                                </div>
+                                <video
+                                    src="./public/sterling-ridge.mp4"
+                                    controls
+                                    autoplay
+                                    muted
+                                    loop
+                                    alt="A community entrance"
+                                ></video>
+                            </div>
+                            <div>
+                                <p>Adobe Suite</p>
+                                <p>Autocad</p>
+                                <p>Rhino</p>
+                                <p>Unreal Engine</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./src/all-projects/all-projects.html"
+                            >All Projects
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="ionicon"
+                                viewBox="0 0 512 512"
+                            >
+                                <path
+                                    d="M208 352h-64a96 96 0 010-192h64M304 160h64a96 96 0 010 192h-64M163.29 256h187.42"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="24"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <section>
+                    <h3>Experience</h3>
+                    <div>
+                        <div>
+                            <h4>GIS Intern</h4>
+                            <a href="https://www.wellingtonfl.gov/">
+                                <img
+                                    src="./public/village-of-wellington.webp"
+                                    alt="The Village of Wellington"
+                                />
+                            </a>
+                            <p>@Wellington</p>
+                            <p>2015 - 2015</p>
+                        </div>
+                        <div>
+                            <h4>Assistant Planner</h4>
+                            <a
+                                href="https://discover.pbcgov.org/parks/Pages/default.aspx"
+                            >
+                                <img
+                                    src="./public/palm-beach-county.webp"
+                                    alt="Palm Beach County"
+                                />
+                            </a>
+                            <p>@Palm Beach County</p>
+                            <p>2017 - 2019</p>
+                        </div>
+                        <div>
+                            <h4>Architectural Renderer</h4>
+                            <a href="https://nieverawilliams.com/">
+                                <img
+                                    src="./public/nievera-williams.webp"
+                                    alt="Nievera Williams"
+                                />
+                            </a>
+                            <p>@Nievera Williams</p>
+                            <p>2020 - 2021</p>
+                        </div>
+                        <div>
+                            <h4>Designer</h4>
+                            <a href="https://www.insitestudio.com/">
+                                <img
+                                    src="./public/insite-studio.webp"
+                                    alt="Insite Studio"
+                                />
+                            </a>
+                            <p>@Insite Studio</p>
+                            <p>2021 - 2023</p>
+                        </div>
+                        <div>
+                            <h4>Founder</h4>
+                            <a href="https://www.generlate.com/">
+                                <img
+                                    src="./public/generlate.webp"
+                                    alt="Generlate"
+                                />
+                            </a>
+                            <p>@Generlate</p>
+                            <p>2020 - Present</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div>
-              <h4>Assistant Planner</h4>
-              <a href="https://discover.pbcgov.org/parks/Pages/default.aspx">
-                <img
-                  src="./public/palm-beach-county.webp"
-                  alt="Palm Beach County"
-                />
-              </a>
-              <p>@Palm Beach County</p>
-              <p>2017 - 2019</p>
-            </div>
-            <div>
-              <h4>Architectural Renderer</h4>
-              <a href="https://nieverawilliams.com/">
-                <img
-                  src="./public/nievera-williams.webp"
-                  alt="Nievera Williams"
-                />
-              </a>
-              <p>@Nievera Williams</p>
-              <p>2020 - 2021</p>
-            </div>
-            <div>
-              <h4>Designer</h4>
-              <a href="https://www.insitestudio.com/">
-                <img src="./public/insite-studio.webp" alt="Insite Studio" />
-              </a>
-              <p>@Insite Studio</p>
-              <p>2021 - 2023</p>
-            </div>
-            <div>
-              <h4>Founder</h4>
-              <a href="https://www.generlate.com/">
-                <img src="./public/generlate.webp" alt="Generlate" />
-              </a>
-              <p>@Generlate</p>
-              <p>2020 - Present</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-  </body>
+        </main>
+    </body>
 </html>
