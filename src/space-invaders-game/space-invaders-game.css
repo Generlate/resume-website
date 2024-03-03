@@ -73,7 +73,9 @@ video::-webkit-media-controls-panel {
 }
 
 @media (max-width: 1376px) {
-    main {
-        margin: 7vh 25vw 1vh 25vw;
+    body {
+        main {
+            margin: 7vh 25vw 1vh 25vw;
+        }
     }
 }
