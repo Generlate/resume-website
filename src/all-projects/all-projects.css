@@ -1,142 +1,142 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:thin,extralight,light,regular,medium,semibold,bold,extrabold,black');
-@import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
+@import url("https://fonts.googleapis.com/css?family=Inter:thin,extralight,light,regular,medium,semibold,bold,extrabold,black");
+@import url("https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black");
 
 :root {
-  --main-color: hsl(55, 100%, 49%);
-  --second-color: hsl(54, 0%, 94%);
-  --third-color: hsl(53, 7%, 84%);
-  --fourth-color: hsl(55, 16%, 34%);
-  --fifth-color: hsl(55, 24%, 18%);
-  --sixth-color: hsl(55, 28%, 4%);
-  --seventh-color: black;
-  --circle-border-radius: 50%;
-  --section-border-radius: 1.5rem;
-  --media-border-radius: 1rem;
-  --button-border-radius: 8px;
-  --font-family: 'Inter', 'Roboto', sans-serif;
-  --mobile-font-size: 1rem;
-  --border: 2px solid var(--fifth-color);
+    --main-color: hsl(55, 100%, 49%);
+    --second-color: hsl(54, 0%, 94%);
+    --third-color: hsl(53, 7%, 84%);
+    --fourth-color: hsl(55, 16%, 34%);
+    --fifth-color: hsl(55, 24%, 18%);
+    --sixth-color: hsl(55, 28%, 4%);
+    --seventh-color: black;
+    --circle-border-radius: 50%;
+    --section-border-radius: 1.5rem;
+    --media-border-radius: 1rem;
+    --button-border-radius: 8px;
+    --font-family: "Inter", "Roboto", sans-serif;
+    --mobile-font-size: 1rem;
+    --border: 2px solid var(--fifth-color);
 }
 
 body {
-  background-color: black;
-  cursor: url('../../public/cursor.webp'), auto;
-  font-family: 'Inter', 'roboto';
-  color: var(--fourth-color);
-  font-weight: 300;
+    background-color: black;
+    cursor: url("../../public/cursor.webp"), auto;
+    font-family: "Inter", "roboto";
+    color: var(--fourth-color);
+    font-weight: 300;
 
-  main {
-    background-color: var(--sixth-color);
-    margin: 1vh;
-    padding: 1.2rem;
-    margin-top: 7vh;
-    /* height: 100%; */
-    border-radius: 1.5rem;
-    box-shadow:
-      inset 0 0 2px 0 rgba(61, 58, 41, 1),
-      inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
-      inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
-      2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    main {
+        background-color: var(--sixth-color);
+        margin: 1vh;
+        padding: 1.2rem;
+        margin-top: 7vh;
+        /* height: 100%; */
+        border-radius: 1.5rem;
+        box-shadow:
+            inset 0 0 2px 0 rgba(61, 58, 41, 1),
+            inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
+            inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
+            2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 
-    h1 {
-      color: var(--second-color);
-      font-weight: 700;
-      font-size: 2.75rem;
-    }
-
-    table {
-      /* width: 100%; */
-      border-collapse: collapse;
-
-      th {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid hsl(53, 16%, 16%);
-        font-weight: 600;
-        font-size: 0.875rem;
-        color: var(--third-color);
-      }
-
-      tr {
-        td {
-          padding: 8px;
-          text-align: left;
-          border-bottom: 1px solid hsl(53, 16%, 16%);
+        h1 {
+            color: var(--second-color);
+            font-weight: 700;
+            font-size: 2.75rem;
         }
 
-        td:first-of-type {
-          font-size: 0.875rem;
-          font-weight: 500;
-          color: var(--fifth-color);
+        table {
+            /* width: 100%; */
+            border-collapse: collapse;
+
+            th {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid hsl(53, 16%, 16%);
+                font-weight: 600;
+                font-size: 0.875rem;
+                color: var(--third-color);
+            }
+
+            tr {
+                td {
+                    padding: 8px;
+                    text-align: left;
+                    border-bottom: 1px solid hsl(53, 16%, 16%);
+                }
+
+                td:first-of-type {
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    color: var(--fifth-color);
+                }
+
+                td:nth-of-type(2) {
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+
+                td:nth-of-type(4) {
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    color: var(--fifth-color);
+                }
+
+                tbody {
+                    tr:last-child td {
+                        border-bottom: none;
+                    }
+
+                    tr td:last-of-type {
+                        font-weight: 500;
+                        font-size: 0.875rem;
+                    }
+                }
+            }
         }
 
-        td:nth-of-type(2) {
-          font-weight: 600;
-          font-size: 1rem;
+        p {
+            background-color: var(--fifth-color);
+            border-radius: 50px;
+            color: var(--third-color);
+            font-size: 0.75rem;
+            font-weight: 400;
+            display: inline-block;
+            padding: 4px 12px;
         }
 
-        td:nth-of-type(4) {
-          font-size: 0.875rem;
-          font-weight: 500;
-          color: var(--fifth-color);
+        a {
+            color: var(--third-color);
+            text-decoration: none;
         }
 
-        tbody {
-          tr:last-child td {
-            border-bottom: none;
-          }
-
-          tr td:last-of-type {
-            font-weight: 500;
-            font-size: 0.875rem;
-          }
+        a:hover {
+            color: var(--second-color);
         }
-      }
     }
-
-    p {
-      background-color: var(--fifth-color);
-      border-radius: 50px;
-      color: var(--third-color);
-      font-size: 0.75rem;
-      font-weight: 400;
-      display: inline-block;
-      padding: 4px 12px;
-    }
-
-    a {
-      color: var(--third-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--second-color);
-    }
-  }
 }
 
 @media (max-width: 1376px) {
-  thead {
-    tr {
-      th:nth-of-type(4) {
-        display: none;
-      }
+    thead {
+        tr {
+            th:nth-of-type(4) {
+                display: none;
+            }
 
-      th:nth-of-type(5) {
-        display: none;
-      }
+            th:nth-of-type(5) {
+                display: none;
+            }
+        }
     }
-  }
 
-  tbody {
-    tr {
-      td:nth-of-type(4) {
-        display: none;
-      }
+    tbody {
+        tr {
+            td:nth-of-type(4) {
+                display: none;
+            }
 
-      td:nth-of-type(5) {
-        display: none;
-      }
+            td:nth-of-type(5) {
+                display: none;
+            }
+        }
     }
-  }
 }

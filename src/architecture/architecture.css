@@ -1,135 +1,135 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:thin,extralight,light,regular,medium,semibold,bold,extrabold,black');
-@import url('https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black');
+@import url("https://fonts.googleapis.com/css?family=Inter:thin,extralight,light,regular,medium,semibold,bold,extrabold,black");
+@import url("https://fonts.googleapis.com/css?family=Roboto:thin,light,medium,black");
 
 :root {
-  --main-color: hsl(55, 100%, 49%);
-  --second-color: hsl(54, 0%, 94%);
-  --third-color: hsl(53, 7%, 84%);
-  --fourth-color: hsl(55, 16%, 34%);
-  --fifth-color: hsl(55, 24%, 18%);
-  --sixth-color: hsl(55, 28%, 4%);
-  --seventh-color: black;
-  --circle-border-radius: 50%;
-  --section-border-radius: 1.5rem;
-  --media-border-radius: 1rem;
-  --button-border-radius: 8px;
-  --font-family: 'Inter', 'Roboto', sans-serif;
-  --mobile-font-size: 1rem;
-  --border: 2px solid var(--fifth-color);
+    --main-color: hsl(55, 100%, 49%);
+    --second-color: hsl(54, 0%, 94%);
+    --third-color: hsl(53, 7%, 84%);
+    --fourth-color: hsl(55, 16%, 34%);
+    --fifth-color: hsl(55, 24%, 18%);
+    --sixth-color: hsl(55, 28%, 4%);
+    --seventh-color: black;
+    --circle-border-radius: 50%;
+    --section-border-radius: 1.5rem;
+    --media-border-radius: 1rem;
+    --button-border-radius: 8px;
+    --font-family: "Inter", "Roboto", sans-serif;
+    --mobile-font-size: 1rem;
+    --border: 2px solid var(--fifth-color);
 }
 
 body {
-  background-color: black;
-  cursor: url('../../public/cursor.webp'), auto;
-  font-family: 'Inter', 'roboto';
-  color: var(--fourth-color);
-  font-size: var(--mobile-font-size);
-  font-weight: 300;
+    background-color: black;
+    cursor: url("../../public/cursor.webp"), auto;
+    font-family: "Inter", "roboto";
+    color: var(--fourth-color);
+    font-size: var(--mobile-font-size);
+    font-weight: 300;
 
-  main {
-    background-color: var(--sixth-color);
-    margin: 7vh 25vw 1vh 25vw;
-    padding: 1.2rem;
-    border-radius: 1.5rem;
-    box-shadow:
-      inset 0 0 2px 0 rgba(61, 58, 41, 1),
-      inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
-      inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
-      2px 2px 4px 0 rgba(0, 0, 0, 0.25);
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-
-    > p {
-      margin: 0px;
-    }
-
-    section {
-      display: flex;
-
-      h3 {
-        color: var(--second-color);
-        font-weight: 500;
-        margin: 0px;
-        font-size: var(--mobile-font-size);
-      }
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0px;
-      padding-left: 0rem;
-      width: 100%;
-      gap: 1rem;
-
-      li {
+    main {
+        background-color: var(--sixth-color);
+        margin: 7vh 1vw 1vh 1vw;
+        padding: 1.2rem;
+        border-radius: 1.5rem;
+        box-shadow:
+            inset 0 0 2px 0 rgba(61, 58, 41, 1),
+            inset 0 0 4px 0 rgba(0, 0, 0, 0.4),
+            inset 0 0 4px 5px rgba(0, 0, 0, 0.05),
+            2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+        gap: 1rem;
         display: flex;
-        list-style: none;
+        flex-direction: column;
 
-        img {
-          width: 60%;
-          object-fit: cover;
-        }
-
-        video {
-          width: 60%;
-          object-fit: cover;
-        }
-
-        div {
-          p:nth-of-type(1) {
-            margin-bottom: 0px;
-            color: hsl(53, 25%, 45%);
-            font-weight: 400;
-          }
-
-          p:nth-of-type(2) {
-            padding-left: 1rem;
-            padding-right: 1rem;
+        > p {
             margin: 0px;
-          }
         }
-      }
 
-      li:nth-of-type(even) {
-        flex-direction: row-reverse;
+        section {
+            display: flex;
 
-        div {
-          margin-left: auto;
-          text-align: right;
+            h3 {
+                color: var(--second-color);
+                font-weight: 500;
+                margin: 0px;
+                font-size: var(--mobile-font-size);
+            }
         }
-      }
 
-      li:nth-of-type(odd) img,
-      li:nth-of-type(odd) video {
-        margin-left: auto;
-      }
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px;
+            padding-left: 0rem;
+            width: 100%;
+            gap: 1rem;
+
+            li {
+                display: flex;
+                list-style: none;
+
+                img {
+                    width: 60%;
+                    object-fit: cover;
+                }
+
+                video {
+                    width: 60%;
+                    object-fit: cover;
+                }
+
+                div {
+                    p:nth-of-type(1) {
+                        margin-bottom: 0px;
+                        color: hsl(53, 25%, 45%);
+                        font-weight: 400;
+                    }
+
+                    p:nth-of-type(2) {
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        margin: 0px;
+                    }
+                }
+            }
+
+            li:nth-of-type(even) {
+                flex-direction: row-reverse;
+
+                div {
+                    margin-left: auto;
+                    text-align: right;
+                }
+            }
+
+            li:nth-of-type(odd) img,
+            li:nth-of-type(odd) video {
+                margin-left: auto;
+            }
+        }
     }
-  }
 }
 
 video::-webkit-media-controls-panel {
-  display: none;
-  opacity: 1;
+    display: none;
+    opacity: 1;
 }
 
 @media (max-width: 1376px) {
-  main {
-    margin: 7vh 1vw 1vh 1vw;
+    main {
+        margin: 7vh 25vw 1vh 25vw;
 
-    ul {
-      li div p:nth-of-type(1) {
-        margin-top: 0.5rem;
-      }
+        ul {
+            li div p:nth-of-type(1) {
+                margin-top: 0.5rem;
+            }
 
-      li:nth-of-type(even) {
-        flex-direction: row;
-      }
+            li:nth-of-type(even) {
+                flex-direction: row;
+            }
 
-      div {
-        text-align: left;
-      }
+            div {
+                text-align: left;
+            }
+        }
     }
-  }
 }
