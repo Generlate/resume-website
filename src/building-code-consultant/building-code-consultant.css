@@ -32,7 +32,7 @@ body {
         flex-direction: column;
         margin: 7vh 25vw 1vh 25vw;
         padding: 1.2rem;
-        height: 100%;
+        height: calc(100vh - 140px);
         border-radius: 1.5rem;
         box-shadow:
             inset 0 0 2px 0 rgba(61, 58, 41, 1),
@@ -73,6 +73,7 @@ video::-webkit-media-controls-panel {
     body {
         main {
             margin: 7vh 1vw 1vh 1vw;
+            height: calc(100vh - 112px);
         }
     }
 }
