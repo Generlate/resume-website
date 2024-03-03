@@ -1,57 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Austen Cabret, software, engineering, back end, Generlate, architecture, design"
-    />
-    <meta name="description" content="resume website" />
-    <meta name="author" content="Austen Cabret" />
-    <link rel="stylesheet" href="../header.css" />
-    <link rel="stylesheet" href="./space-invaders-game.css" />
-    <title>Austen Cabret</title>
-  </head>
-  <body>
-    <script>
-      fetch('../../src/header.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('header-container').innerHTML = data;
-          updateResumeLink();
-          updateHomeLink();
-        });
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="Austen Cabret, software, engineering, back end, Generlate, architecture, design"
+        />
+        <meta name="description" content="resume website" />
+        <meta name="author" content="Austen Cabret" />
+        <link rel="stylesheet" href="../header.css" />
+        <link rel="stylesheet" href="./space-invaders-game.css" />
+        <title>Austen Cabret</title>
+    </head>
+    <body>
+        <script>
+            fetch("../../src/header.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("header-container").innerHTML =
+                        data;
+                    updateResumeLink();
+                    updateHomeLink();
+                });
 
-      function updateResumeLink() {
-        document.getElementById('resume-link').href =
-          window.location.pathname === 'index.html'
-            ? './public/resume.pdf'
-            : '../../public/resume.pdf';
-      }
+            function updateResumeLink() {
+                document.getElementById("resume-link").href =
+                    window.location.pathname === "index.html"
+                        ? "./public/resume.pdf"
+                        : "../../public/resume.pdf";
+            }
 
-      function updateHomeLink() {
-        document.getElementById('home-link').href =
-          window.location.pathname === 'index.html'
-            ? './index.html'
-            : '../../index.html';
-      }
-    </script>
+            function updateHomeLink() {
+                document.getElementById("home-link").href =
+                    window.location.pathname === "index.html"
+                        ? "./index.html"
+                        : "../../index.html";
+            }
+        </script>
 
-    <div id="header-container"></div>
-    <main>
-      <section>
-        <h3>Space Invaders Game</h3>
-      </section>
-      <video
-        src="../../public/space-invaders-game.mp4"
-        alt="space invaders game"
-        controls
-        autoplay
-        loop
-        muted
-      ></video>
-    </main>
-  </body>
+        <div id="header-container"></div>
+        <main>
+            <section>
+                <h3>Space Invaders Game</h3>
+            </section>
+            <video
+                src="../../public/space-invaders-game.mp4"
+                alt="space invaders game"
+                controls
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
+        </main>
+    </body>
 </html>

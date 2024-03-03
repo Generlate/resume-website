@@ -1,155 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Austen Cabret, software, engineering, back end, Generlate, architecture, design" />
-    <meta name="description" content="resume website" />
-    <meta name="author" content="Austen Cabret" />
-    <link rel="stylesheet" href="../header.css" />
-    <link rel="stylesheet" href="./architecture.css" />
-    <title>Austen Cabret</title>
-  </head>
-  <body> 
-    <script>
-      fetch('../../src/header.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('header-container').innerHTML = data;
-          updateResumeLink();
-          updateHomeLink();
-        });
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="Austen Cabret, software, engineering, back end, Generlate, architecture, design"
+        />
+        <meta name="description" content="resume website" />
+        <meta name="author" content="Austen Cabret" />
+        <link rel="stylesheet" href="../header.css" />
+        <link rel="stylesheet" href="./architecture.css" />
+        <title>Austen Cabret</title>
+    </head>
+    <body>
+        <script>
+            fetch("../../src/header.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("header-container").innerHTML =
+                        data;
+                    updateResumeLink();
+                    updateHomeLink();
+                });
 
-      function updateResumeLink() {
-        document.getElementById('resume-link').href =
-          window.location.pathname === 'index.html'
-            ? './public/resume.pdf'
-            : '../../public/resume.pdf';
-      }
+            function updateResumeLink() {
+                document.getElementById("resume-link").href =
+                    window.location.pathname === "index.html"
+                        ? "./public/resume.pdf"
+                        : "../../public/resume.pdf";
+            }
 
-      function updateHomeLink() {
-        document.getElementById('home-link').href =
-          window.location.pathname === 'index.html'
-            ? './index.html'
-            : '../../index.html';
-      }
-    </script>
-    <div id="header-container"></div>
-    <main> 
-      <section>
-        <h3>Architecture</h3>
-      </section>
-      <p>Models, renders and places built throughout my architecture career.</p>
-      <ul>
-        <li>
-          <div>
-            <p>Sterling Ridge</p>
-            <p>A community entrance.</p>
-          </div>
-          <video src="../../public/sterling-ridge.mp4" alt="a community entrance" controls autoplay muted loop>
-        </li>
-        <li>
-          <div>
-            <p>Cybathic Park</p>
-            <p>Community renovation of the Lower East Side, Manhattan, NY. How can a place be designed for hyper-mobile androids in 2040?</p>
-          </div>
-          <img src="../../public/architecture-4.webp" alt="An android looking at a futuristic, Lower East Side of Manhattan">
-        </li>
-        <li>
-          <div>
-            <p>Sinking city</p>
-            <p>Hialeah city redesign</p>
-          </div>
-          <img src="../../public/architecture-3.webp" alt="a proposal for a new Hialeah">
-        </li>
-        <li>
-          <div>
-            <p>Sinking city</p>
-            <p>Hialeah city redesign</p>
-          </div>
-          <img src="../../public/architecture-5.webp" alt="a proposal for a new Hialeah">
-        </li>
-        <li>
-          <div>
-            <p>Avenir West</p>
-            <p>The outdoor design of a community clubhouse.</p>
-          </div>
-          <img src="../../public/architecture-2.webp" alt="A pool">
-        </li>
-        <li>
-          <div>
-            <p>1033 Waterway Lane</p>
-            <p>Residential backyard.</p>
-          </div>
-          <img src="../../public/architecture-1.webp" alt="A backyard">
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Game rendering.</p>
-          </div>
-          <img src="../../public/architecture-6.webp" alt="A shooter with robots">
-        </li>
-        <li>
-          <div>
-            <p>Visual Scripting</p>
-            <p>Hialeah city redesign</p>
-          </div>
-          <img src="../../public/visual-scripting.webp" alt="a proposal for a new Hialeah">
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <img src="../../public/grasshopper-experiment-1.webp" alt="Grasshopper experiment">
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <video src="../../public/grasshopper-experiment-2.mp4" alt="Grasshopper experiment" controls autoplay muted loop></video>
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <video src="../../public/grasshopper-experiment-1.mp4" alt="Grasshopper experiment" controls autoplay muted loop></video>
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <video src="../../public/grasshopper-experiment-3.mp4" alt="Grasshopper experiment" controls autoplay muted loop></video>
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <video src="../../public/grasshopper-experiment-4.mp4" alt="Grasshopper experiment" controls autoplay muted loop></video>
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <video src="../../public/grasshopper-experiment-5.mp4" alt="Grasshopper experiment" controls autoplay muted loop></video>
-        </li>
-        <li>
-          <div>
-            <p>Practice</p>
-            <p>Grasshopper experiment</p>
-          </div>
-          <img src="../../public/grasshopper-experiment-2.webp" alt="Grasshopper experiment"></img>
-        </li>
-      </ul>
-    </main>
-  </body>
+            function updateHomeLink() {
+                document.getElementById("home-link").href =
+                    window.location.pathname === "index.html"
+                        ? "./index.html"
+                        : "../../index.html";
+            }
+        </script>
+        <div id="header-container"></div>
+        <main>
+            <section>
+                <h3>Architecture</h3>
+            </section>
+            <p>
+                Models, renders and places built throughout my architecture
+                career.
+            </p>
+            <ul>
+                <li>
+                    <div>
+                        <p>Sterling Ridge</p>
+                        <p>A community entrance.</p>
+                    </div>
+                    <video
+                        src="../../public/sterling-ridge.mp4"
+                        alt="a community entrance"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    ></video>
+                </li>
+                <li>
+                    <div>
+                        <p>Cybathic Park</p>
+                        <p>
+                            Community renovation of the Lower East Side,
+                            Manhattan, NY. How can a place be designed for
+                            hyper-mobile androids in 2040?
+                        </p>
+                    </div>
+                    <img
+                        src="../../public/architecture-4.webp"
+                        alt="An android looking at a futuristic, Lower East Side of Manhattan"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Sinking city</p>
+                        <p>Hialeah city redesign</p>
+                    </div>
+                    <img
+                        src="../../public/architecture-3.webp"
+                        alt="a proposal for a new Hialeah"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Sinking city</p>
+                        <p>Hialeah city redesign</p>
+                    </div>
+                    <img
+                        src="../../public/architecture-5.webp"
+                        alt="a proposal for a new Hialeah"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Avenir West</p>
+                        <p>The outdoor design of a community clubhouse.</p>
+                    </div>
+                    <img src="../../public/architecture-2.webp" alt="A pool" />
+                </li>
+                <li>
+                    <div>
+                        <p>1033 Waterway Lane</p>
+                        <p>Residential backyard.</p>
+                    </div>
+                    <img
+                        src="../../public/architecture-1.webp"
+                        alt="A backyard"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Game rendering.</p>
+                    </div>
+                    <img
+                        src="../../public/architecture-6.webp"
+                        alt="A shooter with robots"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Visual Scripting</p>
+                        <p>Hialeah city redesign</p>
+                    </div>
+                    <img
+                        src="../../public/visual-scripting.webp"
+                        alt="a proposal for a new Hialeah"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <img
+                        src="../../public/grasshopper-experiment-1.webp"
+                        alt="Grasshopper experiment"
+                    />
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <video
+                        src="../../public/grasshopper-experiment-2.mp4"
+                        alt="Grasshopper experiment"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    ></video>
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <video
+                        src="../../public/grasshopper-experiment-1.mp4"
+                        alt="Grasshopper experiment"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    ></video>
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <video
+                        src="../../public/grasshopper-experiment-3.mp4"
+                        alt="Grasshopper experiment"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    ></video>
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <video
+                        src="../../public/grasshopper-experiment-4.mp4"
+                        alt="Grasshopper experiment"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    ></video>
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <video
+                        src="../../public/grasshopper-experiment-5.mp4"
+                        alt="Grasshopper experiment"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                    ></video>
+                </li>
+                <li>
+                    <div>
+                        <p>Practice</p>
+                        <p>Grasshopper experiment</p>
+                    </div>
+                    <img
+                        src="../../public/grasshopper-experiment-2.webp"
+                        alt="Grasshopper experiment"
+                    />
+                </li>
+            </ul>
+        </main>
+    </body>
 </html>
-
-

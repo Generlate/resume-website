@@ -1,238 +1,248 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Austen Cabret, software, engineering, back end, Generlate, architecture, design"
-    />
-    <meta name="description" content="resume website" />
-    <meta name="author" content="Austen Cabret" />
-    <link rel="stylesheet" href="../header.css" />
-    <link rel="stylesheet" href="./all-projects.css" />
-    <title>Austen Cabret</title>
-  </head>
-  <body>
-    <script>
-      fetch('../../src/header.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('header-container').innerHTML = data;
-          updateResumeLink();
-          updateHomeLink();
-        });
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="../../public/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="Austen Cabret, software, engineering, back end, Generlate, architecture, design"
+        />
+        <meta name="description" content="resume website" />
+        <meta name="author" content="Austen Cabret" />
+        <link rel="stylesheet" href="../header.css" />
+        <link rel="stylesheet" href="./all-projects.css" />
+        <title>Austen Cabret</title>
+    </head>
+    <body>
+        <script>
+            fetch("../../src/header.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("header-container").innerHTML =
+                        data;
+                    updateResumeLink();
+                    updateHomeLink();
+                });
 
-      function updateResumeLink() {
-        document.getElementById('resume-link').href =
-          window.location.pathname === 'index.html'
-            ? './public/resume.pdf'
-            : '../../public/resume.pdf';
-      }
+            function updateResumeLink() {
+                document.getElementById("resume-link").href =
+                    window.location.pathname === "index.html"
+                        ? "./public/resume.pdf"
+                        : "../../public/resume.pdf";
+            }
 
-      function updateHomeLink() {
-        document.getElementById('home-link').href =
-          window.location.pathname === 'index.html'
-            ? './index.html'
-            : '../../index.html';
-      }
-    </script>
-    <div id="header-container"></div>
-    <main>
-      <h1>All Projects</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Project</th>
-            <th>Technologies</th>
-            <th>Type</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2023</td>
-            <td>VRChat World</td>
-            <td><p>Unity</p></td>
-            <td>Game Development, 3D modeling, Metaverse</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>Program Copilot</td>
-            <td>
-              <p>Python</p>
-              <p>Omniverse</p>
-            </td>
-            <td>Textual User Interface</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>Commercial Website 2.0</td>
-            <td>
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>JavaScript</p>
-              <p>React</p>
-              <p>Three</p>
-              <p>Azure</p>
-            </td>
-            <td>Web Development</td>
-            <td><a href="https://generlate.com">generlate.com</a></td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>Portfolio Website</td>
-            <td>
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>TypeScript</p>
-              <p>Github</p>
-              <p>Pages</p>
-            </td>
-            <td>Web Development</td>
-            <td><a href="https://austencabret.com">austencabret.com</a></td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>Model Generator</td>
-            <td>
-              <p>Python</p>
-              <p>Pytorch</p>
-              <p>Omniverse</p>
-            </td>
-            <td>Machine Learning</td>
-            <td>
-              <a href="https://github.com/Generlate/model_generator"
-                >github.com/Generlate/model_generator</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>Building Code Consultant</td>
-            <td>
-              <p>Python</p>
-              <p>OpenAI API</p>
-            </td>
-            <td>LLM Fine-Tune</td>
-            <td>
-              <a href="https://github.com/Generlate/building_code_consultant"
-                >github.com/Generlate/building_code_consultant</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>2022</td>
-            <td>Generlate Youtube Channel</td>
-            <td>
-              <p>Davinci Resolve</p>
-              <p>Premiere Pro</p>
-              <p>Photoshop</p>
-              <p>Midjourney</p>
-              <p>DALL•E 3</p>
-              <p>FL Studio</p>
-            </td>
-            <td>Funnel Creation, Cinematography</td>
-            <td>
-              <a href="https://www.youtube.com/@generlate"
-                >youtube.com/@generlate</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>2022</td>
-            <td>Space Invaders Game</td>
-            <td>
-              <p>Python</p>
-              <p>Pygame</p>
-            </td>
-            <td>Game Development</td>
-            <td>
-              <a href="https://github.com/Generlate/space_invaders_game"
-                >github.com/Generlate/space_invaders_game</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>2021</td>
-            <td>Commercial Website 1.0</td>
-            <td>
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Github Pages</p>
-            </td>
-            <td>Web Development</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2021</td>
-            <td>ShellHacks Hackathon Covid Data Website</td>
-            <td>
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>JavaScript</p>
-              <p>Flask</p>
-            </td>
-            <td>Web Development</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2017</td>
-            <td>Parametric Architecture Models</td>
-            <td>
-              <p>Rhino Grasshopper</p>
-              <p>Photoshop</p>
-              <p>Unreal Engine</p>
-            </td>
-            <td>Visual Scripting</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2014</td>
-            <td>Architecture</td>
-            <td>
-              <p>Autocad</p>
-              <p>Photoshop</p>
-              <p>Illustrator</p>
-              <p>Indesign</p>
-              <p>Rhino</p>
-              <p>Grasshopper</p>
-              <p>Lumion</p>
-              <p>Sketchup</p>
-              <p>Unreal Engine</p>
-              <p>Land F/X</p>
-            </td>
-            <td>Design, 3D Modeling</td>
-            <td>
-              <a
-                href="https://issuu.com/austencabret/docs/02.20.2021_portfolio_cabret-austen"
-                >issuu.com/austencabret/docs/02.20.2021_portfolio_cabret-austen</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>2007</td>
-            <td>Music</td>
-            <td>
-              <p>Clarinet</p>
-              <p>Saxophone</p>
-              <p>Guitar</p>
-              <p>FL Studio</p>
-            </td>
-            <td>Music Production, Music Composition</td>
-            <td>
-              <a
-                href="https://open.spotify.com/track/1Yuxi8K5PKHEMXpXih96ns?si=0570155ecaaa4e60"
-                >open.spotify.com/track/1Yuxi8K5PKHEMXpXih96ns?si=0570155ecaaa4e60</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </body>
+            function updateHomeLink() {
+                document.getElementById("home-link").href =
+                    window.location.pathname === "index.html"
+                        ? "./index.html"
+                        : "../../index.html";
+            }
+        </script>
+        <div id="header-container"></div>
+        <main>
+            <h1>All Projects</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Project</th>
+                        <th>Technologies</th>
+                        <th>Type</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>VRChat World</td>
+                        <td><p>Unity</p></td>
+                        <td>Game Development, 3D modeling, Metaverse</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Program Copilot</td>
+                        <td>
+                            <p>Python</p>
+                            <p>Omniverse</p>
+                        </td>
+                        <td>Textual User Interface</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Commercial Website 2.0</td>
+                        <td>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>React</p>
+                            <p>Three</p>
+                            <p>Azure</p>
+                        </td>
+                        <td>Web Development</td>
+                        <td>
+                            <a href="https://generlate.com">generlate.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Portfolio Website</td>
+                        <td>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>TypeScript</p>
+                            <p>Github</p>
+                            <p>Pages</p>
+                        </td>
+                        <td>Web Development</td>
+                        <td>
+                            <a href="https://austencabret.com"
+                                >austencabret.com</a
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Model Generator</td>
+                        <td>
+                            <p>Python</p>
+                            <p>Pytorch</p>
+                            <p>Omniverse</p>
+                        </td>
+                        <td>Machine Learning</td>
+                        <td>
+                            <a
+                                href="https://github.com/Generlate/model_generator"
+                                >github.com/Generlate/model_generator</a
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Building Code Consultant</td>
+                        <td>
+                            <p>Python</p>
+                            <p>OpenAI API</p>
+                        </td>
+                        <td>LLM Fine-Tune</td>
+                        <td>
+                            <a
+                                href="https://github.com/Generlate/building_code_consultant"
+                                >github.com/Generlate/building_code_consultant</a
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Generlate Youtube Channel</td>
+                        <td>
+                            <p>Davinci Resolve</p>
+                            <p>Premiere Pro</p>
+                            <p>Photoshop</p>
+                            <p>Midjourney</p>
+                            <p>DALL•E 3</p>
+                            <p>FL Studio</p>
+                        </td>
+                        <td>Funnel Creation, Cinematography</td>
+                        <td>
+                            <a href="https://www.youtube.com/@generlate"
+                                >youtube.com/@generlate</a
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Space Invaders Game</td>
+                        <td>
+                            <p>Python</p>
+                            <p>Pygame</p>
+                        </td>
+                        <td>Game Development</td>
+                        <td>
+                            <a
+                                href="https://github.com/Generlate/space_invaders_game"
+                                >github.com/Generlate/space_invaders_game</a
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Commercial Website 1.0</td>
+                        <td>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>Github Pages</p>
+                        </td>
+                        <td>Web Development</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>ShellHacks Hackathon Covid Data Website</td>
+                        <td>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>Flask</p>
+                        </td>
+                        <td>Web Development</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td>Parametric Architecture Models</td>
+                        <td>
+                            <p>Rhino Grasshopper</p>
+                            <p>Photoshop</p>
+                            <p>Unreal Engine</p>
+                        </td>
+                        <td>Visual Scripting</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>Architecture</td>
+                        <td>
+                            <p>Autocad</p>
+                            <p>Photoshop</p>
+                            <p>Illustrator</p>
+                            <p>Indesign</p>
+                            <p>Rhino</p>
+                            <p>Grasshopper</p>
+                            <p>Lumion</p>
+                            <p>Sketchup</p>
+                            <p>Unreal Engine</p>
+                            <p>Land F/X</p>
+                        </td>
+                        <td>Design, 3D Modeling</td>
+                        <td>
+                            <a
+                                href="https://issuu.com/austencabret/docs/02.20.2021_portfolio_cabret-austen"
+                                >issuu.com/austencabret/docs/02.20.2021_portfolio_cabret-austen</a
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2007</td>
+                        <td>Music</td>
+                        <td>
+                            <p>Clarinet</p>
+                            <p>Saxophone</p>
+                            <p>Guitar</p>
+                            <p>FL Studio</p>
+                        </td>
+                        <td>Music Production, Music Composition</td>
+                        <td>
+                            <a
+                                href="https://open.spotify.com/track/1Yuxi8K5PKHEMXpXih96ns?si=0570155ecaaa4e60"
+                                >open.spotify.com/track/1Yuxi8K5PKHEMXpXih96ns?si=0570155ecaaa4e60</a
+                            >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
 </html>
