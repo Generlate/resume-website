@@ -70,11 +70,13 @@ body {
                 img {
                     width: 60%;
                     object-fit: cover;
+                    border-radius: var(--media-border-radius);
                 }
 
                 video {
                     width: 60%;
                     object-fit: cover;
+                    border-radius: var(--media-border-radius);
                 }
 
                 div {
@@ -104,6 +106,7 @@ body {
             li:nth-of-type(odd) img,
             li:nth-of-type(odd) video {
                 margin-left: auto;
+                border-radius: var(--media-border-radius);
             }
         }
     }
@@ -120,6 +123,17 @@ video::-webkit-media-controls-panel {
             margin: 7vh 1vw 1vh 1vw;
 
             ul {
+                li {
+                    div {
+                        text-align: right;
+                        padding-right: 1rem;
+
+                        p:nth-of-type(2) {
+                            padding-left: 0rem;
+                            padding-right: 0rem;
+                        }
+                    }
+                }
                 li div p:nth-of-type(1) {
                     margin-top: 0.5rem;
                 }
@@ -128,9 +142,9 @@ video::-webkit-media-controls-panel {
                     flex-direction: row;
                 }
 
-                /* div {
+                div {
                     text-align: left;
-                } */
+                }
             }
         }
     }
