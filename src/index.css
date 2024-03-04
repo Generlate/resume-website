@@ -433,7 +433,6 @@ video::-webkit-media-controls-panel {
             flex-direction: column;
             align-items: center;
             padding-top: 4.5rem;
-            height: 100%;
 
             h3 {
                 font-size: var(--mobile-font-size);
@@ -566,7 +565,6 @@ video::-webkit-media-controls-panel {
             flex-direction: column;
             align-items: center;
             padding-top: 7rem;
-            height: 100%;
 
             h3 {
                 font-size: var(--mobile-font-size);
