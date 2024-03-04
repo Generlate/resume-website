@@ -4,7 +4,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 const scene = new THREE.Scene();
 const rendererCanvas = document.querySelector("canvas") as HTMLCanvasElement;
 const renderer = new THREE.WebGLRenderer({
-    // canvas: rendererCanvas,
+    canvas: rendererCanvas,
     antialias: true,
 });
 
