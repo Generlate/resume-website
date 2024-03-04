@@ -10,14 +10,14 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 const initialCanvasWidth =
-    window.innerWidth > 1024 ? window.innerWidth / 2.9 : window.innerWidth;
+    window.innerWidth > 1375 ? window.innerWidth / 2.9 : window.innerWidth;
 renderer.setSize(initialCanvasWidth, window.innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 2.0;
 
 const calculateAspectRatio = (): number => {
-    return window.innerWidth > 1024
+    return window.innerWidth > 1375
         ? window.innerWidth / (2.9 * window.innerHeight)
         : window.innerWidth / window.innerHeight;
 };
@@ -33,7 +33,7 @@ const updateCameraAndRenderer = (): void => {
     camera.aspect = calculateAspectRatio();
     camera.updateProjectionMatrix();
     const canvasWidth =
-        window.innerWidth > 1024 ? window.innerWidth / 2.9 : window.innerWidth;
+        window.innerWidth > 1375 ? window.innerWidth / 2.9 : window.innerWidth;
     const canvasHeight = window.innerHeight;
     renderer.setSize(canvasWidth, canvasHeight);
 };
