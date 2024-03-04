@@ -9,12 +9,10 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
-// TODO: fix project title descriptions on architecture sub page
-// TODO: fix spacing from character to description section
-// TODO: make work on ipad and large screens
-// TODO: remove controls and add autoplay to home page videos on mobile
+// TODO: flip experience order in mobile
 // TODO: consider using clamp() and minmax() in CSS
 // TODO: try @media (orientation: landscape)
-// TODO: page change animations
+// TODO: make work on ipad and large screens
 // TODO: fix broken environment on very skinny window / landscape mobile
+// TODO: page change animations
 // TODO: reduce building.glb size to reduce load time
