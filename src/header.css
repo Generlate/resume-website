@@ -2,7 +2,7 @@
     --third-color: hsl(53, 7%, 84%);
 }
 
-/* header {
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -197,7 +197,7 @@
             transition: background-image 0.3s ease;
         }
     }
-} */
+}
 
 /* phone */
 @media (max-width: 600px) and (orientation: portrait) {
