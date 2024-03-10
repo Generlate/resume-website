@@ -450,10 +450,6 @@ video::-webkit-media-controls-panel {
                     font-size: var(--mobile-font-size);
                     height: auto;
 
-                    ul {
-                        gap: 1.5rem;
-                    }
-
                     div ul {
                         flex-wrap: wrap;
                         padding-left: 0rem;
@@ -462,6 +458,12 @@ video::-webkit-media-controls-panel {
                             padding-left: 0.8rem;
                             padding-right: 0.8rem;
                         }
+                    }
+                }
+
+                section:first-of-type {
+                    ul {
+                        gap: 1.5rem;
                     }
                 }
 
