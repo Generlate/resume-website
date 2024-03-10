@@ -446,11 +446,12 @@ video::-webkit-media-controls-panel {
 
             div {
                 width: 100%;
+
                 section:first-of-type {
                     font-size: var(--mobile-font-size);
                     height: auto;
 
-                    div ul {
+                    ul {
                         flex-wrap: wrap;
                         padding-left: 0rem;
                         gap: 1.5rem;
