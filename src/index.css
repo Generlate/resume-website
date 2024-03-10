@@ -434,6 +434,21 @@ video::-webkit-media-controls-panel {
             align-items: center;
             padding-top: 4.5rem;
 
+            > section {
+                margin: 0rem auto;
+                padding: 0rem 0rem 50rem 0rem;
+
+                h1 {
+                    font-size: 2.6rem;
+                    margin-top: 0rem;
+                }
+
+                h2 {
+                    font-size: 1.25rem;
+                    margin-top: -0.3rem;
+                }
+            }
+
             h3 {
                 font-size: var(--mobile-font-size);
             }
@@ -516,21 +531,6 @@ video::-webkit-media-controls-panel {
                     > div div img {
                         width: calc(100% - 1rem);
                     }
-                }
-            }
-
-            > section {
-                margin: 0rem auto;
-                padding: 0rem 0rem 50rem 0rem;
-
-                h1 {
-                    font-size: 2.6rem;
-                    margin-top: 0rem;
-                }
-
-                h2 {
-                    font-size: 1.25rem;
-                    margin-top: -0.3rem;
                 }
             }
         }
