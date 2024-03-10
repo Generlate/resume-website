@@ -453,6 +453,7 @@ video::-webkit-media-controls-panel {
                     div ul {
                         flex-wrap: wrap;
                         padding-left: 0rem;
+                        gap: 1.5rem;
 
                         li {
                             padding-left: 0.8rem;
