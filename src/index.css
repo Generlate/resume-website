@@ -450,6 +450,10 @@ video::-webkit-media-controls-panel {
                     font-size: var(--mobile-font-size);
                     height: auto;
 
+                    ul {
+                        gap: 1.5rem;
+                    }
+
                     div ul {
                         flex-wrap: wrap;
                         padding-left: 0rem;
@@ -459,61 +463,55 @@ video::-webkit-media-controls-panel {
                             padding-right: 0.8rem;
                         }
                     }
-                }
 
-                section:first-of-type {
-                    ul {
-                        gap: 1.5rem;
-                    }
-                }
+                    section:nth-of-type(2) {
+                        height: auto;
+                        padding-bottom: 1.2rem;
 
-                section:nth-of-type(2) {
-                    height: auto;
-                    padding-bottom: 1.2rem;
+                        div:first-of-type {
+                            display: flex;
 
-                    div:first-of-type {
-                        display: flex;
+                            a {
+                                width: auto;
+                                padding: 0rem;
+                                margin: 1rem 0.5rem;
 
-                        a {
-                            width: auto;
-                            padding: 0rem;
-                            margin: 1rem 0.5rem;
+                                div div p {
+                                    padding-left: 0rem;
+                                    margin-left: 0rem;
+                                }
 
-                            div div p {
-                                padding-left: 0rem;
-                                margin-left: 0rem;
-                            }
-
-                            img,
-                            video {
-                                width: 45%;
+                                img,
+                                video {
+                                    width: 45%;
+                                }
                             }
                         }
                     }
-                }
 
-                section:nth-of-type(3) {
-                    height: auto;
-                    padding-bottom: 1.2rem;
-
-                    div {
-                        flex-wrap: wrap;
-                        align-items: center;
+                    section:nth-of-type(3) {
+                        height: auto;
+                        padding-bottom: 1.2rem;
 
                         div {
-                            width: 50%;
-                        }
+                            flex-wrap: wrap;
+                            align-items: center;
 
-                        div:last-of-type {
-                            display: none;
-                        }
+                            div {
+                                width: 50%;
+                            }
 
-                        div:nth-of-type(2) h4 {
-                            margin-top: 0rem;
-                        }
+                            div:last-of-type {
+                                display: none;
+                            }
 
-                        div:first-of-type h4 {
-                            margin-top: 0rem;
+                            div:nth-of-type(2) h4 {
+                                margin-top: 0rem;
+                            }
+
+                            div:first-of-type h4 {
+                                margin-top: 0rem;
+                            }
                         }
                     }
 
