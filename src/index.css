@@ -461,11 +461,11 @@ video::-webkit-media-controls-panel {
                     }
                 }
 
-                section:first-of-type {
+                /* section:first-of-type {
                     ul {
                         gap: 1.5rem;
                     }
-                }
+                } */
 
                 section:nth-of-type(2) {
                     height: auto;
