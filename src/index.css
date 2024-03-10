@@ -450,7 +450,7 @@ video::-webkit-media-controls-panel {
                     font-size: var(--mobile-font-size);
                     height: auto;
 
-                    div ul {
+                    ul {
                         flex-wrap: wrap;
                         padding-left: 0rem;
                         gap: 1.5rem;
@@ -461,12 +461,6 @@ video::-webkit-media-controls-panel {
                         }
                     }
                 }
-
-                /* section:first-of-type {
-                    ul {
-                        gap: 1.5rem;
-                    }
-                } */
 
                 section:nth-of-type(2) {
                     height: auto;
