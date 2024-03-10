@@ -9,6 +9,7 @@ loadBuildingModel(scene);
 loadCharacterModel();
 createPortal(scene, camera, renderer, controls);
 
+// TODO: for the home page, move 2d into the 3d scene (simplifies complex scaling)
 // TODO: flip experience order in mobile
 // TODO: consider using clamp() and minmax() in CSS
 // TODO: try @media (orientation: landscape)
