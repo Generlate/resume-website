@@ -450,7 +450,7 @@ video::-webkit-media-controls-panel {
                     font-size: var(--mobile-font-size);
                     height: auto;
 
-                    ul {
+                    div ul {
                         flex-wrap: wrap;
                         padding-left: 0rem;
                         gap: 1.5rem;
