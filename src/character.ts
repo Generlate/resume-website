@@ -41,7 +41,7 @@ function onProgress(xhr: ProgressEvent): void {
     }
 }
 
-function onError(error: Error): void {
+function onError(error: ErrorEvent): void {
     console.error("An error occurred:", error);
 }
 
